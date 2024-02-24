@@ -26,4 +26,12 @@ public class NetherrackSlab implements DrawingObject {
 		g2d.draw(line);
 		g2d.fill(line);
 	}
+
+	public void adjustX(double distance){
+
+	}
+
+	public double getX(){
+		return x;
+	}
 }
