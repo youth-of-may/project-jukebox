@@ -14,6 +14,7 @@ public class SceneCanvas extends JComponent{
 
         //testing out toolbox
         elements.add(new ToolBox(150, 500, 500));
+        //elements.add(new DiscFrame(50, 70, 100));
         
     /*
      * Add the elements inside the constructor as well
