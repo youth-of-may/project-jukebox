@@ -5,3 +5,14 @@ To Do:
 3. Elements
 4. Figure out how we can incorporate a JButton (how it will function) to our program (The basic requirement for the animation is that you have one (1) button that, every time it is clicked, will move the objects in the scene. However, you are free to animate your project in different ways (e.g. clicking on the drawing instead of a JButton, continuous animation without any buttons, animation using keyboard keys, mouse assisted animation, etc.))
 5. Javadoc comments - (kahit sa huli na)
+
+
+Notes:
+
+1. SceneCanvas.java
+- where we will draw the elements of the animated scene
+- the elements should be added/instantiated inside the constructor
+2. SceneFrame.java
+- contains the JFrame of the GUI
+3. SceneStarter.java
+- contains the main method that will instantiate the SceneFrame class
