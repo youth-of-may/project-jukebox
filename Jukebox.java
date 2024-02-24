@@ -38,4 +38,12 @@ public class Jukebox implements DrawingObject{
 		g2d.draw(line3);
 		g2d.fill(line3);
 	}
+
+	public void adjustX(double distance){
+
+	}
+
+	public double getX(){
+		return x;
+	}
 }
