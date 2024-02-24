@@ -5,11 +5,15 @@
  //this is where we will draw the elements of the animated scene
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Rectangle2D;
 import java.util.*;
 public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
     public SceneCanvas() {
         elements = new ArrayList<DrawingObject>();
+
+        //testing out toolbox
+        elements.add(new ToolBox(0, 0, 100));
         
     /*
      * Add the elements inside the constructor as well
@@ -26,9 +30,11 @@ of the shapes in the list.
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
+        
         for (DrawingObject drawingObj : elements) {
             drawingObj.draw(g2d);
         }
+        
     }
     
 }
