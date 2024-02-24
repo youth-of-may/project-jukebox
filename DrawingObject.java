@@ -1,6 +1,7 @@
+
 import java.awt.*;
-public abstract class DrawingObject {
-    abstract void draw(Graphics2D g2d);
-    abstract void adjustX(double distance);
-    abstract double getX();
+public interface DrawingObject {
+    void draw(Graphics2D g2d);
+    void adjustX(double distance);
+    double getX();
 }

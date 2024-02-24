@@ -1,5 +1,7 @@
+
 import java.awt.*;
-public class Square extends DrawingObject{
+import java.awt.geom.*;
+public class Square implements DrawingObject{
     private double x, y, size;
     private Color color;
 
@@ -11,7 +13,9 @@ public class Square extends DrawingObject{
     }
 
     public void draw(Graphics2D g2d){
-
+        Rectangle2D.Double r1 = new Rectangle2D.Double(x,y,size, size);
+        g2d.setColor(color);
+        g2d.fill(r1);
     }
     public void adjustX(double distance) {
 
