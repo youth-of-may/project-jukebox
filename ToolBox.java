@@ -26,11 +26,12 @@ public class ToolBox implements DrawingObject{
     }
     public void draw(Graphics2D g2d) {
         
+        
         for (MenuBox m : boxes) {
             m.draw(g2d);
         }
-        
 
+        
         /* 
         figure out how to add an outline to the toolbox
         g2d.setStroke(new BasicStroke(4));
