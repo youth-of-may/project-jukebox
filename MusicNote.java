@@ -12,48 +12,52 @@ public class MusicNote extends JComponent {
 	protected void paintComponent(Graphics g){
 		Graphics2D g2d = (Graphics2D) g;
 	
-		Rectangle2D.Double m = new Rectangle2D.Double(0,300,50,50);
-		g2d.setColor(new Color(134,243,222));
-		g2d.fill(m);
+		Square s1 = new Square(100,0,50,new Color(98,179,164));
+		s1.draw(g2d);
 		
-		Rectangle2D.Double m2 = new Rectangle2D.Double(0,350,50,50);
-		g2d.setColor(new Color(58,105,95));
-		g2d.fill(m2);
+		Square s2 = new Square(150,0,50,new Color(82,145,136));
+		s2.draw(g2d);
 		
-		Rectangle2D.Double m3 = new Rectangle2D.Double(50,300,50,50);
-		g2d.setColor(new Color(98,179,164));
-		g2d.fill(m3);
+		Square s3 = new Square(100,50,50,new Color(98,179,164));
+		s3.draw(g2d);
 		
-		Rectangle2D.Double m4 = new Rectangle2D.Double(50,350,100,50);
-		g2d.setColor(new Color(44,81,74));
-		g2d.fill(m4);
+		Square s4 = new Square(150,50,50,new Color(58,105,95));
+		s4.draw(g2d);
 		
-		Rectangle2D.Double m5 = new Rectangle2D.Double(100,300,50,50);
-		g2d.setColor(new Color(58,105,95));
-		g2d.fill(m5);
+		Square s5 = new Square(200,50,50,new Color(80,146,134));
+		s5.draw(g2d);
 		
-		Rectangle2D.Double m6 = new Rectangle2D.Double(100,0,50,150);
-		g2d.setColor(new Color(98,179,164));
-		g2d.fill(m6);
+		Square s6 = new Square(100,100,50,new Color(98,179,164));
+		s6.draw(g2d);
 		
-		Rectangle2D.Double m7 = new Rectangle2D.Double(100,150,50,150);
-		g2d.setColor(new Color(80,146,134));
-		g2d.fill(m7);
+		Square s7 = new Square(200,100,50,new Color(44,81,74));
+		s7.draw(g2d);
 		
-		Rectangle2D.Double m8 = new Rectangle2D.Double(150,0,50,50);
-		g2d.setColor(new Color(82,145,136));
-		g2d.fill(m8);
+		Square s8 = new Square(100,150,50,new Color(80,146,134));
+		s8.draw(g2d);
 		
-		Rectangle2D.Double m9 = new Rectangle2D.Double(150,50,50,50);
-		g2d.setColor(new Color(56,106,95));
-		g2d.fill(m9);
+		Square s9 = new Square(100,200,50,new Color(80,146,134));
+		s9.draw(g2d);
 		
-		Rectangle2D.Double m10 = new Rectangle2D.Double(200,50,50,50);
-		g2d.setColor(new Color(80,146,134));
-		g2d.fill(m10);
+		Square s10 = new Square(100,250,50,new Color(80,146,134));
+		s10.draw(g2d);
 		
-		Rectangle2D.Double m11 = new Rectangle2D.Double(200,100,50,50);
-		g2d.setColor(new Color(44,81,74));
-		g2d.fill(m11);
+		Square s11 = new Square(0,300,50,new Color(134,243,222));
+		s11.draw(g2d);
+		
+		Square s12 = new Square(50,300,50,new Color(98,179,164));
+		s12.draw(g2d);
+		
+		Square s13 = new Square(100,300,50,new Color(58,105,95));
+		s13.draw(g2d);
+		
+		Square s14 = new Square(0,350,50,new Color(58,105,95));
+		s14.draw(g2d);
+		
+		Square s15 = new Square(50,350,50,new Color(44,81,74));
+		s15.draw(g2d);
+		
+		Square s16 = new Square(100,350,50,new Color(44,81,74));
+		s16.draw(g2d);
 	}	
 }
