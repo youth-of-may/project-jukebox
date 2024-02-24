@@ -13,21 +13,22 @@ public class MenuBox implements DrawingObject {
         innerS = new Square(x+8,y+8.5, size *.70, new Color(39,29,6));
     }
     public void draw(Graphics2D g2d){
+        float thickness = 4;
         outerS.draw(g2d);
         middleS.draw(g2d);
         innerS.draw(g2d);
 
         //for the border
-        Line topBorder = new Line(x,y,x+size,y,4, Color.BLACK);
+        Line topBorder = new Line(x,y,x+size,y,thickness, Color.BLACK);
         topBorder.draw(g2d);
 
-        Line bottomBorder = new Line(x,y+size,x+size,y+ size,4, new Color(70,73,67));
+        Line bottomBorder = new Line(x,y+size,x+size,y+ size,thickness, new Color(70,73,67));
         bottomBorder.draw(g2d);
 
-        Line leftBorder = new Line(x,y,x,y+ size,4, new Color(70,73,67));
+        Line leftBorder = new Line(x,y,x,y+ size,thickness, new Color(70,73,67));
         leftBorder.draw(g2d);
 
-        Line rightBorder = new Line(x+size,y,x+size,y+ size,4, new Color(70,73,67));
+        Line rightBorder = new Line(x+size,y,x+size,y+ size,thickness, new Color(70,73,67));
         rightBorder.draw(g2d);
     }
     public void adjustX(double distance){
