@@ -9,8 +9,8 @@ public class MenuBox implements DrawingObject {
         this.y = y;
         this.size = size;
         outerS = new Square(x,y,size, new Color(169,171,168));
-        middleS = new Square(x+8, y+8, size*0.85, new Color(92,92,92));
-        innerS = new Square(x+15,y+15, size *.70, new Color(39,29,6));
+        middleS = new Square(x+5, y+4.5, size*0.85, new Color(92,92,92));
+        innerS = new Square(x+8,y+8.5, size *.70, new Color(39,29,6));
     }
     public void draw(Graphics2D g2d){
         outerS.draw(g2d);

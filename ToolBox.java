@@ -11,8 +11,17 @@ public class ToolBox implements DrawingObject{
         this.width = width;
         this.height = height;
         boxes = new ArrayList<>();
-        boxes.add(new MenuBox(0,0,100));
-        boxes.add(new MenuBox(100,0,100));
+        boxes.add(new MenuBox(x+ 0,y,size/10));
+        boxes.add(new MenuBox(x+ 50,y,size/10));
+        boxes.add(new MenuBox(x+ 100,y,size/10));
+        boxes.add(new MenuBox(x+ 150,y,size/10));
+        boxes.add(new MenuBox(x+ 200,y,size/10));
+        boxes.add(new MenuBox(x+ 250,y,size/10));
+        boxes.add(new MenuBox(x+ 300,y,size/10));
+        boxes.add(new MenuBox(x+ 350,y,size/10));
+        boxes.add(new MenuBox(x+ 400,y,size/10));
+        boxes.add(new MenuBox(x+ 450,y,size/10));
+        
 
     }
     public void draw(Graphics2D g2d) {
