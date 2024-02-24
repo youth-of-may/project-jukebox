@@ -1,5 +1,5 @@
 import java.awt.*;
-public class Circle implements DrawingObject {
+public class Circle extends DrawingObject {
     private double x, y, size;
     private Color color;
 

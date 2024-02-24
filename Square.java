@@ -1,5 +1,5 @@
 import java.awt.*;
-public class Square implements DrawingObject{
+public class Square extends DrawingObject{
     private double x, y, size;
     private Color color;
 
