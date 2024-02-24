@@ -25,4 +25,12 @@ public class Wood implements DrawingObject{
 		g2d.fill(line4);
 		g2d.draw(line4);
 	}
+
+	public void adjustX(double distance){
+
+	}
+
+	public double getX(){
+		return x;
+	}
 }
