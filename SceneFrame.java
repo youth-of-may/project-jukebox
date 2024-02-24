@@ -14,6 +14,7 @@ public class SceneFrame {
     public void setUpGUI() {
         frame.setTitle("Midterm Project - Chua - Giron");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(canvas);
         frame.pack();
         frame.setVisible(true);
     }

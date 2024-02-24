@@ -10,6 +10,7 @@ public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
     public SceneCanvas() {
         elements = new ArrayList<DrawingObject>();
+        
     /*
      * Add the elements inside the constructor as well
      */
