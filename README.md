@@ -50,3 +50,10 @@ Other listener interfaces include:
 11. TextListener
 
 link: https://www.startertutorials.com/corejava/event-listener-interfaces.html
+
+To-do list: (For J)
+- fix glass pane;
+- make log;
+- make item frame;
+- make candles;
+- make sign;
