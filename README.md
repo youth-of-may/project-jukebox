@@ -16,3 +16,34 @@ Notes:
 - contains the JFrame of the GUI
 3. SceneStarter.java
 - contains the main method that will instantiate the SceneFrame class
+
+
+Grading
+Provided that there are no errors, you will receive a maximum grade of 80 points (high C+) for fulfilling the
+requirements stated above. For the possibility of earning a higher grade, create a project that shows a
+deeper understanding of the lessons so far.
+Some concrete examples of what you can do to possibly earn a higher grade are:
+● implement listener interfaces other than the ActionListener interface
+● create animation that is continuous (i.e. no need to repeatedly click)
+● implement something that is unique or challenging
+Quality of code shall also be taken into consideration. This includes, but is not limited to:
+● formatting for clarity and readability
+● using appropriate identifiers (names for fields, methods, and classes)
+● maintaining consistency with naming schemes and conventions
+● eliminating redundancy
+
+
+Other listener interfaces include:
+1. Actionlistener
+2. AdjustmentListener
+3. ComponentListener
+4. ContainerListener
+5. FocusListener
+6. ItemListener
+7. KeyListener
+8. MouseListener
+9. MouseMotionListener
+10. MouseWheelListener
+11. TextListener
+
+link: https://www.startertutorials.com/corejava/event-listener-interfaces.html
