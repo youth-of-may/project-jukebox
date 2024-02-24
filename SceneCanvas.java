@@ -4,6 +4,7 @@
 
  //this is where we will draw the elements of the animated scene
 import javax.swing.*;
+import java.awt.*;
 import java.util.*;
 public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
@@ -21,5 +22,12 @@ through this ArrayList to repeatedly execute instructions affecting the shapes. 
 can have a for loop inside the paintComponent method that calls your custom draw method on all
 of the shapes in the list.
      */
-
+    @Override
+    protected void paintComponent(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        for (DrawingObject drawingObj : elements) {
+            drawingObj.draw(g2d);
+        }
+    }
+    
 }
