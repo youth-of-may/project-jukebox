@@ -25,5 +25,6 @@ public class MenuBox implements DrawingObject {
     }
     public void selectBox() {
 
+        //figure out how to enlarge square when selected
     }
 }
