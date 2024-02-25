@@ -15,9 +15,11 @@ public class SceneCanvas extends JComponent{
         //testing out toolbox
         elements.add(new Background());
         elements.add(new NetherrackSlab(50,500,250,100));
-		elements.add(new Jukebox(300,375,200));
-		elements.add(new Wood(500,375,200));
+		
+		elements.add(new Wood(500,425,200));
+        elements.add(new Jukebox(300,375,200));
         elements.add(new ToolBox(150, 500, 500));
+        elements.add(new Outline());
         //elements.add(new Disc(100,100, 100,100, Color.RED));
         
         //elements.add(new DiscFrame(50, 70, 100));
