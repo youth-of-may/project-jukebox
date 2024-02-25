@@ -18,8 +18,9 @@ public class Outline implements DrawingObject{
         //outline of upper part of jukebox
         Path2D.Double upperSlab = new Path2D.Double();
         upperSlab.moveTo(150, 425);
-        upperSlab.lineTo(150, 100);
+        upperSlab.lineTo(150, 75);
         upperSlab.closePath();
+        g2d.setColor(Color.RED);
         g2d.draw(upperSlab);
 
         //for the slab
@@ -32,7 +33,20 @@ public class Outline implements DrawingObject{
         g2d.setColor(Color.RED);
         g2d.draw(path1);
 
-        //
+        //from wood to the other wood
+        Path2D.Double upperSlab2 = new Path2D.Double();
+        upperSlab2.moveTo(150,325);
+        upperSlab2.lineTo(670,325);
+        upperSlab2.closePath();
+        g2d.setColor(Color.RED);
+        g2d.draw(upperSlab2);
+
+        //from wood diretso
+        Path2D.Double upperSlab3 = new Path2D.Double();
+        upperSlab3.moveTo(665, 325);
+        upperSlab3.lineTo(710, 425);
+        upperSlab3.lineTo(710, 600);
+        g2d.draw(upperSlab3);
     }
     public void adjustX(double distance) {
 
