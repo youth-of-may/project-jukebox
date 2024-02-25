@@ -75,7 +75,17 @@ public class Outline implements DrawingObject{
         upperSlab3.moveTo(665, 325);
         upperSlab3.lineTo(710, 425);
         upperSlab3.lineTo(710, 600);
+        
         g2d.draw(upperSlab3);
+
+        //hati sa gitna ng box
+        Path2D.Double hati = new Path2D.Double();
+        hati.moveTo(150, 210);
+        hati.lineTo(675, 210);
+        hati.closePath();
+        g2d.draw(hati);
+        
+
     }
     public void adjustX(double distance) {
 
