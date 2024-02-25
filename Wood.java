@@ -19,7 +19,7 @@ public class Wood implements DrawingObject{
 		line4.moveTo(x-10,y);
 		line4.lineTo(475,300+25);
 		line4.lineTo(680,300+25);
-		line4.lineTo(715,y);
+		line4.lineTo(705,y);
 		line4.closePath();
 		g2d.setColor(new Color(43,31,17));
 		g2d.fill(line4);
