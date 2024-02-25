@@ -13,7 +13,8 @@ public class SceneCanvas extends JComponent{
         elements = new ArrayList<DrawingObject>();
 
         //testing out toolbox
-        elements.add(new ToolBox(0, 0, 100));
+        elements.add(new ToolBox(150, 500, 500));
+        //elements.add(new DiscFrame(50, 70, 100));
         
     /*
      * Add the elements inside the constructor as well
