@@ -1,5 +1,7 @@
 import java.awt.*;
 import java.awt.geom.*;
+
+import com.oracle.graal.compiler.enterprise.l;
 public class Outline implements DrawingObject{
     private double x1, x2, y1, y2;
 
@@ -22,6 +24,33 @@ public class Outline implements DrawingObject{
         upperSlab.closePath();
         g2d.setColor(Color.RED);
         g2d.draw(upperSlab);
+
+        Path2D.Double upperSlab4 = new Path2D.Double();
+        upperSlab4.moveTo(150,75);
+        upperSlab4.lineTo(675, 75);
+        upperSlab4.closePath();
+        g2d.draw(upperSlab4);
+
+        Path2D.Double upperSlab5 = new Path2D.Double();
+        upperSlab5.moveTo(673, 75);
+        upperSlab5.lineTo(670, 325);
+        upperSlab5.closePath();
+        g2d.setColor(Color.RED);
+        g2d.draw(upperSlab5);
+
+        Path2D.Double upperSlab6 = new Path2D.Double();
+        upperSlab6.moveTo(25, 0);
+        upperSlab6.lineTo(150, 75);
+        upperSlab6.closePath();
+        g2d.setColor(Color.BLUE);
+        g2d.draw(upperSlab6);
+
+        Path2D.Double upperSlab7 = new Path2D.Double();
+        upperSlab7.moveTo(673, 75);
+        upperSlab7.lineTo(775, 0);
+        upperSlab7.closePath();
+        g2d.setColor(Color.BLUE);
+        g2d.draw(upperSlab7);
 
         //for the slab
         Path2D.Double path1 = new Path2D.Double();
