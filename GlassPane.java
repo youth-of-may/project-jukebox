@@ -1,18 +1,12 @@
 import java.awt.*;
 import java.awt.geom.*;
-import javax.swing.*;
+public class GlassPane implements DrawingObject {
+    private int x;
+    public GlassPane() {
 
-public class GlassPane extends JComponent {
-	
-	public GlassPane(){
-		
-	}
-	
-	@Override
-	protected void paintComponent(Graphics g){
-		Graphics2D g2d = (Graphics2D) g;
-		
-		Square m1 = new Square(0,0,50,new Color(165,188,185));
+    }
+    public void draw(Graphics2D g2d){
+        Square m1 = new Square(0,0,50,new Color(165,188,185));
 		m1.draw(g2d);
 		
 		Square m2 = new Square(50,0,50,new Color(165,188,185));
@@ -209,5 +203,11 @@ public class GlassPane extends JComponent {
 		
 		Square b14 = new Square(0,750,50,new Color(135,163,172));
 		b14.draw(g2d);
-	}
+    }
+    public void adjustX(double distance){
+        
+    }
+    public double getX() {
+        return x;
+    }
 }

@@ -39,7 +39,7 @@ public class Outline implements DrawingObject{
         g2d.draw(upperSlab5);
 
         Path2D.Double upperSlab6 = new Path2D.Double();
-        upperSlab6.moveTo(25, 0);
+        upperSlab6.moveTo(75, 0);
         upperSlab6.lineTo(150, 75);
         upperSlab6.closePath();
         g2d.setColor(Color.BLUE);
@@ -47,7 +47,7 @@ public class Outline implements DrawingObject{
 
         Path2D.Double upperSlab7 = new Path2D.Double();
         upperSlab7.moveTo(673, 75);
-        upperSlab7.lineTo(775, 0);
+        upperSlab7.lineTo(735, 0);
         upperSlab7.closePath();
         g2d.setColor(Color.BLUE);
         g2d.draw(upperSlab7);
