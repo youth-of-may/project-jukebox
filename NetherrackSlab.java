@@ -14,14 +14,14 @@ public class NetherrackSlab implements DrawingObject {
 	}
 	
 	public void draw(Graphics2D g2d){
-		Rectangle r1 = new Rectangle(x,y,x2,y2,new Color(29,13,14));
+		Rectangle r1 = new Rectangle(x,y+50,x2,y2,new Color(29,13,14));
 		r1.draw(g2d);
 		
 		Path2D.Double line = new Path2D.Double();
-		line.moveTo(50,500);
-		line.lineTo(150,380);
-		line.lineTo(300,380);
-		line.lineTo(300,500);
+		line.moveTo(50,500+50);
+		line.lineTo(150,380+50);
+		line.lineTo(300,380+50);
+		line.lineTo(300,500+50);
 		line.closePath();
 		g2d.draw(line);
 		g2d.fill(line);
