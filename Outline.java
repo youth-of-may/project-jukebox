@@ -84,7 +84,12 @@ public class Outline implements DrawingObject{
         hati.lineTo(675, 210);
         hati.closePath();
         g2d.draw(hati);
+
+        Line l1 = new Line(0, 125, 150,210, 4, Color.RED);
+        l1.draw(g2d);
         
+        Line l2 = new Line(675, 210, 800,115, 4, Color.RED);
+        l2.draw(g2d);
 
     }
     public void adjustX(double distance) {
