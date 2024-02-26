@@ -29,14 +29,17 @@ public class Jukebox implements DrawingObject{
 		g2d.fill(line2);
 		
 		Path2D.Double line3 = new Path2D.Double();
-		line3.moveTo(310,370+25);
-		line3.lineTo(330,310+25);
-		line3.lineTo(470,310+25);
-		line3.lineTo(490,370+25);
+		line3.moveTo(315,370+25);
+		line3.lineTo(335,310+25);
+		line3.lineTo(465,310+25);
+		line3.lineTo(485,370+25);
 		line3.closePath();
 		g2d.setColor(new Color(85,52,37));
 		g2d.draw(line3);
 		g2d.fill(line3);
+		
+		Rectangle hole = new Rectangle(x+55,y-20,95,15, Color.BLACK);
+		hole.draw(g2d);
 	}
 
 	public void adjustX(double distance){
