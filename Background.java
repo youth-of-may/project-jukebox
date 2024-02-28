@@ -2,6 +2,8 @@ import java.awt.*;
 import java.awt.geom.*;
 
 
+
+
 public class Background implements DrawingObject{
     private double x, y, width, height;
     public Background(){
@@ -120,6 +122,8 @@ public class Background implements DrawingObject{
         g2d.fill(woodPlanksTop5);
         g2d.setColor(new Color(36,26,16));
         g2d.draw(woodPlanksTop5);
+        
+        
 
         Path2D.Double woodPlanksTop6 = new Path2D.Double();
         woodPlanksTop6.moveTo(535, 0);
@@ -230,6 +234,29 @@ public class Background implements DrawingObject{
         g2d.fill(sidePlankLeft);
         g2d.setColor(Color.BLACK);
         g2d.draw(sidePlankLeft);
+
+        Path2D.Double sidePlankLeft1 = new Path2D.Double();
+        
+        sidePlankLeft1.moveTo(35,0);
+        sidePlankLeft1.lineTo(75, 120);
+        sidePlankLeft1.lineTo(0,0);
+        sidePlankLeft1.closePath();
+        g2d.setColor(Color.RED);
+        g2d.fill(sidePlankLeft1);
+
+        Path2D.Double sidePlankLeft2 = new Path2D.Double();
+        
+        sidePlankLeft2.moveTo(150,105);
+        sidePlankLeft2.lineTo(150, 150);
+        sidePlankLeft2.lineTo(0,15);
+        sidePlankLeft2.lineTo(0,0);
+        sidePlankLeft2.lineTo(45,0);
+        sidePlankLeft2.closePath();
+        g2d.setColor(Color.RED);
+        //g2d.draw(sidePlankLeft2);
+
+
+        //sidePlankLeft1.lineTo();
         
         Path2D.Double sidePlankRight = new Path2D.Double();
         sidePlankRight.moveTo(735,0);
@@ -242,6 +269,14 @@ public class Background implements DrawingObject{
         g2d.fill(sidePlankRight);
         g2d.setColor(Color.BLACK);
         g2d.draw(sidePlankRight);
+
+        //line for left and right side
+
+        Line left = new Line(150,210, 150, 450, 5, Color.BLACK);
+        left.draw(g2d);
+
+        Line right = new Line(673,210, 673, 400, 5, Color.BLACK);
+        right.draw(g2d);
 
 
         //coordinates of the last lines
@@ -260,6 +295,42 @@ public class Background implements DrawingObject{
         upperSlab7.closePath();
         g2d.setColor(Color.BLUE);
         g2d.draw(upperSlab7);*/
+
+        Rectangle filler4 = new Rectangle(325,310, 150,100,new Color(48,35,19));
+        filler4.draw(g2d);
+
+        Path2D.Double filler1 = new Path2D.Double();
+        filler1.moveTo(476, 175);
+        filler1.lineTo(463, 190);
+        filler1.lineTo(463, 313);
+        filler1.lineTo(476, 375);
+        filler1.closePath();
+        g2d.setColor(new Color(51,36,20));
+        g2d.fill(filler1);
+
+        //filler window and wall
+        Path2D.Double filler2 = new Path2D.Double();
+        filler2.moveTo(478,175);
+        filler2.lineTo(465,190);
+        filler2.lineTo(325,190);
+        filler2.lineTo(330,175);
+        filler2.closePath();
+        g2d.setColor(new Color(37,25,14));
+        g2d.fill(filler2);
+
+        Path2D.Double filler3 = new Path2D.Double();
+        filler3.moveTo(324, 175);
+        filler3.lineTo(324,375);
+        filler3.lineTo(338, 310);
+        filler3.lineTo(338,190);
+        filler3.closePath();
+        g2d.setColor(new Color(60,45,22));
+        g2d.fill(filler3);
+
+        
+        //line that connects wood and window
+        Rectangle discFrameWall = new Rectangle(325, 0, 150, 180, new Color(32,24,13));
+        discFrameWall.draw(g2d);
 
     }
     public void adjustX(double distance) {
