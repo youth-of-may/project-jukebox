@@ -13,23 +13,28 @@ public class SceneCanvas extends JComponent{
         elements = new ArrayList<DrawingObject>();
 
         //testing out toolbox
+        elements.add(new ThreeDWood("shadow", 100, 100, 100, 100));
+
         elements.add(new Background());
         elements.add(new NetherrackSlab(50,500,250,100));
 		
-		elements.add(new Wood(500,425,200));
-        elements.add(new Jukebox(300,375,200));
+		//elements.add(new Wood(500,425,200));
+        //elements.add(new Jukebox(300,375,200));
 
-        elements.add(new GlassPane(350,190,110));
+        elements.add(new GlassPane(352,190,110));
         //elements.add(new GlassPane());
         
-        elements.add(new ToolBox(150, 500, 500));
+        
         //elements.add(new GlassPane(100,0,50,50));
         //elements.add(new Outline());
         //elements.add(new Disc(100,100, 100,100, Color.RED));
         
-        elements.add(new DiscFrame(345, 45, 130));
-        elements.add(new Disc(373, 85, 1, Color.RED));
-    /*
+        elements.add(new DiscFrame(350, 45, 130));
+        elements.add(new Disc(375, 85, 1, Color.RED));
+        elements.add(new Wood(500,425,200));
+        elements.add(new Jukebox(300,375,200));
+        elements.add(new ToolBox(150, 500, 500));
+            /*
      * Add the elements inside the constructor as well
      */
     
