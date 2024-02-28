@@ -17,6 +17,20 @@ public class ElongatedWindow implements DrawingObject{
         g2d.setColor(new Color(171,187,184));
         g2d.draw(outsideRec);
 
+        Square details1 = new Square(x+70, y * 1.45, 10, Color.GRAY);
+        details1.draw(g2d);
+
+        Square details2 = new Square(x+60, y * 1.55, 10, Color.GRAY);
+        details2.draw(g2d);
+
+        Square details3 = new Square(x+50, y * 1.65, 10, Color.GRAY);
+        details3.draw(g2d);
+
+        Square details4 = new Square(x+ 120,y * 1.75, 10, Color.GRAY);
+        details4.draw(g2d);
+
+        Square details5 = new Square(x + 110, y*1.85,10, Color.GRAY);        
+        details5.draw(g2d);
         
     }
     public void adjustX(double distance) {
