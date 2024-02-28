@@ -101,6 +101,10 @@ public class Jukebox implements DrawingObject{
 		
 		BoxDetails row3 = new BoxDetails(325,510);
 		row3.draw(g2d);
+		
+		BoxDetails2 row4 = new BoxDetails2(325,555);
+		row4.draw(g2d);
+		
 	}
 
 	public void adjustX(double distance){
