@@ -61,8 +61,14 @@ public class ThreeDWood implements DrawingObject{
         rightWood.lineTo(490,350);
         g2d.setColor(new Color(27,26,13));
         g2d.fill(rightWood);
-
-        
+/* */
+        Path2D.Double rightWood2 = new Path2D.Double();
+        rightWood2.moveTo(510, 195);
+        rightWood2.moveTo(685, 195);
+        rightWood2.moveTo(685,330);
+        //rightWood2.moveTo(510,330);
+        g2d.setColor(Color.RED);
+        g2d.fill(rightWood2);
 
 
     }

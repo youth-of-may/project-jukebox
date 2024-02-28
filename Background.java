@@ -296,40 +296,40 @@ public class Background implements DrawingObject{
         g2d.setColor(Color.BLUE);
         g2d.draw(upperSlab7);*/
 
-        Rectangle filler4 = new Rectangle(340,310, 150,100,new Color(48,35,19));
+        Rectangle filler4 = new Rectangle(325,310, 150,100,new Color(48,35,19));
         filler4.draw(g2d);
 
         Path2D.Double filler1 = new Path2D.Double();
-        filler1.moveTo(490, 175);
-        filler1.lineTo(477, 190);
-        filler1.lineTo(477, 313);
-        filler1.lineTo(490, 375);
+        filler1.moveTo(476, 175);
+        filler1.lineTo(463, 190);
+        filler1.lineTo(463, 313);
+        filler1.lineTo(476, 375);
         filler1.closePath();
         g2d.setColor(new Color(51,36,20));
         g2d.fill(filler1);
 
         //filler window and wall
         Path2D.Double filler2 = new Path2D.Double();
-        filler2.moveTo(490,175);
-        filler2.lineTo(477,190);
-        filler2.lineTo(352,190);
-        filler2.lineTo(338,175);
+        filler2.moveTo(478,175);
+        filler2.lineTo(465,190);
+        filler2.lineTo(325,190);
+        filler2.lineTo(330,175);
         filler2.closePath();
         g2d.setColor(new Color(37,25,14));
         g2d.fill(filler2);
 
         Path2D.Double filler3 = new Path2D.Double();
-        filler3.moveTo(338, 175);
-        filler3.lineTo(338,375);
-        filler3.lineTo(352, 310);
-        filler3.lineTo(352,190);
+        filler3.moveTo(324, 175);
+        filler3.lineTo(324,375);
+        filler3.lineTo(338, 310);
+        filler3.lineTo(338,190);
         filler3.closePath();
         g2d.setColor(new Color(60,45,22));
         g2d.fill(filler3);
 
         
         //line that connects wood and window
-        Rectangle discFrameWall = new Rectangle(340, 0, 150, 180, new Color(32,24,13));
+        Rectangle discFrameWall = new Rectangle(325, 0, 150, 180, new Color(32,24,13));
         discFrameWall.draw(g2d);
 
     }

@@ -21,7 +21,7 @@ public class SceneCanvas extends JComponent{
 		//elements.add(new Wood(500,425,200));
         //elements.add(new Jukebox(300,375,200));
 
-        elements.add(new GlassPane(352,190,110));
+        elements.add(new GlassPane(338,190,110));
         //elements.add(new GlassPane());
         
         
@@ -29,8 +29,8 @@ public class SceneCanvas extends JComponent{
         //elements.add(new Outline());
         //elements.add(new Disc(100,100, 100,100, Color.RED));
         
-        elements.add(new DiscFrame(350, 45, 130));
-        elements.add(new Disc(375, 85, 1, Color.RED));
+        elements.add(new DiscFrame(335, 45, 130));
+        elements.add(new Disc(362, 85, 1, Color.RED));
         elements.add(new Wood(500,425,200));
         elements.add(new Jukebox(300,375,200));
         elements.add(new ToolBox(150, 500, 500));
