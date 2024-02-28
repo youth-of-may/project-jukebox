@@ -12,14 +12,14 @@ public class Wood implements DrawingObject{
 	}
 	
 	public void draw(Graphics2D g2d){
-		Square w = new Square(x-10,y,size+15,new Color(43,31,17));
+		Square w = new Square(x-10,y,size+40,new Color(43,31,17));
 		w.draw(g2d);
 		
 		Path2D.Double line4 = new Path2D.Double();
 		line4.moveTo(x-10,y);
 		line4.lineTo(475,300+25);
 		line4.lineTo(675,300+25);
-		line4.lineTo(723,y);
+		line4.lineTo(720,y);
 		line4.closePath();
 		g2d.setColor(new Color(43,31,17));
 		g2d.fill(line4);
