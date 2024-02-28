@@ -13,7 +13,7 @@ public class ElongatedWindow implements DrawingObject{
         Stroke oldStroke = g2d.getStroke();
         g2d.setStroke(new BasicStroke(16));
 
-        Rectangle2D.Double outsideRec = new Rectangle2D.Double(x+8, y+15, width-20, height-20);
+        Rectangle2D.Double outsideRec = new Rectangle2D.Double(x+8, y+13, width-20, height-20);
         g2d.setColor(new Color(171,187,184));
         g2d.draw(outsideRec);
 

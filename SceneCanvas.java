@@ -24,7 +24,7 @@ public class SceneCanvas extends JComponent{
 
         elements.add(new GlassPane(338,190,110));
         elements.add(new ElongatedWindow(475,75,200,100));
-        elements.add(new ElongatedWindow(125,75,200,100));
+        elements.add(new ElongatedWindow(150,75,178,100));
         //elements.add(new GlassPane());
         
         
