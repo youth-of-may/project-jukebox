@@ -18,8 +18,8 @@ public class Wood implements DrawingObject{
 		Path2D.Double line4 = new Path2D.Double();
 		line4.moveTo(x-10,y);
 		line4.lineTo(475,300+25);
-		line4.lineTo(675,300+25);
-		line4.lineTo(720,y);
+		line4.lineTo(670,300+25);
+		line4.lineTo(720,y-5);
 		line4.closePath();
 		g2d.setColor(new Color(43,31,17));
 		g2d.fill(line4);
