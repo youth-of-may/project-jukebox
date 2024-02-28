@@ -61,14 +61,26 @@ public class ThreeDWood implements DrawingObject{
         rightWood.lineTo(470,350);
         g2d.setColor(new Color(27,26,13));
         g2d.fill(rightWood);
+
+        Rectangle r1 = new Rectangle(480, 190, 185, 115, new Color(66,50,27));
+        r1.draw(g2d);
+
+        Rectangle r2 = new Rectangle(490, 198, 165, 100, new Color(44,32,16));
+        r2.draw(g2d);
+
+        Rectangle r3 = new Rectangle(500, 205, 145, 85, new Color(64,46,25));
+        r3.draw(g2d);
+
+        Rectangle r4 = new Rectangle(510, 212, 125, 70, new Color(54,38,22));
+        r4.draw(g2d);
+
+        Rectangle r5 = new Rectangle(525, 219, 95, 55, new Color(42,30,18));
+        r5.draw(g2d);
+
+        Rectangle r6 = new Rectangle(540, 226, 65, 40, new Color(79,59,32));
+        r6.draw(g2d);
 /* */
-        Path2D.Double rightWood2 = new Path2D.Double();
-        rightWood2.moveTo(510, 195);
-        rightWood2.moveTo(685, 195);
-        rightWood2.moveTo(685,330);
-        //rightWood2.moveTo(510,330);
-        g2d.setColor(Color.RED);
-        g2d.fill(rightWood2);
+        
 
 
     }
