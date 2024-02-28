@@ -11,8 +11,9 @@ public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
     public SceneCanvas() {
         elements = new ArrayList<DrawingObject>();
-
+        elements.add(new Background());
         //testing out toolbox
+        //elements.add(new GradientBackground());
         elements.add(new ThreeDWood("shadow", 100, 100, 100, 100));
 
         
@@ -23,8 +24,10 @@ public class SceneCanvas extends JComponent{
 
         elements.add(new GlassPane(338,190,110));
         elements.add(new ElongatedWindow(475,75,200,100));
+        elements.add(new ElongatedWindow(125,75,200,100));
         //elements.add(new GlassPane());
-        elements.add(new Background());
+        
+        
         
         //elements.add(new GlassPane(100,0,50,50));
         //elements.add(new Outline());
