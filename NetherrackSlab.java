@@ -25,6 +25,54 @@ public class NetherrackSlab implements DrawingObject {
 		line.closePath();
 		g2d.draw(line);
 		g2d.fill(line);
+		
+		Line l0 = new Line(x+5,y+50,300,y+50,5,new Color(9,5,6));
+		l0.draw(g2d);
+		
+		Line l1 = new Line(x+50,y+50,200,380+50,5,new Color(9,5,6));
+		l1.draw(g2d);
+		
+		Line l2 = new Line(x+100,y+50,250,380+50,5,new Color(9,5,6));
+		l2.draw(g2d);
+		
+		Line l3 = new Line(x+150,y+50,300,380+50,5,new Color(9,5,6));
+		l3.draw(g2d);
+		
+		Line hori = new Line(x+25,y+20,x+70,y+20,5,new Color(9,5,6));
+		hori.draw(g2d);
+		
+		Line hori2 = new Line(x+85,y-50,x+135,y-50,5,new Color(9,5,6));
+		hori2.draw(g2d);
+		
+		Line hori3 = new Line(x+70,y+30,x+120,y+30,5,new Color(9,5,6));
+		hori3.draw(g2d);
+		
+		Line hori4 = new Line(x+110,y-25,x+160,y-25,5,new Color(9,5,6));
+		hori4.draw(g2d);
+		
+		Line hori5 = new Line(x+140,y-60,x+190,y-60,5,new Color(9,5,6));
+		hori5.draw(g2d);
+		
+		Line hori6 = new Line(x+90,y,x+140,y,5,new Color(9,5,6));
+		hori6.draw(g2d);
+		
+		Line hori7 = new Line(x+150,y-10,x+200,y-10,5,new Color(9,5,6));
+		hori7.draw(g2d);
+		
+		Line hori8 = new Line(x+210,y-20,x+260,y-20,5,new Color(9,5,6));
+		hori8.draw(g2d);
+		
+		Line verti = new Line(x+50,y+50,x+50,y+100,5,new Color(9,5,6));
+		verti.draw(g2d);
+		
+		Line verti2 = new Line(x+100,y+50,x+100,y+100,5,new Color(9,5,6));
+		verti2.draw(g2d);
+		
+		Line verti3 = new Line(x+150,y+50,x+150,y+100,5,new Color(9,5,6));
+		verti3.draw(g2d);
+		
+		Line verti4 = new Line(x+200,y+50,x+200,y+100,5,new Color(9,5,6));
+		verti4.draw(g2d);
 	}
 
 	public void adjustX(double distance){
