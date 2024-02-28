@@ -17,19 +17,20 @@ public class ElongatedWindow implements DrawingObject{
         g2d.setColor(new Color(171,187,184));
         g2d.draw(outsideRec);
 
-        Square details1 = new Square(x+70, y * 1.45, 10, Color.GRAY);
+       
+        Square details1 = new Square(x+70, y * 1.45, 10, new Color(171,187,184));
         details1.draw(g2d);
 
-        Square details2 = new Square(x+60, y * 1.55, 10, Color.GRAY);
+        Square details2 = new Square(x+60, y * 1.55, 10, new Color(134,166,168));
         details2.draw(g2d);
 
-        Square details3 = new Square(x+50, y * 1.65, 10, Color.GRAY);
+        Square details3 = new Square(x+50, y * 1.65, 10, new Color(168,187,185));
         details3.draw(g2d);
 
-        Square details4 = new Square(x+ 120,y * 1.75, 10, Color.GRAY);
+        Square details4 = new Square(x+ 120,y * 1.75, 10, new Color(171,187,184));
         details4.draw(g2d);
 
-        Square details5 = new Square(x + 110, y*1.85,10, Color.GRAY);        
+        Square details5 = new Square(x + 110, y*1.85,10, new Color(134,166,168));        
         details5.draw(g2d);
         
     }
