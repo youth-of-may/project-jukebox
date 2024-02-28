@@ -22,6 +22,7 @@ public class SceneCanvas extends JComponent{
         //elements.add(new Jukebox(300,375,200));
 
         elements.add(new GlassPane(338,190,110));
+        elements.add(new GlassPane(470,75,100));
         //elements.add(new GlassPane());
         
         
