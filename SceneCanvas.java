@@ -11,19 +11,22 @@ public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
     public SceneCanvas() {
         elements = new ArrayList<DrawingObject>();
-
+        elements.add(new Background());
         //testing out toolbox
+        //elements.add(new GradientBackground());
         elements.add(new ThreeDWood("shadow", 100, 100, 100, 100));
 
-        elements.add(new Background());
+        
         elements.add(new NetherrackSlab(50,500,250,100));
 		
 		//elements.add(new Wood(500,425,200));
         //elements.add(new Jukebox(300,375,200));
 
         elements.add(new GlassPane(338,190,110));
-        elements.add(new GlassPane(470,75,100));
+        elements.add(new ElongatedWindow(475,75,200,100));
+        elements.add(new ElongatedWindow(150,75,178,100));
         //elements.add(new GlassPane());
+        
         
         
         //elements.add(new GlassPane(100,0,50,50));

@@ -9,13 +9,14 @@ public class Background implements DrawingObject{
     }
     public void draw(Graphics2D g2d) {
 
-        //Gradient
-		Point2D.Double p = new Point2D.Double(800,200);
+        Point2D.Double p = new Point2D.Double(800,200);
 		Point2D.Double p2 = new Point2D.Double(800,400);
 		
 		GradientPaint gPaint = new GradientPaint(p,new Color(171,208,253), p2, new Color(252,218,190));
 		g2d.setPaint(gPaint);
 		g2d.fillRect(0,0,800,600);
+
+        
 		
 		//for the top part
 
