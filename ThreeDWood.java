@@ -59,8 +59,12 @@ public class ThreeDWood implements DrawingObject{
         rightWood.lineTo(675,175);
         rightWood.lineTo(675, 350);
         rightWood.lineTo(490,350);
-        g2d.setColor(Color.BLACK);
+        g2d.setColor(new Color(27,26,13));
         g2d.fill(rightWood);
+
+        
+
+
     }
     public void adjustX(double distance) {
 
