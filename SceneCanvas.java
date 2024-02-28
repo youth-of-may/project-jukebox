@@ -18,6 +18,7 @@ public class SceneCanvas extends JComponent{
 
         
         elements.add(new NetherrackSlab(50,500,250,100));
+	elements.add(new Sign(160,200,150,90));
 		
 		//elements.add(new Wood(500,425,200));
         //elements.add(new Jukebox(300,375,200));
