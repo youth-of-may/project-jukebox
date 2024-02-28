@@ -285,6 +285,24 @@ public class Background implements DrawingObject{
         Line right = new Line(673,210, 673, 400, 5, Color.BLACK);
         right.draw(g2d);
 
+        //Filling the left and right side with colors muna
+
+        Path2D.Double bottomLeftFill = new Path2D.Double();
+        bottomLeftFill.moveTo(150,210);
+        bottomLeftFill.lineTo(150,600);
+        bottomLeftFill.lineTo(0,600);
+        bottomLeftFill.lineTo(0,125);
+        bottomLeftFill.closePath();
+        g2d.setColor(new Color(56,40,24));
+        g2d.fill(bottomLeftFill);
+
+        Path2D.Double bottomRightFill = new Path2D.Double();
+        bottomRightFill.moveTo(673,210);
+        bottomRightFill.lineTo(673,600);
+        bottomRightFill.lineTo(800, 600);
+        bottomRightFill.lineTo(800, 125);
+        g2d.setColor(new Color(56,40,24));
+        g2d.fill(bottomRightFill);
 
         //coordinates of the last lines
         //woodPlanksTop9.lineTo(673,75);
