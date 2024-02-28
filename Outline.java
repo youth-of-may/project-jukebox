@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.geom.*;
 
-import com.oracle.graal.compiler.enterprise.l;
+
 public class Outline implements DrawingObject{
     private double x1, x2, y1, y2;
 
@@ -90,6 +90,15 @@ public class Outline implements DrawingObject{
         
         Line l2 = new Line(675, 210, 800,115, 4, Color.RED);
         l2.draw(g2d);
+
+        //outline for mid plank 
+        Path2D.Double midPlank = new Path2D.Double();
+        midPlank.moveTo(350,75);
+        midPlank.lineTo(350,210);
+        midPlank.lineTo(475, 210);
+        midPlank.lineTo(475,75);
+        midPlank.closePath();
+        g2d.draw(midPlank);
 
     }
     public void adjustX(double distance) {
