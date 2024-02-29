@@ -242,24 +242,12 @@ public class Background implements DrawingObject{
         g2d.setColor(Color.BLACK);
         g2d.draw(sidePlankLeft);
 
-        Path2D.Double sidePlankLeft1 = new Path2D.Double();
-        
-        sidePlankLeft1.moveTo(35,0);
-        sidePlankLeft1.lineTo(75, 120);
-        sidePlankLeft1.lineTo(0,0);
-        sidePlankLeft1.closePath();
-        g2d.setColor(Color.RED);
-        g2d.fill(sidePlankLeft1);
 
-        Path2D.Double sidePlankLeft2 = new Path2D.Double();
+        //Path2D.Double sidePlankLeft1 = new Path2D.Double();
+        //sidePlankLeft1.moveTo(45,0);
         
-        sidePlankLeft2.moveTo(150,105);
-        sidePlankLeft2.lineTo(150, 150);
-        sidePlankLeft2.lineTo(0,15);
-        sidePlankLeft2.lineTo(0,0);
-        sidePlankLeft2.lineTo(45,0);
-        sidePlankLeft2.closePath();
-        g2d.setColor(Color.RED);
+        Line l1Left = new Line(45,0, 150, 90, 6, Color.RED);
+        l1Left.draw(g2d);
         //g2d.draw(sidePlankLeft2);
 
 
@@ -276,6 +264,8 @@ public class Background implements DrawingObject{
         g2d.fill(sidePlankRight);
         g2d.setColor(Color.BLACK);
         g2d.draw(sidePlankRight);
+
+        
 
         //line for left and right side
 
