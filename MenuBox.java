@@ -28,7 +28,7 @@ public class MenuBox implements DrawingObject {
         outerS = new Square(x,y,size, new Color(169,171,168));
         middleS = new Square(x+5, y+4.5, size*0.85, new Color(92,92,92));
         innerS = new Square(x+8,y+8.5, size *.70, new Color(39,29,6));
-        disc = new Disc(x+8, y+13, 0.45, colorList.get(count));
+        disc = new Disc(x+10, y+15, 0.40, colorList.get(count));
         addCount();
     }
     private static void addCount() {
@@ -36,12 +36,49 @@ public class MenuBox implements DrawingObject {
         count++;
     }
     public void draw(Graphics2D g2d){
+        double tentativeY = y;
         float thickness = 4;
+
+        //declare a lighter color for the shadow/for the thingy behind the discs
         outerS.draw(g2d);
         middleS.draw(g2d);
         innerS.draw(g2d);
+
+        y+=3;
         
+        //shadows behind the discs
+        Line layer1 = new Line((x+20), y+12, x+30, y+12, 4, Color.RED);
+        layer1.draw(g2d);
+
+        Line layer2 = new Line((x+15), y+15, x+35, y+15, 4, Color.RED);
+        layer2.draw(g2d);
+        
+        Line layer3 = new Line((x+10), y+20, x+40, y+20, 4, Color.RED);
+        layer3.draw(g2d);
         disc.draw(g2d);
+
+        Line layer4 = new Line((x+10), y+23, x+40, y+23, 4, Color.RED);
+        layer4.draw(g2d);
+
+        Line layer5 = new Line((x+13), y+28, x+35, y+28, 4, Color.RED);
+        layer5.draw(g2d);
+
+        Line layer6 = new Line((x+20), y+31, x+30, y+31, 4, Color.RED);
+        layer6.draw(g2d);
+
+        Line layer7 = new Line((x+20), y+32, x+30, y+32, 4, Color.RED);
+        layer7.draw(g2d);
+
+        disc.draw(g2d);
+
+        /*
+         * innerS = new Square(x+8,y+8.5, size *.70, new Color(39,29,6));
+         */
+        /*
+         * 
+         */
+
+         y = tentativeY;
 
         //for the border
         Line topBorder = new Line(x,y,x+size,y,thickness, Color.BLACK);
@@ -55,6 +92,8 @@ public class MenuBox implements DrawingObject {
 
         Line rightBorder = new Line(x+size,y,x+size,y+ size,thickness, new Color(70,73,67));
         rightBorder.draw(g2d);
+
+        
     }
     public void adjustX(double distance){
 
