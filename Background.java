@@ -230,6 +230,8 @@ public class Background implements DrawingObject{
         //l10.draw(g2d);
         Line l11 = new Line(675, 210, 800,115, 4, Color.RED);
         //l11.draw(g2d);
+
+        Color planksColor = new Color(36,26,16);
         Path2D.Double sidePlankLeft = new Path2D.Double();
         sidePlankLeft.moveTo(0, 125);
         sidePlankLeft.lineTo(150, 210);
@@ -239,15 +241,34 @@ public class Background implements DrawingObject{
         sidePlankLeft.closePath();
         g2d.setColor(new Color(86,61,31));
         g2d.fill(sidePlankLeft);
-        g2d.setColor(Color.BLACK);
+        g2d.setColor(planksColor);
         g2d.draw(sidePlankLeft);
 
 
         //Path2D.Double sidePlankLeft1 = new Path2D.Double();
         //sidePlankLeft1.moveTo(45,0);
         
-        Line l1Left = new Line(45,0, 150, 90, 6, Color.RED);
+        Line l1Left = new Line(45,0, 150, 90, 6, planksColor);
         l1Left.draw(g2d);
+
+        Line l1midLine = new Line(115, 40, 115, 55, 6, planksColor);
+        l1midLine.draw(g2d);
+
+        Line l2Left = new Line(0,15, 160, 140, 6, planksColor);
+        l2Left.draw(g2d);
+
+        Line l2midLine = new Line(50,7, 50, 50, 6, planksColor);
+        l2midLine.draw(g2d);
+
+
+        Line l3Left = new Line(0,70, 170, 185, 6, planksColor);
+        l3Left.draw(g2d);
+
+        Line l3midLine = new Line(100, 95, 100, 135, 6, planksColor);
+        l3midLine.draw(g2d);
+
+        Line l4midLine = new Line(75, 125, 75, 163, 6, planksColor);
+        l4midLine.draw(g2d);
         //g2d.draw(sidePlankLeft2);
 
 
@@ -257,13 +278,37 @@ public class Background implements DrawingObject{
         sidePlankRight.moveTo(735,0);
         sidePlankRight.lineTo(673,75);
         sidePlankRight.lineTo(673,210);
-        sidePlankRight.lineTo(800,125);
+        sidePlankRight.lineTo(800,120);
         sidePlankRight.lineTo(800,0);
         sidePlankRight.closePath();
         g2d.setColor(new Color(87,60,31));
         g2d.fill(sidePlankRight);
         g2d.setColor(Color.BLACK);
         g2d.draw(sidePlankRight);
+
+        //lines for the right part 
+
+        Line l1Right = new Line(673,90, 755, 0, 6, planksColor);
+        l1Right.draw(g2d);
+
+        Line l1RightmidLine = new Line(700, 45, 700, 60, 6, planksColor);
+        l1RightmidLine.draw(g2d);
+        
+
+        Line l2Right = new Line(800,15, 673, 135, 6, planksColor);
+        l2Right.draw(g2d);
+
+        Line l2RightmidLine = new Line(765, 0, 765,45, 6, planksColor);
+        l2RightmidLine.draw(g2d);
+
+        Line l3Right = new Line(673,180, 800, 70, 6, planksColor);
+        l3Right.draw(g2d);
+
+        Line l3RightmidLine = new Line(735, 80, 735, 125, 6, planksColor);
+        l3RightmidLine.draw(g2d);
+
+        Line l4RightmidLine = new Line(690, 170, 690, 200, 6, planksColor);
+        l4RightmidLine.draw(g2d);
 
         
 
@@ -290,9 +335,18 @@ public class Background implements DrawingObject{
         bottomRightFill.moveTo(673,210);
         bottomRightFill.lineTo(673,600);
         bottomRightFill.lineTo(800, 600);
-        bottomRightFill.lineTo(800, 125);
+        bottomRightFill.lineTo(800, 120);
         g2d.setColor(new Color(56,40,24));
         g2d.fill(bottomRightFill);
+
+        
+        //for the space between slab and sign
+        Rectangle bottomCenterFill = new Rectangle(150, 320, 180, 110, new Color(56,40,24));
+        bottomCenterFill.draw(g2d);
+
+        Line bottomCenterFillShadow = new Line(153,320, 153,450, 6, new Color(48,36,20, 80));
+        bottomCenterFillShadow.draw(g2d);
+
 
         //coordinates of the last lines
         //woodPlanksTop9.lineTo(673,75);
