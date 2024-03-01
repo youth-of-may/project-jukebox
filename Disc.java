@@ -34,6 +34,10 @@ public class Disc implements DrawingObject {
 
 		Square d5 = new Square(x+(30*percentage),y+(15*percentage),15*percentage,color);
 		d5.draw(g2d);
+
+		//adding details to the disc 
+		Line detail1 = new Line(x+13,y+(10*percentage),x+10+(5*percentage),y+(percentage*10), Math.round(6*percentage), new Color(82,81,82));
+		detail1.draw(g2d);
 		
 	}
 	

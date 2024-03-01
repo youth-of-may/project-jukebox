@@ -39,6 +39,7 @@ public class SceneCanvas extends JComponent{
         elements.add(new Wood(500,425,200));
         elements.add(new Jukebox(300,375,200));
         elements.add(new ToolBox(150, 500, 500));
+	elements.add(new Candles(550,300));
             /*
      * Add the elements inside the constructor as well
      */
