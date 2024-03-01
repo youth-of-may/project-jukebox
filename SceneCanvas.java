@@ -5,10 +5,13 @@
  //this is where we will draw the elements of the animated scene
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Rectangle2D;
+import java.awt.geom.*;
 import java.util.*;
-public class SceneCanvas extends JComponent{
+import java.awt.event.*;
+public class SceneCanvas extends JComponent implements KeyListener{
     private ArrayList<DrawingObject> elements;
+	private JLabel label;
+	
     public SceneCanvas() {
         elements = new ArrayList<DrawingObject>();
         elements.add(new Background());
@@ -18,7 +21,7 @@ public class SceneCanvas extends JComponent{
 
         
         elements.add(new NetherrackSlab(50,500,250,100));
-	elements.add(new Sign(160,200,155,90));
+		elements.add(new Sign(160,200,155,90));
 		
 		//elements.add(new Wood(500,425,200));
         //elements.add(new Jukebox(300,375,200));
@@ -39,7 +42,7 @@ public class SceneCanvas extends JComponent{
         elements.add(new Wood(500,425,200));
         elements.add(new Jukebox(300,375,200));
         elements.add(new ToolBox(150, 500, 500));
-	elements.add(new Candles(550,300));
+		elements.add(new Candles(550,300));
             /*
      * Add the elements inside the constructor as well
      */
@@ -61,5 +64,17 @@ of the shapes in the list.
         }
         
     }
+	
+	public void keyPressed(KeyEvent e){
+		
+	}
+	
+	public void keyReleased(KeyEvent e){
+		
+	}
+	
+	public void keyTyped(KeyEvent e){
+		
+	}
     
 }
