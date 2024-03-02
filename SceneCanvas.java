@@ -42,7 +42,12 @@ public class SceneCanvas extends JComponent implements KeyListener{
         elements.add(new Wood(500,425,200));
         elements.add(new Jukebox(300,375,200));
         elements.add(new ToolBox(150, 500, 500));
-		elements.add(new Candles(550,300));
+	elements.add(new Candles(550,300));
+	elements.add(new Fire(555,260));
+	elements.add(new Fire(575,210));
+	elements.add(new Fire(600,200));
+	elements.add(new Smoke(555,200));
+	elements.add(new MusicNote(390,320));
             /*
      * Add the elements inside the constructor as well
      */
