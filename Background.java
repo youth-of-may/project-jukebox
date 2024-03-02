@@ -401,6 +401,12 @@ public class Background implements DrawingObject{
         Rectangle discFrameWall = new Rectangle(325, 0, 150, 180, new Color(32,24,13));
         discFrameWall.draw(g2d);
 
+	WallDetailsMain wdm = new WallDetailsMain(0,0);
+	wdm.draw(g2d);
+		
+	WallDetailsMain wdm2 = new WallDetailsMain(720,20);
+	wdm2.draw(g2d);
+
     }
     public void adjustX(double distance) {
 
