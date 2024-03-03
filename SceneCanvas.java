@@ -14,6 +14,7 @@ import javax.sound.sampled.*;
 public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
 	private Action zero, one, two,three, four,five, six,seven,eight,nine;
+	private double y = 200, max_y = 100, max_y2 = 290, y2 = 170, y3 = 180, y4 = 320;
 	
     public SceneCanvas() {
 
@@ -51,7 +52,6 @@ public class SceneCanvas extends JComponent{
 	    elements.add(new Fire(555,260));
 	    elements.add(new Fire(575,210));
 	    elements.add(new Fire(600,200));
-	    elements.add(new MusicNote(390,320));
             /*
      * Add the elements inside the constructor as well
      */
@@ -99,6 +99,13 @@ of the shapes in the list.
 			y3--;
 			if (y3==max_y){
 				y3 = 180;
+			}
+		}
+
+	    	if(y4>max_y2 || y<0){
+			y4--;
+			if (y4==max_y2){
+				y4 = 320;
 			}
 		}
 		
