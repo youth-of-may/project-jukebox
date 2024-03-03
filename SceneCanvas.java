@@ -19,6 +19,7 @@ public class SceneCanvas extends JComponent{
     private AudioInputStream zeroStream, oneStream, twoStream, threeStream, fourStream, fiveStream, sixStream, sevenStream, eightStream, nineStream;
     private Clip clip;
     private ToolBox toolbox;
+	private double y = 200, max_y = 100, max_y2 = 290, y2 = 170, y3 = 180, y4 = 320;
 	
     public SceneCanvas() {
 
@@ -96,8 +97,6 @@ public class SceneCanvas extends JComponent{
 	    elements.add(new Fire(555,260));
 	    elements.add(new Fire(575,210));
 	    elements.add(new Fire(600,200));
-	    elements.add(new Smoke(555,200));
-	    elements.add(new MusicNote(390,320));
             /*
      * Add the elements inside the constructor as well
      */
@@ -110,14 +109,56 @@ through this ArrayList to repeatedly execute instructions affecting the shapes. 
 can have a for loop inside the paintComponent method that calls your custom draw method on all
 of the shapes in the list.
      */
-    @Override
+@Override
     protected void paintComponent(Graphics g) {
-        Graphics2D g2d = (Graphics2D) g;
+		super.paintComponent(g);
+		Graphics2D g2d = (Graphics2D) g;
         
         for (DrawingObject drawingObj : elements) {
             drawingObj.draw(g2d);
         }
-        
+        Smoke smoke = new Smoke(555,y);
+		smoke.draw(g2d);
+		
+		Smoke smoke2 = new Smoke(570,y2);
+		smoke2.draw(g2d);
+		
+		Smoke smoke3 = new Smoke(600,y3);
+		smoke3.draw(g2d);
+		
+		if(y>max_y || y<0){
+			y--;
+			if (y==max_y){
+				y = 200;
+			}
+		}
+		
+		if(y2>max_y || y2<0){
+			y2--;
+			if (y2==max_y){
+				y2 = 170;
+			}
+		}
+		
+		if(y3>max_y || y3<0){
+			y3--;
+			if (y3==max_y){
+				y3 = 180;
+			}
+		}
+
+	    	if(y4>max_y2 || y<0){
+			y4--;
+			if (y4==max_y2){
+				y4 = 320;
+			}
+		}
+		
+		try{
+		Thread.sleep(20);
+		}catch(Exception ex){}
+		revalidate();
+		repaint();
     }
 	
     private class ZeroAction extends AbstractAction {
