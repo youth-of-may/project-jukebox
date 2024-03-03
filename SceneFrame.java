@@ -30,7 +30,8 @@ public class SceneFrame {
         playButton.setForeground(new Color(76,76,76));
         playButton.setFocusPainted(false);
         playButton.setFont(minecraft);
-
+        playButton.setBorder(BorderFactory.createRaisedBevelBorder());
+        
         
         invisibleLabel = new JLabel();
         invisibleLabel.setOpaque(true);
@@ -46,6 +47,7 @@ public class SceneFrame {
         stopButton.setBackground(new Color(198,198,198));
         stopButton.setForeground(new Color(76,76,76));
         stopButton.setFont(minecraft);
+        stopButton.setBorder(BorderFactory.createRaisedBevelBorder());
 
     }
     public void setUpGUI() {
