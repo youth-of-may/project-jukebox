@@ -129,6 +129,11 @@ of the shapes in the list.
         for (DrawingObject drawingObj : elements) {
             drawingObj.draw(g2d);
         }
+
+	    g2d.setPaint(Color.cyan);
+		g2d.setFont(new Font("minecraft",Font.BOLD,13));
+		g2d.drawString("Minecraft & Chill",165,250);
+	    
         Smoke smoke = new Smoke(555,y);
 		smoke.draw(g2d);
 		
