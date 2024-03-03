@@ -125,7 +125,10 @@ of the shapes in the list.
 		
 		Smoke smoke3 = new Smoke(600,y3);
 		smoke3.draw(g2d);
-		
+
+		MusicNote mn = new MusicNote(390,y4);
+		mn.draw(g2d);
+	    
 		if(y>max_y || y<0){
 			y--;
 			if (y==max_y){
