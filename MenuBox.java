@@ -57,7 +57,9 @@ public class MenuBox implements DrawingObject {
         y+=3;
         //color highlighted
         if(selected){
-        shadow = new Color(53,46,15);
+        g2d.setColor(new Color(68,11,11));
+        g2d.fill(r1);
+        shadow = new Color(218,165,32);
         //shadows behind the discs
         Line layer1 = new Line((x+20), y+12, x+30, y+12, 4, shadow);
         layer1.draw(g2d);
@@ -125,6 +127,9 @@ public class MenuBox implements DrawingObject {
     }
     public void resetSelect () {
         selected = false;
+    }
+    public boolean returnSelected() {
+        return selected;
     }
     
 }

@@ -14,6 +14,7 @@ import javax.sound.sampled.*;
 
 public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
+    private boolean[] amISelected;
 	private Action zero, one, two,three, four,five, six,seven,eight,nine;
     private File aria, blocks, cat, chirp, door, hauntMuskie,kyoto, mall, mutation, strad;
     private AudioInputStream zeroStream, oneStream, twoStream, threeStream, fourStream, fiveStream, sixStream, sevenStream, eightStream, nineStream;
@@ -24,7 +25,10 @@ public class SceneCanvas extends JComponent{
 	
     public SceneCanvas() {
 
-        //for the boolean arraylist
+        //for the boolean array
+        amISelected = new boolean[10];
+        
+
 
         //selected = new ArrayList<>();
         
@@ -174,6 +178,16 @@ of the shapes in the list.
 		revalidate();
 		repaint();
     }
+    public void updateArray() {
+        for (int i = 0; i<10; i++) {
+            amISelected[i] = toolbox.returnMenuBox(i).returnSelected();
+        }
+    }
+    public void resetSelected() {
+        for (int i = 0; i<10; i++) {
+            toolbox.returnMenuBox(i).resetSelect();
+        }
+    }
 	
     private class ZeroAction extends AbstractAction {
         @Override 
@@ -183,6 +197,10 @@ of the shapes in the list.
             //m.highlightBox();
 
             try {
+            resetSelected();
+            MenuBox m = toolbox.returnMenuBox(0);
+            m.selectBox();
+
             zeroStream = AudioSystem.getAudioInputStream(aria);
             clip = AudioSystem.getClip();
             clip.open(zeroStream);
@@ -190,15 +208,10 @@ of the shapes in the list.
 			repaint();
 
             }
-            catch(UnsupportedAudioFileException e) {
+            catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
 
             }
-            catch(LineUnavailableException e) {
-
-            }
-            catch(IOException e) {
-
-            }
+            
         }
     }
 
@@ -207,6 +220,10 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 1");
             try {
+                resetSelected();
+                MenuBox m = toolbox.returnMenuBox(1);
+                m.selectBox();
+
                 oneStream = AudioSystem.getAudioInputStream(blocks);
                 clip = AudioSystem.getClip();
                 clip.open(oneStream);
@@ -214,14 +231,8 @@ of the shapes in the list.
 				repaint();
 				
                 }
-                catch(UnsupportedAudioFileException e) {
-                
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+
                 }
         }
     }
@@ -231,6 +242,10 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 2");
             try {
+                resetSelected();
+                MenuBox m = toolbox.returnMenuBox(2);
+                m.selectBox();
+
                 twoStream = AudioSystem.getAudioInputStream(cat);
                 clip = AudioSystem.getClip();
                 clip.open(twoStream);
@@ -238,14 +253,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
-                
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+
                 }
             
             
@@ -258,6 +267,11 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 3");
             try {
+                resetSelected();
+                MenuBox m = toolbox.returnMenuBox(3);
+                m.selectBox();
+
+
                 threeStream = AudioSystem.getAudioInputStream(chirp);
                 clip = AudioSystem.getClip();
                 clip.open(threeStream);
@@ -265,14 +279,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
-                
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+
                 }
             
             
@@ -285,6 +293,10 @@ of the shapes in the list.
             System.out.println("You pressed 4");
             
             try {
+                resetSelected();
+                MenuBox m = toolbox.returnMenuBox(4);
+                m.selectBox();
+
                 fourStream = AudioSystem.getAudioInputStream(door);
                 clip = AudioSystem.getClip();
                 clip.open(fourStream);
@@ -292,14 +304,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
-                
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+
                 }
             
         }
@@ -310,6 +316,11 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 5");
             try {
+                resetSelected();
+                MenuBox m = toolbox.returnMenuBox(5);
+                m.selectBox();
+
+
                 fiveStream = AudioSystem.getAudioInputStream(hauntMuskie);
                 clip = AudioSystem.getClip();
                 clip.open(fiveStream);
@@ -317,14 +328,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
-                
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+
                 }
             
         }
@@ -335,6 +340,10 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 6");
             try {
+                resetSelected();
+                MenuBox m = toolbox.returnMenuBox(6);
+                m.selectBox();
+
                 sixStream = AudioSystem.getAudioInputStream(kyoto);
                 clip = AudioSystem.getClip();
                 clip.open(sixStream);
@@ -342,14 +351,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
-                
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+
                 }
             
         }
@@ -360,6 +363,10 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 7");
             try {
+                resetSelected();
+                MenuBox m = toolbox.returnMenuBox(7);
+                m.selectBox();
+
                 sevenStream = AudioSystem.getAudioInputStream(mall);
                 clip = AudioSystem.getClip();
                 clip.open(sevenStream);
@@ -367,14 +374,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
-                
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+
                 }
             
         }
@@ -385,6 +386,10 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 8");
             try {
+                resetSelected();
+                MenuBox m = toolbox.returnMenuBox(8);
+                m.selectBox();
+
                 eightStream = AudioSystem.getAudioInputStream(mutation);
                 clip = AudioSystem.getClip();
                 clip.open(eightStream);
@@ -392,14 +397,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
-                
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+
                 }
             
         }
@@ -410,6 +409,10 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 9");
             try {
+                resetSelected();
+                MenuBox m = toolbox.returnMenuBox(9);
+                m.selectBox();
+
                 nineStream = AudioSystem.getAudioInputStream(strad);
                 clip = AudioSystem.getClip();
                 clip.open(nineStream);
@@ -417,14 +420,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
-                
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+
                 }
         }
     }
