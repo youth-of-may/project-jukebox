@@ -130,7 +130,7 @@ of the shapes in the list.
             drawingObj.draw(g2d);
         }
 
-	    g2d.setPaint(Color.cyan);
+	    g2d.setPaint(Color.black);
 		g2d.setFont(new Font("minecraft",Font.BOLD,13));
 		g2d.drawString("Minecraft & Chill",165,250);
 	    
