@@ -8,14 +8,57 @@ import java.awt.*;
 import java.awt.geom.*;
 import java.util.*;
 import java.awt.event.*;
+import java.io.IOException;
 import java.io.*;
 import javax.sound.sampled.*;
 
 public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
 	private Action zero, one, two,three, four,five, six,seven,eight,nine;
+    private File aria, blocks, cat, chirp, door, hauntMuskie,kyoto, mall, mutation, strad;
+    private AudioInputStream zeroStream, oneStream, twoStream, threeStream, fourStream, fiveStream, sixStream, sevenStream, eightStream, nineStream;
+    private Clip clip;
+    private ToolBox toolbox;
 	
     public SceneCanvas() {
+
+        //instantiate the music files
+       
+            aria = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Aria Math.wav");
+            blocks = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Blocks.wav");
+            cat = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Cat.wav");
+            chirp = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Chirp.wav");
+            door = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Door.wav");
+            hauntMuskie = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\HauntMuskie.wav");
+            kyoto = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Kyoto.wav");
+            mall = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Mall.wav");
+            mutation = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Mutation.wav");
+            strad = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Strad.wav");
+        
+        //instantiating audiostream
+        try {
+            zeroStream = AudioSystem.getAudioInputStream(aria);
+            oneStream = AudioSystem.getAudioInputStream(blocks);
+            twoStream = AudioSystem.getAudioInputStream(cat);
+            threeStream = AudioSystem.getAudioInputStream(chirp);
+            fourStream = AudioSystem.getAudioInputStream(door);
+            fiveStream = AudioSystem.getAudioInputStream(hauntMuskie);
+            sixStream = AudioSystem.getAudioInputStream(kyoto);
+            sevenStream = AudioSystem.getAudioInputStream(mall);
+            eightStream = AudioSystem.getAudioInputStream(mutation);
+            nineStream = AudioSystem.getAudioInputStream(strad);
+
+            clip = AudioSystem.getClip();
+        }
+        catch (UnsupportedAudioFileException e) {
+
+        }
+        catch (IOException e) {
+
+        }
+        catch(LineUnavailableException e) {
+
+        }
 
         //instantiating the Action instances
         zero = new ZeroAction();
@@ -30,6 +73,8 @@ public class SceneCanvas extends JComponent{
         nine = new NineAction();
     
         
+        //instantiating toolbox
+        toolbox = new ToolBox(150, 500, 500);
         
         elements = new ArrayList<DrawingObject>();
         elements.add(new Background());
@@ -46,7 +91,7 @@ public class SceneCanvas extends JComponent{
         elements.add(new Wood(500,425,200));
         elements.add(new Jukebox(300,375,200));
         
-        elements.add(new ToolBox(150, 500, 500));
+        elements.add(toolbox);
 	    elements.add(new Candles(550,300));
 	    elements.add(new Fire(555,260));
 	    elements.add(new Fire(575,210));
@@ -79,6 +124,25 @@ of the shapes in the list.
         @Override 
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 0");
+            //MenuBox m = toolbox.returnMenuBox(0);
+            //m.highlightBox();
+
+            try {
+            zeroStream = AudioSystem.getAudioInputStream(aria);
+            clip = AudioSystem.getClip();
+            clip.open(zeroStream);
+            
+
+            }
+            catch(UnsupportedAudioFileException e) {
+
+            }
+            catch(LineUnavailableException e) {
+
+            }
+            catch(IOException e) {
+
+            }
         }
     }
 
@@ -86,6 +150,22 @@ of the shapes in the list.
         @Override 
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 1");
+            try {
+                oneStream = AudioSystem.getAudioInputStream(blocks);
+                clip = AudioSystem.getClip();
+                clip.open(oneStream);
+                
+    
+                }
+                catch(UnsupportedAudioFileException e) {
+                
+                }
+                catch(LineUnavailableException e) {
+    
+                }
+                catch(IOException e) {
+                    
+                }
         }
     }
 
@@ -93,6 +173,24 @@ of the shapes in the list.
         @Override 
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 2");
+            try {
+                twoStream = AudioSystem.getAudioInputStream(cat);
+                clip = AudioSystem.getClip();
+                clip.open(twoStream);
+                
+    
+                }
+                catch(UnsupportedAudioFileException e) {
+                
+                }
+                catch(LineUnavailableException e) {
+    
+                }
+                catch(IOException e) {
+                    
+                }
+            
+            
         }
     }
 
@@ -101,6 +199,24 @@ of the shapes in the list.
         @Override 
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 3");
+            try {
+                threeStream = AudioSystem.getAudioInputStream(chirp);
+                clip = AudioSystem.getClip();
+                clip.open(threeStream);
+                
+    
+                }
+                catch(UnsupportedAudioFileException e) {
+                
+                }
+                catch(LineUnavailableException e) {
+    
+                }
+                catch(IOException e) {
+                    
+                }
+            
+            
         }
     }
 
@@ -108,44 +224,146 @@ of the shapes in the list.
         @Override 
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 4");
+            
+            try {
+                fourStream = AudioSystem.getAudioInputStream(door);
+                clip = AudioSystem.getClip();
+                clip.open(fourStream);
+                
+    
+                }
+                catch(UnsupportedAudioFileException e) {
+                
+                }
+                catch(LineUnavailableException e) {
+    
+                }
+                catch(IOException e) {
+                    
+                }
+            
         }
     }
 
     private class FiveAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-
+            System.out.println("You pressed 5");
+            try {
+                fiveStream = AudioSystem.getAudioInputStream(hauntMuskie);
+                clip = AudioSystem.getClip();
+                clip.open(fiveStream);
+                
+    
+                }
+                catch(UnsupportedAudioFileException e) {
+                
+                }
+                catch(LineUnavailableException e) {
+    
+                }
+                catch(IOException e) {
+                    
+                }
+            
         }
     }
 
     private class SixAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-
+            System.out.println("You pressed 6");
+            try {
+                sixStream = AudioSystem.getAudioInputStream(kyoto);
+                clip = AudioSystem.getClip();
+                clip.open(sixStream);
+                
+    
+                }
+                catch(UnsupportedAudioFileException e) {
+                
+                }
+                catch(LineUnavailableException e) {
+    
+                }
+                catch(IOException e) {
+                    
+                }
+            
         }
     }
 
     private class SevenAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-
+            System.out.println("You pressed 7");
+            try {
+                sevenStream = AudioSystem.getAudioInputStream(mall);
+                clip = AudioSystem.getClip();
+                clip.open(sevenStream);
+                
+    
+                }
+                catch(UnsupportedAudioFileException e) {
+                
+                }
+                catch(LineUnavailableException e) {
+    
+                }
+                catch(IOException e) {
+                    
+                }
+            
         }
     }
 
     private class EightAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-
+            System.out.println("You pressed 8");
+            try {
+                eightStream = AudioSystem.getAudioInputStream(mutation);
+                clip = AudioSystem.getClip();
+                clip.open(eightStream);
+                
+    
+                }
+                catch(UnsupportedAudioFileException e) {
+                
+                }
+                catch(LineUnavailableException e) {
+    
+                }
+                catch(IOException e) {
+                    
+                }
+            
         }
     }
 	
     private class NineAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-
+            System.out.println("You pressed 9");
+            try {
+                nineStream = AudioSystem.getAudioInputStream(strad);
+                clip = AudioSystem.getClip();
+                clip.open(nineStream);
+                
+    
+                }
+                catch(UnsupportedAudioFileException e) {
+                
+                }
+                catch(LineUnavailableException e) {
+    
+                }
+                catch(IOException e) {
+                    
+                }
         }
     }
-    public void setUpListener(JButton button) {
+    public void setUpKeyBindings(JButton button, SceneCanvas canvas) {
         button.getInputMap().put(KeyStroke.getKeyStroke("0"),"zeroAction");
         //first is the map name then second is the instance name
         button.getActionMap().put("zeroAction", zero);
@@ -185,5 +403,26 @@ of the shapes in the list.
         button.getInputMap().put(KeyStroke.getKeyStroke("9"),"nineAction");
         //first is the map name then second is the instance name
         button.getActionMap().put("nineAction", nine);
+
+        //repaint the canvas after 
+        canvas.repaint();
     }
+    public void setUpPlayListener(JButton playButton) {
+        playButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                clip.start();
+            }
+        });
+    }
+    public void setUpStopListener (JButton stopButton) {
+        stopButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                clip.stop();
+                clip.close();
+            }
+        });
+    }
+
 }

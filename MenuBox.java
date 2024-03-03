@@ -8,6 +8,7 @@ public class MenuBox implements DrawingObject {
     private Square outerS, middleS, innerS;
     private Disc disc;
     private boolean selected;
+    private Color shadow,innerBox;
     public MenuBox(double x, double y, double size) {
         this.x = x;
         this.y = y;
@@ -27,9 +28,10 @@ public class MenuBox implements DrawingObject {
         colorList.add(new Color(201,250,219));
         colorList.add(new Color(230,156,143));
 
+        innerBox = new Color(39,34,12);
+
         outerS = new Square(x,y,size, new Color(169,171,168));
         middleS = new Square(x+5, y+4.5, size*0.85, new Color(92,92,92));
-        innerS = new Square(x+8,y+8.5, size *.70, new Color(39,34,12));
         disc = new Disc(x+10, y+15, 0.40, colorList.get(count));
         addCount();
     }
@@ -44,12 +46,16 @@ public class MenuBox implements DrawingObject {
         //declare a lighter color for the shadow/for the thingy behind the discs
         outerS.draw(g2d);
         middleS.draw(g2d);
-        innerS.draw(g2d);
+        
+
+        Rectangle2D.Double r1 = new Rectangle2D.Double(x+8,y+8.5, size *.70, size *.70);
+        g2d.setColor(innerBox);
+        g2d.fill(r1);
 
         y+=3;
         //color highlighted
         
-        Color shadow = new Color(53,46,15);
+        shadow = new Color(53,46,15);
         //shadows behind the discs
         Line layer1 = new Line((x+20), y+12, x+30, y+12, 4, shadow);
         layer1.draw(g2d);
@@ -105,9 +111,12 @@ public class MenuBox implements DrawingObject {
     public double getX(){
         return x;
     }
-    public void selectBox() {
-
+    public void highlightBox() {
+        innerBox = Color.WHITE;
+        
+        System.out.println("Highlighted");
         //figure out how to enlarge square when selected
-        selected = true;
+        
     }
+    
 }

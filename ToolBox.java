@@ -24,6 +24,9 @@ public class ToolBox implements DrawingObject{
         
 
     }
+    public MenuBox returnMenuBox (int index) {
+        return boxes.get(index);
+    }
     public void draw(Graphics2D g2d) {
         
         
