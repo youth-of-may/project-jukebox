@@ -26,16 +26,16 @@ public class SceneCanvas extends JComponent{
 
         //instantiate the music files
        
-            aria = new File("Aria Math.wav");
-            blocks = new File("Blocks.wav");
-            cat = new File("Cat.wav");
-            chirp = new File("Chirp.wav");
-            door = new File("Door.wav");
-            hauntMuskie = new File("HauntMuskie.wav");
-            kyoto = new File("Kyoto.wav");
-            mall = new File("Mall.wav");
-            mutation = new File("Mutation.wav");
-            strad = new File("Strad.wav");
+            aria = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Aria Math.wav");
+            blocks = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Blocks.wav");
+            cat = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Cat.wav");
+            chirp = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Chirp.wav");
+            door = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Door.wav");
+            hauntMuskie = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\HauntMuskie.wav");
+            kyoto = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Kyoto.wav");
+            mall = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Mall.wav");
+            mutation = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Mutation.wav");
+            strad = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Strad.wav");
         
         //instantiating audiostream
         try {
@@ -179,12 +179,9 @@ of the shapes in the list.
             zeroStream = AudioSystem.getAudioInputStream(aria);
             clip = AudioSystem.getClip();
             clip.open(zeroStream);
-            MenuBox m = toolbox.returnMenuBox(0);
-            MenuBox.resetSelect();
-            m.selectBox();
             xtext = 0;
 			repaint();
-            
+
             }
             catch(UnsupportedAudioFileException e) {
 
@@ -208,6 +205,7 @@ of the shapes in the list.
                 clip.open(oneStream);
                 xtext = -500;
 				repaint();
+				
                 }
                 catch(UnsupportedAudioFileException e) {
                 
