@@ -14,10 +14,13 @@ public class SceneFrame {
         playButton = new JButton("Play");
         
         invisibleLabel = new JLabel();
+        invisibleLabel.setOpaque(true);
+        invisibleLabel.setBackground(new Color(47,33,19));
 
         test = new JButton();
-        test.setOpaque(false);
-        test.setContentAreaFilled(false);
+        test.setOpaque(true);
+        //test.setContentAreaFilled(false);
+        test.setBackground(new Color(47,33,19));
         test.setBorderPainted(false);
 
         stopButton = new JButton("Stop");
