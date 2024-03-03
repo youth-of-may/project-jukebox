@@ -20,7 +20,7 @@ public class SceneCanvas extends JComponent{
     private Clip clip;
     private ToolBox toolbox;
 	private double y = 200, max_y = 100, max_y2 = 290, y2 = 170, y3 = 180, y4 = 320;
-	private int xtext;
+	private int xtext = 800;
 	
     public SceneCanvas() {
 
