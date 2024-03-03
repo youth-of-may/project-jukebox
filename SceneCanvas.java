@@ -14,6 +14,7 @@ import javax.sound.sampled.*;
 
 public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
+    //private ArrayList<boolean> selected;
 	private Action zero, one, two,three, four,five, six,seven,eight,nine;
     private File aria, blocks, cat, chirp, door, hauntMuskie,kyoto, mall, mutation, strad;
     private AudioInputStream zeroStream, oneStream, twoStream, threeStream, fourStream, fiveStream, sixStream, sevenStream, eightStream, nineStream;
@@ -24,18 +25,25 @@ public class SceneCanvas extends JComponent{
 	
     public SceneCanvas() {
 
+        //for the boolean arraylist
+
+        //selected = new ArrayList<>();
+        
+        
+
+
         //instantiate the music files
        
-            aria = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Aria Math.wav");
-            blocks = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Blocks.wav");
-            cat = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Cat.wav");
-            chirp = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Chirp.wav");
-            door = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Door.wav");
-            hauntMuskie = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\HauntMuskie.wav");
-            kyoto = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Kyoto.wav");
-            mall = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Mall.wav");
-            mutation = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Mutation.wav");
-            strad = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Strad.wav");
+            aria = new File("Aria Math.wav");
+            blocks = new File("Blocks.wav");
+            cat = new File("Cat.wav");
+            chirp = new File("Chirp.wav");
+            door = new File("Door.wav");
+            hauntMuskie = new File("HauntMuskie.wav");
+            kyoto = new File("Kyoto.wav");
+            mall = new File("Mall.wav");
+            mutation = new File("Mutation.wav");
+            strad = new File("Strad.wav");
         
         //instantiating audiostream
         try {
@@ -179,19 +187,15 @@ of the shapes in the list.
             zeroStream = AudioSystem.getAudioInputStream(aria);
             clip = AudioSystem.getClip();
             clip.open(zeroStream);
+           
             xtext = 0;
 			repaint();
+            
+            }
+            catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
 
             }
-            catch(UnsupportedAudioFileException e) {
-
-            }
-            catch(LineUnavailableException e) {
-
-            }
-            catch(IOException e) {
-
-            }
+            
         }
     }
 
@@ -205,17 +209,11 @@ of the shapes in the list.
                 clip.open(oneStream);
                 xtext = -500;
 				repaint();
-				
                 }
-                catch(UnsupportedAudioFileException e) {
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
                 
                 }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
-                }
+                
         }
     }
 
@@ -231,14 +229,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
                 
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
                 }
             
             
@@ -258,14 +250,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
                 
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
                 }
             
             
@@ -285,14 +271,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
                 
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
                 }
             
         }
@@ -310,14 +290,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
                 
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
                 }
             
         }
@@ -335,14 +309,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
                 
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
                 }
             
         }
@@ -360,14 +328,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
                 
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
                 }
             
         }
@@ -385,14 +347,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
                 
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
                 }
             
         }
@@ -410,14 +366,8 @@ of the shapes in the list.
 				repaint();
     
                 }
-                catch(UnsupportedAudioFileException e) {
+                catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
                 
-                }
-                catch(LineUnavailableException e) {
-    
-                }
-                catch(IOException e) {
-                    
                 }
         }
     }
