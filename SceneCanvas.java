@@ -8,11 +8,28 @@ import java.awt.*;
 import java.awt.geom.*;
 import java.util.*;
 import java.awt.event.*;
-public class SceneCanvas extends JComponent implements KeyListener{
+import java.io.*;
+import javax.sound.sampled.*;
+
+public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
-	private JButton button;
+	private Action zero, one, two,three, four,five, six,seven,eight,nine;
 	
     public SceneCanvas() {
+
+        //instantiating the Action instances
+        zero = new ZeroAction();
+        one = new OneAction();
+        two = new TwoAction();
+        three = new ThreeAction();
+        four = new FourAction();
+        five = new FiveAction();
+        six = new SixAction();
+        seven = new SevenAction();
+        eight = new EightAction();
+        nine = new NineAction();
+    
+        
         
         elements = new ArrayList<DrawingObject>();
         elements.add(new Background());
@@ -30,12 +47,12 @@ public class SceneCanvas extends JComponent implements KeyListener{
         elements.add(new Jukebox(300,375,200));
         
         elements.add(new ToolBox(150, 500, 500));
-	elements.add(new Candles(550,300));
-	elements.add(new Fire(555,260));
-	elements.add(new Fire(575,210));
-	elements.add(new Fire(600,200));
-	elements.add(new Smoke(555,200));
-	elements.add(new MusicNote(390,320));
+	    elements.add(new Candles(550,300));
+	    elements.add(new Fire(555,260));
+	    elements.add(new Fire(575,210));
+	    elements.add(new Fire(600,200));
+	    elements.add(new Smoke(555,200));
+	    elements.add(new MusicNote(390,320));
             /*
      * Add the elements inside the constructor as well
      */
@@ -58,16 +75,115 @@ of the shapes in the list.
         
     }
 	
-	public void keyPressed(KeyEvent e){
-		
-	}
+    private class ZeroAction extends AbstractAction {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+            System.out.println("You pressed 0");
+        }
+    }
+
+    private class OneAction extends AbstractAction {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+            System.out.println("You pressed 1");
+        }
+    }
+
+    private class TwoAction extends AbstractAction {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+            System.out.println("You pressed 2");
+        }
+    }
+
+
+    private class ThreeAction extends AbstractAction {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+            System.out.println("You pressed 3");
+        }
+    }
+
+    private class FourAction extends AbstractAction {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+            System.out.println("You pressed 4");
+        }
+    }
+
+    private class FiveAction extends AbstractAction {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+
+        }
+    }
+
+    private class SixAction extends AbstractAction {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+
+        }
+    }
+
+    private class SevenAction extends AbstractAction {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+
+        }
+    }
+
+    private class EightAction extends AbstractAction {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+
+        }
+    }
 	
-	public void keyReleased(KeyEvent e){
-		
-	}
-	
-	public void keyTyped(KeyEvent e){
-		
-	}
-    
+    private class NineAction extends AbstractAction {
+        @Override 
+        public void actionPerformed(ActionEvent ae) {
+
+        }
+    }
+    public void setUpListener(JButton button) {
+        button.getInputMap().put(KeyStroke.getKeyStroke("0"),"zeroAction");
+        //first is the map name then second is the instance name
+        button.getActionMap().put("zeroAction", zero);
+
+        button.getInputMap().put(KeyStroke.getKeyStroke("1"),"oneAction");
+        //first is the map name then second is the instance name
+        button.getActionMap().put("oneAction", one);
+
+        button.getInputMap().put(KeyStroke.getKeyStroke("2"),"twoAction");
+        //first is the map name then second is the instance name
+        button.getActionMap().put("twoAction", two);
+
+        button.getInputMap().put(KeyStroke.getKeyStroke("3"),"threeAction");
+        //first is the map name then second is the instance name
+        button.getActionMap().put("threeAction", three);
+
+        button.getInputMap().put(KeyStroke.getKeyStroke("4"),"fourAction");
+        //first is the map name then second is the instance name
+        button.getActionMap().put("fourAction", four);
+
+        button.getInputMap().put(KeyStroke.getKeyStroke("5"),"fiveAction");
+        //first is the map name then second is the instance name
+        button.getActionMap().put("fiveAction", five);
+
+        button.getInputMap().put(KeyStroke.getKeyStroke("6"),"sixAction");
+        //first is the map name then second is the instance name
+        button.getActionMap().put("sixAction", six);
+
+        button.getInputMap().put(KeyStroke.getKeyStroke("7"),"sevenAction");
+        //first is the map name then second is the instance name
+        button.getActionMap().put("sevenAction", seven);
+
+        button.getInputMap().put(KeyStroke.getKeyStroke("8"),"eightAction");
+        //first is the map name then second is the instance name
+        button.getActionMap().put("eightAction", eight);
+
+        button.getInputMap().put(KeyStroke.getKeyStroke("9"),"nineAction");
+        //first is the map name then second is the instance name
+        button.getActionMap().put("nineAction", nine);
+    }
 }
