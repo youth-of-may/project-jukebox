@@ -7,13 +7,15 @@ public class MenuBox implements DrawingObject {
     private ArrayList<Color> colorList;
     private Square outerS, middleS, innerS;
     private Disc disc;
-    private boolean selected;
+    private static boolean selected,reset;
     private Color shadow,innerBox;
     public MenuBox(double x, double y, double size) {
         this.x = x;
         this.y = y;
         this.size = size;
         selected = false;
+        
+
 
         //adding colors to the list
         colorList = new ArrayList<>();
@@ -54,7 +56,7 @@ public class MenuBox implements DrawingObject {
 
         y+=3;
         //color highlighted
-        
+        if(selected){
         shadow = new Color(53,46,15);
         //shadows behind the discs
         Line layer1 = new Line((x+20), y+12, x+30, y+12, 4, shadow);
@@ -78,7 +80,7 @@ public class MenuBox implements DrawingObject {
 
         Line layer7 = new Line((x+20), y+32, x+30, y+32, 4, shadow);
         layer7.draw(g2d);
-
+        }
         disc.draw(g2d);
 
         /*
@@ -91,7 +93,7 @@ public class MenuBox implements DrawingObject {
          y = tentativeY;
 
         //for the border
-        Line topBorder = new Line(x,y,x+size,y,thickness, Color.BLACK);
+        Line topBorder = new Line(x,y,x+size,y,thickness, Color.GRAY);
         topBorder.draw(g2d);
 
         Line bottomBorder = new Line(x,y+size,x+size,y+ size,thickness, new Color(70,73,67));
@@ -117,6 +119,12 @@ public class MenuBox implements DrawingObject {
         System.out.println("Highlighted");
         //figure out how to enlarge square when selected
         
+    }
+    public static void selectBox() {
+        selected = true;
+    }
+    public static void resetSelect () {
+        selected = false;
     }
     
 }

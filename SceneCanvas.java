@@ -172,8 +172,10 @@ of the shapes in the list.
             zeroStream = AudioSystem.getAudioInputStream(aria);
             clip = AudioSystem.getClip();
             clip.open(zeroStream);
+            MenuBox m = toolbox.returnMenuBox(0);
+            MenuBox.resetSelect();
+            m.selectBox();
             
-
             }
             catch(UnsupportedAudioFileException e) {
 
