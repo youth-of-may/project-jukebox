@@ -64,7 +64,7 @@ through this ArrayList to repeatedly execute instructions affecting the shapes. 
 can have a for loop inside the paintComponent method that calls your custom draw method on all
 of the shapes in the list.
      */
-    @Override
+@Override
     protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
@@ -75,8 +75,33 @@ of the shapes in the list.
         Smoke smoke = new Smoke(555,y);
 		smoke.draw(g2d);
 		
-		if(y>max_y || y<0)
+		Smoke smoke2 = new Smoke(570,y2);
+		smoke2.draw(g2d);
+		
+		Smoke smoke3 = new Smoke(600,y3);
+		smoke3.draw(g2d);
+		
+		if(y>max_y || y<0){
 			y--;
+			if (y==max_y){
+				y = 200;
+			}
+		}
+		
+		if(y2>max_y || y2<0){
+			y2--;
+			if (y2==max_y){
+				y2 = 170;
+			}
+		}
+		
+		if(y3>max_y || y3<0){
+			y3--;
+			if (y3==max_y){
+				y3 = 180;
+			}
+		}
+		
 		try{
 		Thread.sleep(20);
 		}catch(Exception ex){}
