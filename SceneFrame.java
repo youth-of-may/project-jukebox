@@ -1,17 +1,36 @@
 import java.awt.*;
 
 import javax.swing.*;
+import java.io.*;
 
 public class SceneFrame {
     private JFrame frame;
     private SceneCanvas canvas;
     private JButton playButton, test, stopButton;
     private JLabel invisibleLabel;
+    private Font minecraft;
     public SceneFrame() {
+        
+        //add a new font 
+
+        try {
+            minecraft = Font.createFont(Font.TRUETYPE_FONT, new File("minecraft_font.ttf")).deriveFont(14f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("minecraft_font.ttf")));
+
+        }
+        catch (IOException | FontFormatException e) {
+
+        }
         frame = new JFrame();
         canvas = new SceneCanvas();
         canvas.setPreferredSize(new Dimension(800,600));
         playButton = new JButton("Play");
+        playButton.setBackground(new Color(198,198,198));
+        playButton.setForeground(new Color(76,76,76));
+        playButton.setFocusPainted(false);
+        playButton.setFont(minecraft);
+
         
         invisibleLabel = new JLabel();
         invisibleLabel.setOpaque(true);
@@ -24,7 +43,9 @@ public class SceneFrame {
         test.setBorderPainted(false);
 
         stopButton = new JButton("Stop");
-        
+        stopButton.setBackground(new Color(198,198,198));
+        stopButton.setForeground(new Color(76,76,76));
+        stopButton.setFont(minecraft);
 
     }
     public void setUpGUI() {
