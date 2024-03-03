@@ -51,7 +51,6 @@ public class SceneCanvas extends JComponent{
 	    elements.add(new Fire(555,260));
 	    elements.add(new Fire(575,210));
 	    elements.add(new Fire(600,200));
-	    elements.add(new Smoke(555,200));
 	    elements.add(new MusicNote(390,320));
             /*
      * Add the elements inside the constructor as well
@@ -67,12 +66,22 @@ of the shapes in the list.
      */
     @Override
     protected void paintComponent(Graphics g) {
-        Graphics2D g2d = (Graphics2D) g;
+		super.paintComponent(g);
+		Graphics2D g2d = (Graphics2D) g;
         
         for (DrawingObject drawingObj : elements) {
             drawingObj.draw(g2d);
         }
-        
+        Smoke smoke = new Smoke(555,y);
+		smoke.draw(g2d);
+		
+		if(y>max_y || y<0)
+			y--;
+		try{
+		Thread.sleep(20);
+		}catch(Exception ex){}
+		revalidate();
+		repaint();
     }
 	
     private class ZeroAction extends AbstractAction {
