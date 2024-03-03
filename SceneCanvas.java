@@ -183,12 +183,8 @@ of the shapes in the list.
 		revalidate();
 		repaint();
     }
-    public void updateArray() {
-        for (int i = 0; i<10; i++) {
-            amISelected[i] = toolbox.returnMenuBox(i).returnSelected();
-        }
-    }
-    public void resetSelected() {
+    
+    private void resetSelected() {
         for (int i = 0; i<10; i++) {
             toolbox.returnMenuBox(i).resetSelect();
         }
