@@ -26,16 +26,16 @@ public class SceneCanvas extends JComponent{
 
         //instantiate the music files
        
-            aria = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Aria Math.wav");
-            blocks = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Blocks.wav");
-            cat = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Cat.wav");
-            chirp = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Chirp.wav");
-            door = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Door.wav");
-            hauntMuskie = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\HauntMuskie.wav");
-            kyoto = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Kyoto.wav");
-            mall = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Mall.wav");
-            mutation = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Mutation.wav");
-            strad = new File("D:\\Data Files\\Desktop\\Jukebox\\Music\\Strad.wav");
+            aria = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Aria Math.wav");
+            blocks = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Blocks.wav");
+            cat = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Cat.wav");
+            chirp = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Chirp.wav");
+            door = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Door.wav");
+            hauntMuskie = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\HauntMuskie.wav");
+            kyoto = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Kyoto.wav");
+            mall = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Mall.wav");
+            mutation = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Mutation.wav");
+            strad = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Strad.wav");
         
         //instantiating audiostream
         try {
