@@ -7,7 +7,7 @@ public class MenuBox implements DrawingObject {
     private ArrayList<Color> colorList;
     private Square outerS, middleS, innerS;
     private Disc disc;
-    private static boolean selected,reset;
+    private boolean selected,reset;
     private Color shadow,innerBox;
     public MenuBox(double x, double y, double size) {
         this.x = x;
@@ -120,10 +120,10 @@ public class MenuBox implements DrawingObject {
         //figure out how to enlarge square when selected
         
     }
-    public static void selectBox() {
+    public void selectBox() {
         selected = true;
     }
-    public static void resetSelect () {
+    public void resetSelect () {
         selected = false;
     }
     

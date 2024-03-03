@@ -19,23 +19,30 @@ public class SceneCanvas extends JComponent{
     private AudioInputStream zeroStream, oneStream, twoStream, threeStream, fourStream, fiveStream, sixStream, sevenStream, eightStream, nineStream;
     private Clip clip;
     private ToolBox toolbox;
-	private double y = 200, max_y = 100, max_y2 = 290, y2 = 170, y3 = 180, y4 = 320;
+	private double y = 200, max_y = 100, max_y2 = 290, y2 = 170, y3 = 180, y4 = 320, x = 800;
 	private int xtext = 800;
 	
     public SceneCanvas() {
 
+        //for the boolean arraylist
+
+        //selected = new ArrayList<>();
+        
+        
+
+
         //instantiate the music files
        
-            aria = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Aria Math.wav");
-            blocks = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Blocks.wav");
-            cat = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Cat.wav");
-            chirp = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Chirp.wav");
-            door = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Door.wav");
-            hauntMuskie = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\HauntMuskie.wav");
-            kyoto = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Kyoto.wav");
-            mall = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Mall.wav");
-            mutation = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Mutation.wav");
-            strad = new File("C:\\Users\\user\\Documents\\GitHub\\project-jukebox\\Music\\Strad.wav");
+            aria = new File("Aria Math.wav");
+            blocks = new File("Blocks.wav");
+            cat = new File("Cat.wav");
+            chirp = new File("Chirp.wav");
+            door = new File("Door.wav");
+            hauntMuskie = new File("HauntMuskie.wav");
+            kyoto = new File("Kyoto.wav");
+            mall = new File("Mall.wav");
+            mutation = new File("Mutation.wav");
+            strad = new File("Strad.wav");
         
         //instantiating audiostream
         try {
@@ -127,7 +134,7 @@ of the shapes in the list.
 		Smoke smoke3 = new Smoke(600,y3);
 		smoke3.draw(g2d);
 		
-		MusicNote mn = new MusicNote(390,y4);
+		MusicNote mn = new MusicNote(x,y4);
 		mn.draw(g2d);
 		
 		if(y>max_y || y<0){
@@ -179,7 +186,7 @@ of the shapes in the list.
             zeroStream = AudioSystem.getAudioInputStream(aria);
             clip = AudioSystem.getClip();
             clip.open(zeroStream);
-            xtext = 0;
+			xtext = 0;
 			repaint();
 
             }
@@ -203,7 +210,7 @@ of the shapes in the list.
                 oneStream = AudioSystem.getAudioInputStream(blocks);
                 clip = AudioSystem.getClip();
                 clip.open(oneStream);
-                xtext = -500;
+				xtext = -500;
 				repaint();
 				
                 }
@@ -227,7 +234,7 @@ of the shapes in the list.
                 twoStream = AudioSystem.getAudioInputStream(cat);
                 clip = AudioSystem.getClip();
                 clip.open(twoStream);
-                xtext = -1000;
+				xtext = -1000;
 				repaint();
     
                 }
@@ -254,7 +261,7 @@ of the shapes in the list.
                 threeStream = AudioSystem.getAudioInputStream(chirp);
                 clip = AudioSystem.getClip();
                 clip.open(threeStream);
-                xtext = -1500;
+				xtext = -1500;
 				repaint();
     
                 }
@@ -281,7 +288,7 @@ of the shapes in the list.
                 fourStream = AudioSystem.getAudioInputStream(door);
                 clip = AudioSystem.getClip();
                 clip.open(fourStream);
-                xtext = -2000;
+				xtext = -2000;
 				repaint();
     
                 }
@@ -306,7 +313,7 @@ of the shapes in the list.
                 fiveStream = AudioSystem.getAudioInputStream(hauntMuskie);
                 clip = AudioSystem.getClip();
                 clip.open(fiveStream);
-                xtext = -2500;
+				xtext = -2500;
 				repaint();
     
                 }
@@ -331,7 +338,7 @@ of the shapes in the list.
                 sixStream = AudioSystem.getAudioInputStream(kyoto);
                 clip = AudioSystem.getClip();
                 clip.open(sixStream);
-                xtext = -3000;
+				xtext = -3000;
 				repaint();
     
                 }
@@ -356,7 +363,7 @@ of the shapes in the list.
                 sevenStream = AudioSystem.getAudioInputStream(mall);
                 clip = AudioSystem.getClip();
                 clip.open(sevenStream);
-                xtext = -3500;
+				xtext = -3500;
 				repaint();
     
                 }
@@ -381,7 +388,7 @@ of the shapes in the list.
                 eightStream = AudioSystem.getAudioInputStream(mutation);
                 clip = AudioSystem.getClip();
                 clip.open(eightStream);
-                xtext = -4000;
+				xtext = -4000;
 				repaint();
     
                 }
@@ -406,7 +413,7 @@ of the shapes in the list.
                 nineStream = AudioSystem.getAudioInputStream(strad);
                 clip = AudioSystem.getClip();
                 clip.open(nineStream);
-                xtext = -4500;
+				xtext = -4500;
 				repaint();
     
                 }
@@ -470,6 +477,7 @@ of the shapes in the list.
             @Override
             public void actionPerformed(ActionEvent ae) {
                 clip.start();
+				x = 390;
             }
         });
     }
@@ -479,6 +487,7 @@ of the shapes in the list.
             public void actionPerformed(ActionEvent ae) {
                 clip.stop();
                 clip.close();
+				x = 800;
             }
         });
     }
