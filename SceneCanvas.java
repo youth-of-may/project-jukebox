@@ -264,7 +264,6 @@ of the shapes in the list.
     private class ZeroAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-            System.out.println("You pressed 0");
             //MenuBox m = toolbox.returnMenuBox(0);
             //m.highlightBox();
 
@@ -294,7 +293,6 @@ of the shapes in the list.
     private class OneAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-            System.out.println("You pressed 1");
             try {
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
@@ -320,7 +318,7 @@ of the shapes in the list.
     private class TwoAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-            System.out.println("You pressed 2");
+
             try {
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
@@ -349,7 +347,7 @@ of the shapes in the list.
     private class ThreeAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-            System.out.println("You pressed 3");
+
             try {
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
@@ -378,7 +376,7 @@ of the shapes in the list.
     private class FourAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-            System.out.println("You pressed 4");
+
             
             try {
                 threeDDisc.resetY();
@@ -406,7 +404,7 @@ of the shapes in the list.
     private class FiveAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-            System.out.println("You pressed 5");
+
             try {
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
@@ -434,7 +432,7 @@ of the shapes in the list.
     private class SixAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-            System.out.println("You pressed 6");
+
             try {
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
@@ -461,7 +459,7 @@ of the shapes in the list.
     private class SevenAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-            System.out.println("You pressed 7");
+
             try {
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
@@ -488,7 +486,7 @@ of the shapes in the list.
     private class EightAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-            System.out.println("You pressed 8");
+
             try {
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
@@ -515,7 +513,7 @@ of the shapes in the list.
     private class NineAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-            System.out.println("You pressed 9");
+
             try {
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
