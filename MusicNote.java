@@ -15,6 +15,8 @@ public class MusicNote implements DrawingObject{
         return className;
     }
 	public void draw(Graphics2D g2d){
+		
+		//Used to create the music note that pops out of the jukebox
 		Square s1 = new Square(x,y+30,5,new Color(134,243,222));//134,243,222
 		s1.draw(g2d);
 		
