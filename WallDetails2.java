@@ -14,7 +14,9 @@ public class WallDetails2 implements DrawingObject{
         return className;
     }
 	
-	public void draw(Graphics2D g2d){		
+	public void draw(Graphics2D g2d){	
+
+		//Different colored details to enhance the details of the wall
 		Rectangle r1 = new Rectangle(x,y+50,10,20,new Color(49,38,20));
 		r1.draw(g2d);
 		
