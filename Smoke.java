@@ -15,6 +15,8 @@ public class Smoke implements DrawingObject{
         return className;
     }
 	public void draw(Graphics2D g2d){
+		
+		//Used to create a smoke effect
 		Square s1 = new Square(x,y+10,5,new Color(159,134,111));
 		s1.draw(g2d);
 		
