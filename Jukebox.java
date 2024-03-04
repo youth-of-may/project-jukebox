@@ -16,12 +16,16 @@ public class Jukebox implements DrawingObject{
         return className;
     }
 	public void draw(Graphics2D g2d){
+		
+		//Main Body of the jukebox
 		Square s = new Square(x, y+25, size, new Color(24,23,18));
 		s.draw(g2d);
 		
+		//To add details to the jukebox
 		Square s2 = new Square(x+10, y+10+25, size-20, new Color(85,52,37));
 		s2.draw(g2d);
 		
+		//Upper angle of the jukebox
 		Path2D.Double line2 = new Path2D.Double();
 		line2.moveTo(307,380+25);
 		line2.lineTo(325,300+25);
@@ -32,6 +36,7 @@ public class Jukebox implements DrawingObject{
 		g2d.draw(line2);
 		g2d.fill(line2);
 		
+		//To add details to the upper view of the jukebox
 		Path2D.Double line3 = new Path2D.Double();
 		line3.moveTo(322,370+25);
 		line3.lineTo(335,310+25);
@@ -73,6 +78,7 @@ public class Jukebox implements DrawingObject{
 		g2d.draw(line6);
 		g2d.fill(line6);
 		
+		//To add details to the jukebox, makes use of box details 1 and 2
 		Square s3 = new Square(x+10,y+37,7,new Color(51,33,21));
 		s3.draw(g2d);
 		
