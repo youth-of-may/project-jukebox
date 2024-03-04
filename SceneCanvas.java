@@ -20,7 +20,7 @@ public class SceneCanvas extends JComponent{
     private AudioInputStream zeroStream, oneStream, twoStream, threeStream, fourStream, fiveStream, sixStream, sevenStream, eightStream, nineStream;
     private Clip clip;
     private ToolBox toolbox;
-	private double y = 200, max_y = 100, max_y2 = 290, y2 = 170, y3 = 180, y4 = 320, x = 800;
+	private double y = 200, max_y = 100, max_y2 = 290, y2 = 170, y3 = 180, y4 = 320, x = 800, sx = 230, sx2 = 400, sx3 = 620, sy = 100, sy2 = 200, sy3 = 100;
 	private int xtext = 800;
 	
     public SceneCanvas() {
@@ -63,15 +63,10 @@ public class SceneCanvas extends JComponent{
 
             clip = AudioSystem.getClip();
         }
-        catch (UnsupportedAudioFileException e) {
+        catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
 
         }
-        catch (IOException e) {
-
-        }
-        catch(LineUnavailableException e) {
-
-        }
+        
 
         //instantiating the Action instances
         zero = new ZeroAction();
@@ -90,7 +85,7 @@ public class SceneCanvas extends JComponent{
         toolbox = new ToolBox(150, 500, 500);
         
         elements = new ArrayList<DrawingObject>();
-        elements.add(new Background());
+
         //testing out toolbox
         //elements.add(new GradientBackground());
         elements.add(new ThreeDWood("shadow", 100, 100, 100, 100));
@@ -103,7 +98,6 @@ public class SceneCanvas extends JComponent{
         elements.add(new Disc(362, 85, 1, Color.RED));
         elements.add(new Wood(500,425,200));
         elements.add(new Jukebox(300,375,200));
-        
         elements.add(toolbox);
 	    elements.add(new Candles(550,300));
 	    elements.add(new Fire(555,260));
@@ -125,6 +119,18 @@ of the shapes in the list.
     protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
+
+	    Background bg = new Background();
+		bg.draw(g2d);
+        
+		Snowfall sf = new Snowfall(sx,sy);
+		sf.draw(g2d);
+		
+		Snowfall sf2 = new Snowfall(sx2,sy2);
+		sf2.draw(g2d);
+		
+		Snowfall sf3 = new Snowfall(sx3,sy3);
+		sf3.draw(g2d);
         
         for (DrawingObject drawingObj : elements) {
             drawingObj.draw(g2d);
@@ -173,13 +179,40 @@ of the shapes in the list.
 				y4 = 320;
 			}
 		}
+
+		if (sy<160){
+			sy++;
+			sx--;
+			if(sy == 160){
+				sx = 230;
+				sy = 100;
+			}
+		}
 		
+		if (sy2<230){
+			sy2++;
+			sx2--;
+			if (sy2 == 230){
+				sx2 = 400;
+				sy2 = 200;
+			}
+		}
+		
+		if (sy3<200){
+			sy3++;
+			sx3--;
+			if (sy3 == 200){
+				sx3 = 620;
+				sy3 = 100;
+			}
+		}
+	    
 		try{
 		Thread.sleep(20);
 		}catch(Exception ex){}
 		g2d.setPaint(Color.magenta);
 		g2d.setFont(new Font("minecraft",Font.BOLD,20));
-		g2d.drawString("                                                         Aria Math                                                                   Blocks                                                                        Cat                                                                          Chirp                                                                        Door                                                                 Haunt Muskie                                                              Kyoto                                                                         Mall                                                                       Mutation                                                                   Strad                                                           ",xtext,480);
+		g2d.drawString("                                                                     Aria Math                                                                              Blocks                                                                                      Cat                                                                                         Chirp                                                                                       Door                                                                              Haunt Muskie                                                                         Kyoto                                                                                      Mall                                                                                    Mutation                                                                                 Strad                                                           ",xtext,480);
 		revalidate();
 		repaint();
     }
