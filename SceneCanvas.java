@@ -8,12 +8,12 @@ import java.awt.*;
 import java.awt.geom.*;
 import java.util.*;
 import java.awt.event.*;
-import java.io.IOException;
 import java.io.*;
 import javax.sound.sampled.*;
 
 public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
+    private ArrayList<Color> colorList;
     private boolean[] amISelected;
 	private Action zero, one, two,three, four,five, six,seven,eight,nine;
     private File aria, blocks, cat, chirp, door, hauntMuskie,kyoto, mall, mutation, strad;
@@ -23,6 +23,7 @@ public class SceneCanvas extends JComponent{
 	private double y = 200, max_y = 100, max_y2 = 290, y2 = 170, y3 = 180, y4 = 320, x = 800, sx = 230, sx2 = 400, sx3 = 620, sy = 100, sy2 = 200, sy3 = 100;
 	private int xsong = 340;
 	private String songname = " ";
+    private ThreeDDisc threeDDisc;
 	
     public SceneCanvas() {
 
@@ -32,6 +33,19 @@ public class SceneCanvas extends JComponent{
 
 
         //selected = new ArrayList<>();
+
+        //instantiate the colorList
+        colorList = new ArrayList<>();
+        colorList.add(Color.YELLOW);
+        colorList.add(Color.RED);
+        colorList.add(Color.BLUE);
+        colorList.add(Color.GREEN);
+        colorList.add(new Color(203,108,230));
+        colorList.add(new Color(255,145,77));
+        colorList.add(new Color(140,82,255));
+        colorList.add(new Color(255,215,205));
+        colorList.add(new Color(201,250,219));
+        colorList.add(new Color(230,156,143));
         
         
 
@@ -84,8 +98,14 @@ public class SceneCanvas extends JComponent{
         
         //instantiating toolbox
         toolbox = new ToolBox(150, 500, 500);
+        threeDDisc = new ThreeDDisc(600, 475, 175, 100, colorList.get(0));
+
+        
         
         elements = new ArrayList<DrawingObject>();
+
+        
+
 
         //testing out toolbox
         //elements.add(new GradientBackground());
@@ -102,13 +122,14 @@ public class SceneCanvas extends JComponent{
         
 
 
-        elements.add(toolbox);
+        
         
 	    elements.add(new Candles(550,300));
 	    elements.add(new Fire(555,260));
 	    elements.add(new Fire(575,210));
 	    elements.add(new Fire(600,200));
-        elements.add(new ThreeDDisc(600, 300, 175, 100, Color.RED));
+        elements.add(threeDDisc);
+        elements.add(toolbox);
             /*
      * Add the elements inside the constructor as well
      */
@@ -126,6 +147,9 @@ of the shapes in the list.
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 
+        //affinetransform
+        AffineTransform reset = g2d.getTransform();
+
 	    Background bg = new Background();
 		bg.draw(g2d);
         
@@ -139,7 +163,15 @@ of the shapes in the list.
 		sf3.draw(g2d);
         
         for (DrawingObject drawingObj : elements) {
+            g2d.setTransform(reset);
+            String className = drawingObj.returnClassName();
+            
+            if (className.equals("ThreeDDisc")) {
+                g2d.rotate(Math.toRadians(10), 600,475);
+                g2d.translate(50,0);
+            }
             drawingObj.draw(g2d);
+            
         }
 
 	    g2d.setPaint(Color.black);
@@ -237,6 +269,7 @@ of the shapes in the list.
             //m.highlightBox();
 
             try {
+            threeDDisc.changeColor(colorList.get(0));
             resetSelected();
             MenuBox m = toolbox.returnMenuBox(0);
             m.selectBox();
@@ -261,6 +294,7 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 1");
             try {
+                threeDDisc.changeColor(colorList.get(1));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(1);
                 m.selectBox();
@@ -284,6 +318,7 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 2");
             try {
+                threeDDisc.changeColor(colorList.get(2));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(2);
                 m.selectBox();
@@ -310,6 +345,7 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 3");
             try {
+                threeDDisc.changeColor(colorList.get(3));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(3);
                 m.selectBox();
@@ -337,6 +373,7 @@ of the shapes in the list.
             System.out.println("You pressed 4");
             
             try {
+                threeDDisc.changeColor(colorList.get(4));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(4);
                 m.selectBox();
@@ -361,6 +398,7 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 5");
             try {
+                threeDDisc.changeColor(colorList.get(5));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(5);
                 m.selectBox();
@@ -386,6 +424,7 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 6");
             try {
+                threeDDisc.changeColor(colorList.get(6));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(6);
                 m.selectBox();
@@ -410,6 +449,7 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 7");
             try {
+                threeDDisc.changeColor(colorList.get(7));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(7);
                 m.selectBox();
@@ -434,6 +474,7 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 8");
             try {
+                threeDDisc.changeColor(colorList.get(8));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(8);
                 m.selectBox();
@@ -458,6 +499,7 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 9");
             try {
+                threeDDisc.changeColor(colorList.get(9));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(9);
                 m.selectBox();

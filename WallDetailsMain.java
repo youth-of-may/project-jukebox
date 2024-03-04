@@ -4,12 +4,16 @@ import javax.swing.*;
 
 public class WallDetailsMain implements DrawingObject{
 	private double x,y;
+	private String className;
 	
 	public WallDetailsMain(double x, double y){
 		this.x = x;
 		this.y = y;
+		className = "WallDetailsMain";
 	}
-	
+	public String returnClassName () {
+        return className;
+    }
 	public void draw(Graphics2D g2d){
 		Rectangle rec = new Rectangle(x+20,y+140,10,70,new Color(43,33,21));
 		rec.draw(g2d);

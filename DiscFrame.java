@@ -8,14 +8,19 @@ public class DiscFrame implements DrawingObject {
     private double x,  y, size;
     private Color color;
     private Square outerFrame, midFrame;
+    private String className;
     public DiscFrame(double x, double y, double size) {
         this.x = x;
         this.y = y;
         this.size = size;
         this.color = color;
+        className = "DiscFrame";
         
         outerFrame = new Square(x, y, size, new Color(190,171,113));
         midFrame = new Square(x+12, y+13, size*0.80, new Color(115,64,40));
+    }
+    public String returnClassName () {
+        return className;
     }
     public void draw(Graphics2D g2d) {
         outerFrame.draw(g2d);

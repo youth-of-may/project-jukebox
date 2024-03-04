@@ -3,12 +3,17 @@ import java.awt.geom.*;
 public class ThreeDWood implements DrawingObject{
     private String shadow;
     private double x, y, height, width;
+    private String className;
     public ThreeDWood(String shadow, double x, double y, double width, double height) {
         this.x = x;
         this.y = y;
         this.height = height;
         this.width = width;
         this.shadow = shadow;
+        className = "ThreeDWood";
+    }
+    public String returnClassName () {
+        return className;
     }
 
     public void draw(Graphics2D g2d) {

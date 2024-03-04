@@ -4,12 +4,16 @@ import javax.swing.*;
 
 public class MusicNote implements DrawingObject{
 	private double x,y;
+	private String className;
 	
 	public MusicNote(double x, double y){
 		this.x = x;
 		this.y = y;
+		className = "MusicNote";
 	}
-	
+	public String returnClassName () {
+        return className;
+    }
 	public void draw(Graphics2D g2d){
 		Square s1 = new Square(x,y+30,5,new Color(134,243,222));//134,243,222
 		s1.draw(g2d);

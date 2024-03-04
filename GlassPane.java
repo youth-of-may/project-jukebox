@@ -2,11 +2,16 @@ import java.awt.*;
 import java.awt.geom.*;
 public class GlassPane implements DrawingObject {
     private double x, y, size;
+	private String className;
 	
     public GlassPane(double x, double y, double size) {
 		this.x = x;
 		this.y = y;
 		this.size = size;
+		className = "GlassPane";
+    }
+	public String returnClassName () {
+        return className;
     }
     public void draw(Graphics2D g2d){
         Rectangle r1 = new Rectangle(x,y,size,15,new Color(171,187,184));

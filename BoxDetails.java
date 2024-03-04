@@ -4,12 +4,16 @@ import javax.swing.*;
 
 public class BoxDetails implements DrawingObject{
 	private double x, y;
+	private String className;
 	
 	public BoxDetails(double x, double y){
 		this.x = x;
 		this.y = y;
+		className = "BoxDetails";
 	}
-	
+	public String returnClassName () {
+        return className;
+    }
 	public void draw(Graphics2D g2d){
 		Rectangle r0 = new Rectangle(x-10,y,10,45,new Color(37,23,14));
 		r0.draw(g2d);

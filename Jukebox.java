@@ -4,13 +4,17 @@ import javax.swing.*;
 
 public class Jukebox implements DrawingObject{
 	private double x, y, size;
+	private String className;
 	
 	public Jukebox(double x, double y, double size){
 		this.x = x;
         this.y = y;
 		this.size = size;
+		className = "Jukebox";
 	}
-	
+	public String returnClassName () {
+        return className;
+    }
 	public void draw(Graphics2D g2d){
 		Square s = new Square(x, y+25, size, new Color(24,23,18));
 		s.draw(g2d);

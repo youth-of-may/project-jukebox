@@ -4,9 +4,13 @@ import java.awt.geom.*;
 
 public class Outline implements DrawingObject{
     private double x1, x2, y1, y2;
+    private String className;
 
     public Outline() {
-
+        className = "Outline";
+    }
+    public String returnClassName () {
+        return className;
     }
 
     public Outline(double x1, double y1, double x2, double y2) {
