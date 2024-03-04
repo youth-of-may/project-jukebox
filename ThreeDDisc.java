@@ -19,7 +19,11 @@ public class ThreeDDisc implements DrawingObject{
     public void draw(Graphics2D g2d) {
         
         
-        
+        Rectangle firstRectangle = new Rectangle(x, y, width, height, color);
+        firstRectangle.draw(g2d);
+
+        Rectangle secondRectangle = new Rectangle(x+25, y, width -100, y+25, Color.BLACK);
+        secondRectangle.draw(g2d);
 
         
         /* 
