@@ -25,7 +25,7 @@ public class ThreeDDisc implements DrawingObject{
     public void draw(Graphics2D g2d) {
         
         
-        Rectangle firstRectangle = new Rectangle(x, y, width, height, new Color(82,81,82));
+        Rectangle firstRectangle = new Rectangle(x, y, width, height, new Color(27,27,27));
         firstRectangle.draw(g2d);
 
         Rectangle firstDetailRectangle = new Rectangle(x+15, y+65, width-30, height-50, new Color(33,33,33));
@@ -47,11 +47,28 @@ public class ThreeDDisc implements DrawingObject{
 
         Rectangle fourthDetailRectangle = new Rectangle(x-15, y+35, width + 50, height -50,new Color(33,33,33));
         fourthDetailRectangle.draw(g2d);
+
         
+
+        //for the details
+        Rectangle detail1 = new Rectangle(x+70, y-25, width- 140, height-90, Color.GRAY);
+        detail1.draw(g2d);
+
+        Rectangle detail2 = new Rectangle(x+25, y, width- 160, height-90, new Color(140,140,140));
+        detail2.draw(g2d);
+
+        Rectangle detail3 = new Rectangle(x+80, y+15, width- 160, height-90, new Color(27,27,27));
+        detail3.draw(g2d);
         //for the box at the middle
+       
 
         Square s1 = new Square(x+60, y+30, 50, color);
         s1.draw(g2d);
+
+        Square s2 = new Square(x+73, y+43, 25,new Color(27,27,27));
+        s2.draw(g2d);
+        
+        
         /* 
         figure out how to add an outline to the toolbox
         g2d.setStroke(new BasicStroke(4));
