@@ -15,6 +15,8 @@ public class Fire implements DrawingObject{
         return className;
     }
 	public void draw(Graphics2D g2d){
+		
+		//Used to create fire to be placed on the candle
 		Square red1 = new Square(x+5,y,5,new Color(255,15,15));
 		red1.draw(g2d);
 		
