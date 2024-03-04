@@ -98,6 +98,9 @@ public class SceneCanvas extends JComponent{
         elements.add(new Disc(362, 85, 1, Color.RED));
         elements.add(new Wood(500,425,200));
         elements.add(new Jukebox(300,375,200));
+        elements.add(new ThreeDDisc(800, 600, 300, 300, Color.RED));
+
+
         elements.add(toolbox);
 	    elements.add(new Candles(550,300));
 	    elements.add(new Fire(555,260));
