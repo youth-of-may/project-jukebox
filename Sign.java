@@ -4,12 +4,18 @@ import javax.swing.*;
 
 public class Sign implements DrawingObject {
     private double x, y, x2, y2;
+	private String className;
+	
 	
     public Sign(double x, double y, double x2, double y2) {
 		this.x = x;
 		this.y = y;
 		this.x2 = x2;
 		this.y2 = y2;
+		className = "Sign";
+    }
+	public String returnClassName () {
+        return className;
     }
     public void draw(Graphics2D g2d){
         Rectangle r1 = new Rectangle(x,y,x2,y2,new Color(109,95,60));

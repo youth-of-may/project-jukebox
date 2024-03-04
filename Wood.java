@@ -4,12 +4,17 @@ import javax.swing.*;
 
 public class Wood implements DrawingObject{ 
 	private double x, y, size;
+	private String className;
 	
 	public Wood(double x, double y, double size){
 		this.x = x;
 		this.y = y;
 		this.size = size;
+		className = "Wood";
 	}
+	public String returnClassName () {
+        return className;
+    }
 	
 	public void draw(Graphics2D g2d){
 		Square w = new Square(x-10,y,size+40,new Color(43,31,17));

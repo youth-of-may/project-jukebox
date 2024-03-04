@@ -5,14 +5,18 @@ import javax.swing.*;
 public class NetherrackSlab implements DrawingObject {
 	
 	private double x, y, x2, y2;
+	private String className;
 	
 	public NetherrackSlab(double x, double y, double x2, double y2){
 		this.x = x;
         this.y = y;
 		this.x2 = x2;
 		this.y2 = y2;
+		className = "NetherrackSlab";
 	}
-	
+	public String returnClassName () {
+        return className;
+    }
 	public void draw(Graphics2D g2d){
 		Rectangle r1 = new Rectangle(x,y+50,x2,y2,new Color(29,13,14));
 		r1.draw(g2d);

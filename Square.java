@@ -4,12 +4,17 @@ import java.awt.geom.*;
 public class Square implements DrawingObject{
     private double x, y, size;
     private Color color;
+    private String className;
 
     public Square(double x, double y, double size, Color color) {
         this.x = x;
         this.y = y;
         this.size = size;
         this.color = color;
+        className = "Square";
+    }
+    public String returnClassName () {
+        return className;
     }
 
     public void draw(Graphics2D g2d){

@@ -4,12 +4,16 @@ import javax.swing.*;
 
 public class Fire implements DrawingObject{
 	private double x,y;
+	private String className;
 	
 	public Fire(double x, double y){
 		this.x = x;
 		this.y = y;
+		className = "Fire";
 	}
-	
+	public String returnClassName () {
+        return className;
+    }
 	public void draw(Graphics2D g2d){
 		Square red1 = new Square(x+5,y,5,new Color(255,15,15));
 		red1.draw(g2d);

@@ -4,12 +4,14 @@ import java.awt.geom.*;
 public class ToolBox implements DrawingObject{
     private double x, y, width, height;
     private ArrayList<MenuBox> boxes;
+    private String className;
 
     public ToolBox(double x, double y, double size) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
+        className = "ToolBox";
         boxes = new ArrayList<>();
         boxes.add(new MenuBox(x+ 0,y,size/10));
         boxes.add(new MenuBox(x+ 50,y,size/10));
@@ -23,6 +25,9 @@ public class ToolBox implements DrawingObject{
         boxes.add(new MenuBox(x+ 450,y,size/10));
         
 
+    }
+    public String returnClassName () {
+        return className;
     }
     public MenuBox returnMenuBox (int index) {
         return boxes.get(index);

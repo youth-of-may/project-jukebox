@@ -4,12 +4,16 @@ import javax.swing.*;
 
 public class Candles implements DrawingObject{
 	private double x, y;
+	private String className;
 	
 	public Candles(double x, double y){
 		this.x = x;
 		this.y = y;
+		className = "Candles";
 	}
-	
+	public String returnClassName () {
+        return className;
+    }
 	public void draw(Graphics2D g2d){		
 		Path2D.Double c2 = new Path2D.Double();
 		c2.moveTo(x+25,y-50);

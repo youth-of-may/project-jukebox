@@ -9,11 +9,14 @@ public class MenuBox implements DrawingObject {
     private Disc disc;
     private boolean selected,reset;
     private Color shadow,innerBox;
+    private String className;
+    
     public MenuBox(double x, double y, double size) {
         this.x = x;
         this.y = y;
         this.size = size;
         selected = false;
+        className = "MenuBox";
         
 
 
@@ -36,6 +39,9 @@ public class MenuBox implements DrawingObject {
         middleS = new Square(x+5, y+4.5, size*0.85, new Color(92,92,92));
         disc = new Disc(x+10, y+15, 0.40, colorList.get(count));
         addCount();
+    }
+    public String returnClassName () {
+        return className;
     }
     private static void addCount() {
         //to keep track of number of discs made

@@ -5,16 +5,19 @@ import javax.swing.*;
 public class Disc implements DrawingObject {
 	private double x,y, percentage;
 	private Color color;
+	private String className;
 	
 	public Disc(double x, double y, double percentage, Color color){
 		this.x = x;
 		this.y = y;
 		this.percentage = percentage;
 		this.color = color;
-		
+		className = "Disc";
 
 	}
-	
+	public String returnClassName () {
+        return className;
+    }
 	public void draw(Graphics2D g2d){
 		//for bottom part
 		Rectangle d1 = new Rectangle(x,y+(15*percentage),75*percentage,20*percentage,new Color(43,43,43));

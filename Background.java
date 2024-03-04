@@ -4,7 +4,12 @@ import java.awt.geom.*;
 
 public class Background implements DrawingObject{
     private double x, y, width, height;
+    private String className;
     public Background(){
+        className = "Background";
+    }
+    public String returnClassName() {
+        return className;
 
     }
     public void draw(Graphics2D g2d) {

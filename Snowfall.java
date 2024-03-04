@@ -4,11 +4,16 @@ import java.awt.geom.*;
 
 public class Snowfall implements DrawingObject{
 	private double x,y;
+	private String className;
 	
 	public Snowfall(double x, double y){
 		this.x = x;
 		this.y = y;
+		className = "Snowfall";
 	}
+	public String returnClassName () {
+        return className;
+    }
 	
 	public void draw(Graphics2D g2d){
 		Snow sw = new Snow(x,y);
