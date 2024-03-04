@@ -17,9 +17,12 @@ public class Wood implements DrawingObject{
     }
 	
 	public void draw(Graphics2D g2d){
+		
+		//Main body of the wood block
 		Square w = new Square(x-10,y,size+40,new Color(43,31,17));
 		w.draw(g2d);
 		
+		//Top angle of the wood block
 		Path2D.Double line4 = new Path2D.Double();
 		line4.moveTo(x-10,y);
 		line4.lineTo(475,300+25);
@@ -30,6 +33,7 @@ public class Wood implements DrawingObject{
 		g2d.fill(line4);
 		g2d.draw(line4);
 		
+		//Details of the wood block
 		Rectangle r1 = new Rectangle(x+25,y+125,15,30,new Color(35,28,12));
 		r1.draw(g2d);
 		
