@@ -16,6 +16,8 @@ public class WallDetails implements DrawingObject{
     }
 	
 	public void draw(Graphics2D g2d){
+		
+		//Details of the wall
 		Rectangle r1 = new Rectangle(x,y+50,10,20,new Color(43,33,21));
 		r1.draw(g2d);
 		
