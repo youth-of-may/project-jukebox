@@ -2,7 +2,7 @@ import java.util.*;
 import java.awt.*;
 import java.awt.geom.*;
 public class ThreeDDisc implements DrawingObject{
-    private double x, y, width, height;
+    private double x, y,tempY, width, height;
     private String className;
     private Color color;
     
@@ -14,6 +14,7 @@ public class ThreeDDisc implements DrawingObject{
        this.height = height;
        this.color = color;
        className = "ThreeDDisc";
+       tempY = y;
         
 
     }
@@ -68,6 +69,12 @@ public class ThreeDDisc implements DrawingObject{
     }
     public double getX() {
         return x;
+    }
+    public void moveUp(double y) {
+        this.y -=y;
+    }
+    public void resetY() {
+        y = tempY;
     }
     
 }

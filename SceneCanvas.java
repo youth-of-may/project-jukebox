@@ -98,7 +98,7 @@ public class SceneCanvas extends JComponent{
         
         //instantiating toolbox
         toolbox = new ToolBox(150, 500, 500);
-        threeDDisc = new ThreeDDisc(600, 475, 175, 100, colorList.get(0));
+        threeDDisc = new ThreeDDisc(600, 650, 175, 100, colorList.get(0));
 
         
         
@@ -269,6 +269,8 @@ of the shapes in the list.
             //m.highlightBox();
 
             try {
+            threeDDisc.resetY();
+            threeDDisc.moveUp(175);
             threeDDisc.changeColor(colorList.get(0));
             resetSelected();
             MenuBox m = toolbox.returnMenuBox(0);
@@ -294,6 +296,8 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 1");
             try {
+                threeDDisc.resetY();
+                threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(1));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(1);
@@ -318,6 +322,8 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 2");
             try {
+                threeDDisc.resetY();
+                threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(2));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(2);
@@ -345,6 +351,8 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 3");
             try {
+                threeDDisc.resetY();
+                threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(3));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(3);
@@ -373,6 +381,8 @@ of the shapes in the list.
             System.out.println("You pressed 4");
             
             try {
+                threeDDisc.resetY();
+                threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(4));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(4);
@@ -398,6 +408,8 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 5");
             try {
+                threeDDisc.resetY();
+                threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(5));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(5);
@@ -424,6 +436,8 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 6");
             try {
+                threeDDisc.resetY();
+                threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(6));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(6);
@@ -449,6 +463,8 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 7");
             try {
+                threeDDisc.resetY();
+                threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(7));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(7);
@@ -474,6 +490,8 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 8");
             try {
+                threeDDisc.resetY();
+                threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(8));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(8);
@@ -499,6 +517,8 @@ of the shapes in the list.
         public void actionPerformed(ActionEvent ae) {
             System.out.println("You pressed 9");
             try {
+                threeDDisc.resetY();
+                threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(9));
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(9);
