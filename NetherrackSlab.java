@@ -18,9 +18,12 @@ public class NetherrackSlab implements DrawingObject {
         return className;
     }
 	public void draw(Graphics2D g2d){
+		
+		//Main body of the netherrack slab
 		Rectangle r1 = new Rectangle(x,y+50,x2,y2,new Color(29,13,14));
 		r1.draw(g2d);
 		
+		//Upper angle of the netherrack slab
 		Path2D.Double line = new Path2D.Double();
 		line.moveTo(50,500+50);
 		line.lineTo(150,380+50);
@@ -30,6 +33,7 @@ public class NetherrackSlab implements DrawingObject {
 		g2d.draw(line);
 		g2d.fill(line);
 		
+		//Details of the netherrack slab
 		Line l0 = new Line(x+5,y+50,300,y+50,5,new Color(9,5,6));
 		l0.draw(g2d);
 		
