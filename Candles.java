@@ -14,7 +14,9 @@ public class Candles implements DrawingObject{
 	public String returnClassName () {
         return className;
     }
-	public void draw(Graphics2D g2d){		
+	public void draw(Graphics2D g2d){	
+
+		//Main body of the second candle
 		Path2D.Double c2 = new Path2D.Double();
 		c2.moveTo(x+25,y-50);
 		c2.lineTo(x+25+25,y-50);
@@ -27,6 +29,7 @@ public class Candles implements DrawingObject{
 		g2d.fill(c2);
 		g2d.draw(c2);
 		
+		//Details of the second candle
 		Path2D.Double c2d = new Path2D.Double();
 		c2d.moveTo(x+25,y-50);
 		c2d.lineTo(x+25+25,y-50);
@@ -39,6 +42,7 @@ public class Candles implements DrawingObject{
 		g2d.fill(c2d);
 		g2d.draw(c2d);
 		
+		//More details for the second candle
 		Line m1 = new Line(x+15+25,y-50+75,x+15+25,y-50+30,7,new Color(204,193,175));
 		m1.draw(g2d);
 		
@@ -48,6 +52,7 @@ public class Candles implements DrawingObject{
 		Line m3 = new Line(x+15-8+25,y-50+45,x+15-8+25,y-50+60,7,new Color(204,193,175));
 		m3.draw(g2d);
 		
+		//Main body of the first candle
 		Path2D.Double c1 = new Path2D.Double();
 		c1.moveTo(x,y);
 		c1.lineTo(x+25,y);
@@ -60,6 +65,8 @@ public class Candles implements DrawingObject{
 		g2d.fill(c1);
 		g2d.draw(c1);
 		
+		
+		//Details of the first candle
 		Path2D.Double c1d = new Path2D.Double();
 		c1d.moveTo(x,y);
 		c1d.lineTo(x+25,y);
@@ -72,6 +79,7 @@ public class Candles implements DrawingObject{
 		g2d.fill(c1d);
 		g2d.draw(c1d);
 		
+		//Main body of the third candle
 		Path2D.Double c3 = new Path2D.Double();
 		c3.moveTo(x+25+25,y-55);
 		c3.lineTo(x+25+25+25,y-55);
@@ -84,6 +92,7 @@ public class Candles implements DrawingObject{
 		g2d.fill(c3);
 		g2d.draw(c3);
 		
+		//Details of the third candle
 		Path2D.Double c3d = new Path2D.Double();
 		c3d.moveTo(x+25+25,y-55);
 		c3d.lineTo(x+25+25+25,y-55);
@@ -96,6 +105,7 @@ public class Candles implements DrawingObject{
 		g2d.fill(c3d);
 		g2d.draw(c3d);
 		
+		//More details for the third candle
 		Line k1 = new Line(x+15+25+25,y-55+105,x+15+25+25,y-55+30,7,new Color(184,181,166));
 		k1.draw(g2d);
 		
@@ -105,6 +115,7 @@ public class Candles implements DrawingObject{
 		Line k3 = new Line(x+15-8+25+25,y-55+80,x+15-8+25+25,y-55+45,7,new Color(184,181,166));
 		k3.draw(g2d);
 		
+		//The black part of the candles
 		Rectangle r1 = new Rectangle(x+5,y-5,17,10,new Color(27,25,39));
 		r1.draw(g2d);
 		
@@ -114,6 +125,7 @@ public class Candles implements DrawingObject{
 		Rectangle r3 = new Rectangle(x+50+5,y-55-5,17,10,new Color(27,25,39));
 		r3.draw(g2d);
 		
+		//More details forr the first candle
 		Line l1 = new Line(x+15,y+45,x+15,y+27,7,new Color(191,180,162));
 		l1.draw(g2d);
 		
