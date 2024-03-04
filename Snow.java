@@ -15,6 +15,8 @@ public class Snow implements DrawingObject{
         return className;
     }
 	public void draw(Graphics2D g2d){
+		
+		//Used to create a single snow particle
 		Square s1 = new Square(x,y+5,5,Color.WHITE);
 		s1.draw(g2d);
 		
