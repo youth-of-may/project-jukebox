@@ -21,6 +21,7 @@ public class SceneCanvas extends JComponent{
     private Clip clip;
     private ToolBox toolbox;
 	private double y = 200, max_y = 100, max_y2 = 290, y2 = 170, y3 = 180, y4 = 320, x = 800, sx = 230, sx2 = 400, sx3 = 620, sy = 100, sy2 = 200, sy3 = 100;
+	private int xsong = 340;
 	private String songname = " ";
 	
     public SceneCanvas() {
@@ -217,7 +218,7 @@ of the shapes in the list.
 		}catch(Exception ex){}
 		g2d.setPaint(Color.magenta);
 		g2d.setFont(new Font("minecraft",Font.BOLD,20));
-	    	g2d.drawString(songname,330,480);
+	    	g2d.drawString(songname,xsong,480);
 		revalidate();
 		repaint();
     }
@@ -243,7 +244,8 @@ of the shapes in the list.
             zeroStream = AudioSystem.getAudioInputStream(aria);
             clip = AudioSystem.getClip();
             clip.open(zeroStream);
-			songname = " Aria Math";
+			songname = "Aria Math";
+		    	xsong = 340;
 			repaint();
 
             }
@@ -266,7 +268,8 @@ of the shapes in the list.
                 oneStream = AudioSystem.getAudioInputStream(blocks);
                 clip = AudioSystem.getClip();
                 clip.open(oneStream);
-				songname = "    Blocks";
+				songname = "Blocks";
+				xsong = 365;
 				repaint();
 				
                 }
@@ -288,7 +291,8 @@ of the shapes in the list.
                 twoStream = AudioSystem.getAudioInputStream(cat);
                 clip = AudioSystem.getClip();
                 clip.open(twoStream);
-				songname = "        Cat";
+				songname = "Cat";
+				xsong = 380;
 				repaint();
     
                 }
@@ -314,7 +318,8 @@ of the shapes in the list.
                 threeStream = AudioSystem.getAudioInputStream(chirp);
                 clip = AudioSystem.getClip();
                 clip.open(threeStream);
-				songname = "     Chirp";
+				songname = "Chirp";
+				xsong = 365;
 				repaint();
     
                 }
@@ -339,7 +344,8 @@ of the shapes in the list.
                 fourStream = AudioSystem.getAudioInputStream(door);
                 clip = AudioSystem.getClip();
                 clip.open(fourStream);
-				songname = "       Door";
+				songname = "Door";
+				xsong = 370;
 				repaint();
     
                 }
@@ -364,6 +370,7 @@ of the shapes in the list.
                 clip = AudioSystem.getClip();
                 clip.open(fiveStream);
 				songname = "Haunt Muskie";
+				xsong = 320;
 				repaint();
     
                 }
@@ -386,7 +393,8 @@ of the shapes in the list.
                 sixStream = AudioSystem.getAudioInputStream(kyoto);
                 clip = AudioSystem.getClip();
                 clip.open(sixStream);
-				songname = "      Kyoto";
+				songname = "Kyoto";
+				xsong = 365;
 				repaint();
     
                 }
@@ -409,7 +417,8 @@ of the shapes in the list.
                 sevenStream = AudioSystem.getAudioInputStream(mall);
                 clip = AudioSystem.getClip();
                 clip.open(sevenStream);
-				songname = "       Mall";
+				songname = "Mall";
+				xsong = 375;
 				repaint();
     
                 }
@@ -432,7 +441,8 @@ of the shapes in the list.
                 eightStream = AudioSystem.getAudioInputStream(mutation);
                 clip = AudioSystem.getClip();
                 clip.open(eightStream);
-				songname = "   Mutation";
+				songname = "Mutation";
+				xsong = 350;
 				repaint();
     
                 }
@@ -455,7 +465,8 @@ of the shapes in the list.
                 nineStream = AudioSystem.getAudioInputStream(strad);
                 clip = AudioSystem.getClip();
                 clip.open(nineStream);
-				songname = "    Strad";
+				songname = "Strad";
+				xsong = 355;
 				repaint();
     
                 }
