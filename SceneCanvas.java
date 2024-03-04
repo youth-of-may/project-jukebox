@@ -149,7 +149,8 @@ of the shapes in the list.
 
         //affinetransform
         AffineTransform reset = g2d.getTransform();
-
+		
+		//Created a new background before the other parts so that the snow appears infront of the background but behind the other parts
 	    Background bg = new Background();
 		bg.draw(g2d);
         
@@ -190,6 +191,7 @@ of the shapes in the list.
 		MusicNote mn = new MusicNote(x,y4);
 		mn.draw(g2d);
 		
+		//Movement of the first smoke particle
 		if(y>max_y || y<0){
 			y--;
 			if (y==max_y){
@@ -197,6 +199,7 @@ of the shapes in the list.
 			}
 		}
 		
+		//Movement of the second smoke particle
 		if(y2>max_y || y2<0){
 			y2--;
 			if (y2==max_y){
@@ -204,20 +207,23 @@ of the shapes in the list.
 			}
 		}
 		
+		//Movement of the third smoke particle
 		if(y3>max_y || y3<0){
 			y3--;
 			if (y3==max_y){
 				y3 = 180;
 			}
 		}
-
+		
+		//Movement of the music note
 	    	if(y4>max_y2 || y<0){
 			y4--;
 			if (y4==max_y2){
 				y4 = 320;
 			}
 		}
-
+		
+		//Movement of the left snowfall
 		if (sy<165){
 			sy++;
 			sx--;
@@ -227,6 +233,7 @@ of the shapes in the list.
 			}
 		}
 		
+		//Movement of the middle snowfall
 		if (sy2<230){
 			sy2++;
 			sx2--;
@@ -236,6 +243,7 @@ of the shapes in the list.
 			}
 		}
 		
+		//Movement of the right snowfall
 		if (sy3<200){
 			sy3++;
 			sx3--;
@@ -245,6 +253,7 @@ of the shapes in the list.
 			}
 		}
 	    
+		//To make the animations move and change the text according to the song being played
 		try{
 		Thread.sleep(20);
 		}catch(Exception ex){}
