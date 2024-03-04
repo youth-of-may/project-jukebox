@@ -218,10 +218,10 @@ of the shapes in the list.
 			}
 		}
 
-		if (sy<160){
+		if (sy<165){
 			sy++;
 			sx--;
-			if(sy == 160){
+			if(sy == 165){
 				sx = 230;
 				sy = 100;
 			}
