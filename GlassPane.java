@@ -14,6 +14,8 @@ public class GlassPane implements DrawingObject {
         return className;
     }
     public void draw(Graphics2D g2d){
+		
+		//Main body of the glass pane and its details
         Rectangle r1 = new Rectangle(x,y,size,15,new Color(171,187,184));
 		r1.draw(g2d);
 		
