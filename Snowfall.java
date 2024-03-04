@@ -16,6 +16,8 @@ public class Snowfall implements DrawingObject{
     }
 	
 	public void draw(Graphics2D g2d){
+		
+		//Collection of 4 snows to create an effect of multiple snowflakes
 		Snow sw = new Snow(x,y);
 		sw.draw(g2d);
 		
