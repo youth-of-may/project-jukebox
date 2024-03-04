@@ -18,6 +18,8 @@ public class Sign implements DrawingObject {
         return className;
     }
     public void draw(Graphics2D g2d){
+		
+		//Used to add text and add immersion to imitate minecraft
         Rectangle r1 = new Rectangle(x,y,x2,y2,new Color(109,95,60));
 		r1.draw(g2d);
 		
