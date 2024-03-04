@@ -14,6 +14,8 @@ public class BoxDetails2 implements DrawingObject{
         return className;
     }
 	public void draw(Graphics2D g2d){
+		
+		//Similar to box details 1 except positioned differently
 		Rectangle r = new Rectangle(x-10,y+15,10,15,new Color(37,23,14));
 		r.draw(g2d);
 		
