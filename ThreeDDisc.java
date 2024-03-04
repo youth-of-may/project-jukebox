@@ -90,6 +90,9 @@ public class ThreeDDisc implements DrawingObject{
     public void moveUp(double y) {
         this.y -=y;
     }
+    public void moveDown(double y) {
+        this.y +=y;
+    }
     public void resetY() {
         y = tempY;
     }
