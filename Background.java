@@ -23,10 +23,15 @@
 import java.awt.*;
 import java.awt.geom.*;
 public class Background implements DrawingObject{
-    private double x, y, width, height;
+    private double x, y;
     private String className;
     private Square[] impurities;
-    public Background(){
+    public Background(double x, double y){
+        /**
+         * This constructor instantiates the variables x, y, and clsasName. It also creates an array called impurities that contains instances of the Square class.
+         **/
+        this.x = x;
+        this.y = y;
         className = "Background";
         impurities = new Square[100];
     }
