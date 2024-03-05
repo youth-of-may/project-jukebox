@@ -22,15 +22,17 @@
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
-
+//walldetails2 implements the drawingobject interface and instantiates the variables
 public class WallDetails2 implements DrawingObject{
 	private double x,y;
 	private String className;
+	//gives the values to the variables
 	public WallDetails2(double x, double y){
 		this.x = x;
 		this.y = y;
 		className = "WallDetails2";
 	}
+	//gives the name of the class
 	public String returnClassName () {
         return className;
     }
@@ -53,11 +55,11 @@ public class WallDetails2 implements DrawingObject{
 		Rectangle r5 = new Rectangle(x-30,y+45,10,30,new Color(49,38,20));
 		r5.draw(g2d);
 	}
-	
+	//changes the x value
 	public void adjustX(double distance){
 		x += distance;
 	}
-	
+	//gives the x value
 	public double getX(){
 		return x;
 	}
