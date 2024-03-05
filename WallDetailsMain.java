@@ -22,19 +22,21 @@
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
-
+//walldetailsmain implements the drawingobject interface and instantiates the variables
 public class WallDetailsMain implements DrawingObject{
 	private double x,y;
 	private String className;
-	
+	//gives the values of the variables
 	public WallDetailsMain(double x, double y){
 		this.x = x;
 		this.y = y;
 		className = "WallDetailsMain";
 	}
+	//gives the name of the class
 	public String returnClassName () {
         return className;
     }
+	//draws out the object
 	public void draw(Graphics2D g2d){
 		
 		//Collection of all the wood details so that it may be used on both walls
@@ -104,11 +106,11 @@ public class WallDetailsMain implements DrawingObject{
 		WallDetails2 det5 = new WallDetails2(x+250,y+290);
 		det5.draw(g2d);
 	}
-	
+	//changes the x value
 	public void adjustX(double distance){
 		x += distance;
 	}
-	
+	//gives the x value
 	public double getX(){
 		return x;
 	}
