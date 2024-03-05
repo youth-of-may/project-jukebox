@@ -25,14 +25,19 @@ import java.awt.geom.*;
 public class Background implements DrawingObject{
     private double x, y, width, height;
     private String className;
+    private Square[] impurities;
     public Background(){
         className = "Background";
+        impurities = new Square[100];
     }
     public String returnClassName() {
         return className;
 
     }
     public void draw(Graphics2D g2d) {
+
+        Stroke resetStroke = g2d.getStroke();
+        g2d.setStroke(new BasicStroke(6));
 
         Point2D.Double p = new Point2D.Double(800,200);
 		Point2D.Double p2 = new Point2D.Double(800,400);
@@ -41,8 +46,51 @@ public class Background implements DrawingObject{
 		g2d.setPaint(gPaint);
 		g2d.fillRect(0,0,800,600);
 
-        
+        //making a moon
+
+        Ellipse moonBg = new Ellipse(180, 80, 110, 120, new Color(180,217,222,10));
+        moonBg.draw(g2d);
+
+        Ellipse moonBg2 = new Ellipse(130, 130, 110, 120, new Color(177,194,216,20));
+        moonBg2.draw(g2d);
+
+        Square s1 = new Square(215, 110, 40, new Color(103,113,137));
+        s1.draw(g2d);
+
+        Square s2 = new Square(225, 110, 30, new Color(224,237,255));
+        s2.draw(g2d);
 		
+        Path2D.Double moonDetails = new Path2D.Double();
+        moonDetails.moveTo(228,125);
+        moonDetails.lineTo(235,125);
+        moonDetails.lineTo(235,115);
+        moonDetails.moveTo(240,138);
+        moonDetails.lineTo(252,138);
+        moonDetails.moveTo(250,112);
+        moonDetails.lineTo(250,125);
+        g2d.setColor(new Color(87,96,116,80));
+        g2d.draw(moonDetails);
+
+        Rectangle mooonDetails2 = new Rectangle(215,110,5, 20, new Color(152,160,178));
+        mooonDetails2.draw(g2d);
+
+        Rectangle mooonDetails3 = new Rectangle(215,140,5, 10, new Color(224,237,255, 90));
+        mooonDetails3.draw(g2d);
+
+        Rectangle mooonDetails4 = new Rectangle(240,120,7, 15, new Color (152,160,180));
+        mooonDetails4.draw(g2d);
+
+        g2d.setStroke(resetStroke);
+
+        //making the impurities
+        for (int i = 0; i<impurities.length; i++) {
+            impurities[i] = new Square(Math.random()*800, Math.random()*600, 5, new Color (150,150,150, 30));
+            impurities[i].draw(g2d);
+        }
+
+        
+
+
 		//for the top part
 
 
