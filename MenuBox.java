@@ -137,11 +137,6 @@ public class MenuBox implements DrawingObject {
     public double getX(){
         return x;
     }
-    public void highlightBox() {
-        innerBox = Color.WHITE;
-        System.out.println("Highlighted");
-        
-    }
     public void selectBox() {
         selected = true;
     }
