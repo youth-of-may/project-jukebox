@@ -1,3 +1,24 @@
+/**
+ * This is a template for a Java file.
+	
+	@author Princess May Giron (232869)
+	@version 06 March 2024
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+ */
+/**
+ * This class was used to create the 3D wood found at the bottom part of the elongated window.
+ **/
 import java.awt.*;
 import java.awt.geom.*;
 public class ThreeDWood implements DrawingObject{
@@ -18,47 +39,7 @@ public class ThreeDWood implements DrawingObject{
 
     public void draw(Graphics2D g2d) {
 
-        /* 
-        x = 505;
-        y = 165;
-        Square firstLayer = new Square(x,y, 5, new Color(182,137,70));
-        Square secondLayer = new Square(x, y, 20, new Color(45, 34,16));
-        Square thirdLayer = new Square(x,y, 40, new Color(54,38,22));
-        Square fourthLayer = new Square(x, y, 80, new Color(55,39,23));
-        Square fifthLayer = new Square(x,y, 160, new Color(64,45,26));
-        
-
-        //draw the squares
-        fifthLayer.draw(g2d);
-        fourthLayer.draw(g2d);
-        thirdLayer.draw(g2d);
-        secondLayer.draw(g2d);
-        firstLayer.draw(g2d);
-
-        //draw the shadows
-        Path2D.Double left = new Path2D.Double();
-        left.moveTo(x,y);
-        left.lineTo(x-20, y-5);
-        left.closePath();
-
-        if (shadow.equals("left")) {
-
-        }
-        
-        
-        
-        
-         */
-        //Square sixthLayer = new Square();
-        //Square seventhLayer = new Square();
-        //Square eightLayer = new Square();
-
-        /* Coordinates
-         * filler1.moveTo(490, 175);
-        filler1.lineTo(477, 190);
-        filler1.lineTo(477, 313);
-        filler1.lineTo(490, 375);
-         */
+       
         Path2D.Double rightWood = new Path2D.Double();
         rightWood.moveTo(470,175);
         rightWood.lineTo(675,175);
@@ -112,20 +93,6 @@ public class ThreeDWood implements DrawingObject{
         Rectangle r6left = new Rectangle(204, 226, 65, 40, new Color(79,59,32));
         r6left.draw(g2d);
 
-        
-
-        
-
-/*  Coordinates for mid part
- * Path2D.Double midPlank = new Path2D.Double();
-        midPlank.moveTo(350,75);
-        midPlank.lineTo(350,210);
-        midPlank.lineTo(475, 210);
-        midPlank.lineTo(475,75);
-        midPlank.closePath();
-        g2d.draw(midPlank);
-*/
-        
 
 
     }

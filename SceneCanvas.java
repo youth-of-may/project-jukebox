@@ -1,8 +1,24 @@
-/*
- * Instantiate the elements here. Event listeners should also be found here.
- */
+/**
+ * This is a template for a Java file.
+	
+	@author Princess May Giron (232869)
+	@version 06 March 2024
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
 
- //this is where we will draw the elements of the animated scene
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+ */
+/**
+ * DrawingObject components were instantiated and drawn in this class. The event listeners were also declared and initialized here.
+ **/
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.*;
@@ -14,7 +30,6 @@ import javax.sound.sampled.*;
 public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
     private ArrayList<Color> colorList;
-    private boolean[] amISelected;
 	private Action zero, one, two,three, four,five, six,seven,eight,nine;
     private File aria, blocks, cat, chirp, door, hauntMuskie,kyoto, mall, mutation, strad;
     private AudioInputStream zeroStream, oneStream, twoStream, threeStream, fourStream, fiveStream, sixStream, sevenStream, eightStream, nineStream;
@@ -26,14 +41,6 @@ public class SceneCanvas extends JComponent{
     private ThreeDDisc threeDDisc;
 	
     public SceneCanvas() {
-
-        //for the boolean array
-        amISelected = new boolean[10];
-        
-
-
-        //selected = new ArrayList<>();
-
         //instantiate the colorList
         colorList = new ArrayList<>();
         colorList.add(Color.YELLOW);
@@ -47,8 +54,6 @@ public class SceneCanvas extends JComponent{
         colorList.add(new Color(201,250,219));
         colorList.add(new Color(230,156,143));
         
-        
-
 
         //instantiate the music files
        
@@ -130,18 +135,11 @@ public class SceneCanvas extends JComponent{
 	    elements.add(new Fire(600,200));
         elements.add(threeDDisc);
         elements.add(toolbox);
-            /*
-     * Add the elements inside the constructor as well
-     */
+   
     
     }
 
-    /*
-     * In your code, you must have at least one (1) loop that iterates
-through this ArrayList to repeatedly execute instructions affecting the shapes. For example, you
-can have a for loop inside the paintComponent method that calls your custom draw method on all
-of the shapes in the list.
-     */
+
 @Override
     protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
@@ -177,7 +175,7 @@ of the shapes in the list.
 
 	    g2d.setPaint(Color.black);
 		g2d.setFont(new Font("minecraft",Font.BOLD,13));
-		g2d.drawString("Minecraft & Chill",165,250);
+		g2d.drawString("Minecraft & Chill",175,250);
 	    
         Smoke smoke = new Smoke(555,y);
 		smoke.draw(g2d);
@@ -273,8 +271,7 @@ of the shapes in the list.
     private class ZeroAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
-            //MenuBox m = toolbox.returnMenuBox(0);
-            //m.highlightBox();
+
 
             try {
             threeDDisc.resetY();

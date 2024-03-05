@@ -1,9 +1,28 @@
+/**
+ * This is a template for a Java file.
+	
+	@author Princess May Giron (232869)
+	@version 06 March 2024
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+ */
+/**
+ * The class implements DrawingObject and draws a frame that contains a disc found at the center of the JFrame.
+ **/
 import java.awt.*;
 import java.awt.geom.*;
 
-/*
- * Simple lang muna for now. I'll add stuff na lang once we have all the elements
- */
+
 public class DiscFrame implements DrawingObject {
     private double x,  y, size;
     private Color color;
@@ -35,10 +54,6 @@ public class DiscFrame implements DrawingObject {
 
         
         //for the details of the discframe
-
-        /*
-         * elements.add(new DiscFrame(335, 45, 130));
-         */
 
         Line layer1 = new Line(387, 75, 412, 75, 6, new Color(151,79,46));
         layer1.draw(g2d);
@@ -79,16 +94,19 @@ public class DiscFrame implements DrawingObject {
 
         Line layer9 = new Line(420,158,445,158, 6, new Color(0,0,0,20));
         layer9.draw(g2d);
+
+        //Line sa gilid
+        Line side1= new Line (352, 100, 352, 115, 6, new Color(161,84,48));
+        side1.draw(g2d);
+
+        Line side2= new Line (440, 100, 440, 115, 6, new Color(161,84,48));
+        side2.draw(g2d);
         
 
-        //for texture
-        /* 
-        Line l1 = new Line(x,y + 5, x, y+10, 10, new Color(87,77,50));
-        l1.draw(g2d);
-        */
+        
     }
     public void adjustX(double distance) {
-
+        x+=distance;
     }
     public double getX() {
         return x;
