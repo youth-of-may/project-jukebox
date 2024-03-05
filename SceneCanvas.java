@@ -84,7 +84,7 @@ public class SceneCanvas extends JComponent{
             clip = AudioSystem.getClip();
         }
         catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-
+            System.out.println("Exceptions found. Check your code.");
         }
         
 
@@ -105,8 +105,6 @@ public class SceneCanvas extends JComponent{
         toolbox = new ToolBox(150, 500, 500);
         threeDDisc = new ThreeDDisc(600, 650, 175, 100, colorList.get(0));
 
-        
-        
         elements = new ArrayList<DrawingObject>();
 
         
@@ -124,11 +122,6 @@ public class SceneCanvas extends JComponent{
         elements.add(new Disc(362, 85, 1, Color.RED));
         elements.add(new Wood(500,425,200));
         elements.add(new Jukebox(300,375,200));
-        
-
-
-        
-        
 	    elements.add(new Candles(550,300));
 	    elements.add(new Fire(555,260));
 	    elements.add(new Fire(575,210));
@@ -290,7 +283,7 @@ public class SceneCanvas extends JComponent{
 
             }
             catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-
+                System.out.println("Exceptions found. Check your code.");
             }
             
         }
@@ -316,7 +309,7 @@ public class SceneCanvas extends JComponent{
 				
                 }
                 catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-
+                    System.out.println("Exceptions found. Check your code.");
                 }
         }
     }
@@ -342,7 +335,7 @@ public class SceneCanvas extends JComponent{
     
                 }
                 catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-
+                    System.out.println("Exceptions found. Check your code.");
                 }
             
             
@@ -372,7 +365,7 @@ public class SceneCanvas extends JComponent{
     
                 }
                 catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-
+                    System.out.println("Exceptions found. Check your code.");
                 }
             
             
@@ -401,7 +394,7 @@ public class SceneCanvas extends JComponent{
     
                 }
                 catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-
+                    System.out.println("Exceptions found. Check your code.");
                 }
             
         }
@@ -429,7 +422,7 @@ public class SceneCanvas extends JComponent{
     
                 }
                 catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-
+                    System.out.println("Exceptions found. Check your code.");
                 }
             
         }
@@ -456,7 +449,7 @@ public class SceneCanvas extends JComponent{
     
                 }
                 catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-
+                    System.out.println("Exceptions found. Check your code.");
                 }
             
         }
@@ -483,7 +476,7 @@ public class SceneCanvas extends JComponent{
     
                 }
                 catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-
+                    System.out.println("Exceptions found. Check your code.");
                 }
             
         }
@@ -510,7 +503,7 @@ public class SceneCanvas extends JComponent{
     
                 }
                 catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-
+                    System.out.println("Exceptions found. Check your code.");
                 }
             
         }
@@ -537,7 +530,7 @@ public class SceneCanvas extends JComponent{
     
                 }
                 catch(UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-
+                    System.out.println("Exceptions found. Check your code.");
                 }
         }
     }
