@@ -1,7 +1,7 @@
 /**
  * This is a template for a Java file.
 	
-	@author Princess May Giron (232869)
+	@author Princess May Giron (232869), Jienzel Christenzen H. Chua (231567)
 	@version 06 March 2024
 	
 	I have not discussed the Java language code in my program 
@@ -175,7 +175,7 @@ public class SceneCanvas extends JComponent{
 
 	    g2d.setPaint(Color.black);
 		g2d.setFont(new Font("minecraft",Font.BOLD,13));
-		g2d.drawString("Minecraft & Chill",175,250);
+		g2d.drawString("Minecraft & Chill",173,250);
 	    
         Smoke smoke = new Smoke(555,y);
 		smoke.draw(g2d);

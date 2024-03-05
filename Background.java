@@ -2,7 +2,7 @@
 /**
  * This is a template for a Java file.
 	
-	@author Princess May Giron (232869)
+	@author Princess May Giron (232869), Jienzel Christenzen H. Chua (231567)
 	@version 06 March 2024
 	
 	I have not discussed the Java language code in my program 
@@ -215,25 +215,7 @@ public class Background implements DrawingObject{
         g2d.setColor(new Color(36,26,16));
         g2d.draw(woodPlanksTop9);
  
-    /* 
-        Line l1 = new Line(125,0, 200, 75, 4, new Color(29,18,8));
-        //l1.draw(g2d);
-
-        Line l2 = new Line(175,0, 250, 75, 4,new Color(29,18,8));
-        l2.draw(g2d);
-
-        Line l3 = new Line(225,0, 300, 75, 4, new Color(29,18,8));
-        l3.draw(g2d);
-
-        Line l4 = new Line(275,0, 350, 75, 4, new Color(29,18,8));
-        l4.draw(g2d);
-
-        */
-/*
-        Line l5 = new Line(325,0, 400, 75, 4, Color.BLACK);
-        l5.draw(g2d);
- */
-        //add lines to the top part (right)
+ 
 
         Line l6 = new Line(685, 0, 625, 75, 4, new Color(29,18,8));
         l6.draw(g2d);
@@ -249,12 +231,7 @@ public class Background implements DrawingObject{
 
 
 
-        //for the wooden planks sa gilid
-
-        //Line l10 = new Line(0, 125, 150,210, 4, Color.RED);
-        //l10.draw(g2d);
-        Line l11 = new Line(675, 210, 800,115, 4, Color.RED);
-        //l11.draw(g2d);
+        
 
         Color planksColor = new Color(36,26,16);
         Path2D.Double sidePlankLeft = new Path2D.Double();
@@ -270,8 +247,7 @@ public class Background implements DrawingObject{
         g2d.draw(sidePlankLeft);
 
 
-        //Path2D.Double sidePlankLeft1 = new Path2D.Double();
-        //sidePlankLeft1.moveTo(45,0);
+     
         
         Line l1Left = new Line(45,0, 150, 90, 6, planksColor);
         l1Left.draw(g2d);
@@ -294,10 +270,7 @@ public class Background implements DrawingObject{
 
         Line l4midLine = new Line(75, 125, 75, 163, 6, planksColor);
         l4midLine.draw(g2d);
-        //g2d.draw(sidePlankLeft2);
-
-
-        //sidePlankLeft1.lineTo();
+        
         
         Path2D.Double sidePlankRight = new Path2D.Double();
         sidePlankRight.moveTo(735,0);
@@ -373,22 +346,7 @@ public class Background implements DrawingObject{
         bottomCenterFillShadow.draw(g2d);
 
 
-        //coordinates of the last lines
-        //woodPlanksTop9.lineTo(673,75);
-        //woodPlanksTop9.lineTo(735,0);
         
-
-        /* 
-        Line l10 = new Line(485, 0, 425, 75, 4, Color.BLACK);
-        l10.draw(g2d);
-*/
-        /* 
-        Path2D.Double upperSlab7 = new Path2D.Double();
-        upperSlab7.moveTo(673, 75);
-        upperSlab7.lineTo(735, 0);
-        upperSlab7.closePath();
-        g2d.setColor(Color.BLUE);
-        g2d.draw(upperSlab7);*/
 
         Rectangle filler4 = new Rectangle(325,310, 150,100,new Color(48,35,19));
         filler4.draw(g2d);
@@ -434,7 +392,7 @@ public class Background implements DrawingObject{
 
     }
     public void adjustX(double distance) {
-
+            x += distance;
     }
     public double getX() {
         return x;

@@ -1,7 +1,7 @@
 /**
  * This is a template for a Java file.
 	
-	@author Princess May Giron (232869)
+	@author Princess May Giron (232869), Jienzel Christenzen H. Chua (231567)
 	@version 06 March 2024
 	
 	I have not discussed the Java language code in my program 
@@ -17,7 +17,7 @@
 	of my program.
  */
 /**
- * Insert comment here
+	This class was used to create the fire that comes out of the candle, it makes use of squares and rectangles
  **/
 import java.awt.*;
 import java.awt.geom.*;
@@ -85,7 +85,7 @@ public class Fire implements DrawingObject{
 	}
 	
 	public void adjustX(double distance){
-	
+		x += distance;
 	}
 	
 	public double getX(){

@@ -1,7 +1,7 @@
 /**
  * This is a template for a Java file.
 	
-	@author Princess May Giron (232869)
+	@author Princess May Giron (232869), Jienzel Christenzen H. Chua (231567)
 	@version 06 March 2024
 	
 	I have not discussed the Java language code in my program 
@@ -88,7 +88,7 @@ public class BoxDetails implements DrawingObject{
 	}
 	
 	public void adjustX(double distance){
-        
+        x += distance;
     }
 	
     public double getX() {

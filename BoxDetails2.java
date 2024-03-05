@@ -1,10 +1,7 @@
-import java.awt.*;
-import java.awt.geom.*;
-import javax.swing.*;
 /**
  * This is a template for a Java file.
 	
-	@author Princess May Giron (232869)
+	@author Princess May Giron (232869), Jienzel Christenzen H. Chua (231567)
 	@version 06 March 2024
 	
 	I have not discussed the Java language code in my program 
@@ -20,8 +17,13 @@ import javax.swing.*;
 	of my program.
  */
 /**
- * Insert comment here
+ * This class is used to make the details on the 2nd row of the jukebox, it makes use of squares and rectangles
  **/
+
+import javax.swing.*;
+import java.awt.geom.*;
+import java.awt.*;
+
 public class BoxDetails2 implements DrawingObject{
 	private double x, y;
 	private String className;
@@ -83,7 +85,7 @@ public class BoxDetails2 implements DrawingObject{
 	}
 	
 	public void adjustX(double distance){
-        
+        x += distance;
     }
 	
     public double getX() {
