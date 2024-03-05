@@ -41,7 +41,7 @@ public class SceneFrame {
 
         }
         catch (IOException | FontFormatException e) {
-
+            System.out.println("Exceptions found. Check your code");
         }
         frame = new JFrame();
         canvas = new SceneCanvas();
