@@ -1,3 +1,24 @@
+/**
+ * This is a template for a Java file.
+	
+	@author Princess May Giron (232869), Jienzel Christenzen H. Chua (231567)
+	@version 06 March 2024
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+ */
+/**
+ * This class is used to create the netherrack slab, it makes use of rectangles, paths, and lines
+ **/
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
@@ -18,9 +39,12 @@ public class NetherrackSlab implements DrawingObject {
         return className;
     }
 	public void draw(Graphics2D g2d){
+		
+		//Main body of the netherrack slab
 		Rectangle r1 = new Rectangle(x,y+50,x2,y2,new Color(29,13,14));
 		r1.draw(g2d);
 		
+		//Upper angle of the netherrack slab
 		Path2D.Double line = new Path2D.Double();
 		line.moveTo(50,500+50);
 		line.lineTo(150,380+50);
@@ -30,6 +54,7 @@ public class NetherrackSlab implements DrawingObject {
 		g2d.draw(line);
 		g2d.fill(line);
 		
+		//Details of the netherrack slab
 		Line l0 = new Line(x+5,y+50,300,y+50,5,new Color(9,5,6));
 		l0.draw(g2d);
 		
@@ -80,7 +105,7 @@ public class NetherrackSlab implements DrawingObject {
 	}
 
 	public void adjustX(double distance){
-
+			x += distance;
 	}
 
 	public double getX(){

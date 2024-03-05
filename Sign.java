@@ -1,3 +1,24 @@
+/**
+ * This is a template for a Java file.
+	
+	@author Princess May Giron (232869), Jienzel Christenzen H. Chua (231567)
+	@version 06 March 2024
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+ */
+/**
+ * This class is used to create the sign, it makes use of Squares, Rectangles, and Lines
+ **/
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
@@ -18,6 +39,8 @@ public class Sign implements DrawingObject {
         return className;
     }
     public void draw(Graphics2D g2d){
+		
+		//Used to add text and add immersion to imitate minecraft
         Rectangle r1 = new Rectangle(x,y,x2,y2,new Color(109,95,60));
 		r1.draw(g2d);
 		
@@ -46,7 +69,7 @@ public class Sign implements DrawingObject {
 		r4.draw(g2d);
     }
     public void adjustX(double distance){
-        
+        x += distance;
     }
     public double getX() {
         return x;

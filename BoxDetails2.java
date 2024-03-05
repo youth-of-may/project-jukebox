@@ -1,6 +1,28 @@
-import java.awt.*;
-import java.awt.geom.*;
+/**
+ * This is a template for a Java file.
+	
+	@author Princess May Giron (232869), Jienzel Christenzen H. Chua (231567)
+	@version 06 March 2024
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+ */
+/**
+ * This class is used to make the details on the 2nd row of the jukebox, it makes use of squares and rectangles
+ **/
+
 import javax.swing.*;
+import java.awt.geom.*;
+import java.awt.*;
 
 public class BoxDetails2 implements DrawingObject{
 	private double x, y;
@@ -14,6 +36,8 @@ public class BoxDetails2 implements DrawingObject{
         return className;
     }
 	public void draw(Graphics2D g2d){
+		
+		//Similar to box details 1 except positioned differently
 		Rectangle r = new Rectangle(x-10,y+15,10,15,new Color(37,23,14));
 		r.draw(g2d);
 		
@@ -61,7 +85,7 @@ public class BoxDetails2 implements DrawingObject{
 	}
 	
 	public void adjustX(double distance){
-        
+        x += distance;
     }
 	
     public double getX() {

@@ -1,3 +1,24 @@
+/**
+ * This is a template for a Java file.
+	
+	@author Princess May Giron (232869), Jienzel Christenzen H. Chua (231567)
+	@version 06 March 2024
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+ */
+/**
+ * This class was used to create the boxes with discs found in the toolbox.
+ **/
 import java.awt.*;
 import java.awt.geom.*;
 import java.util.*;
@@ -5,9 +26,9 @@ public class MenuBox implements DrawingObject {
     private double x,  y, size;
     private static int count = 0;
     private ArrayList<Color> colorList;
-    private Square outerS, middleS, innerS;
+    private Square outerS, middleS;
     private Disc disc;
-    private boolean selected,reset;
+    private boolean selected;
     private Color shadow,innerBox;
     private String className;
     
@@ -91,12 +112,7 @@ public class MenuBox implements DrawingObject {
         }
         disc.draw(g2d);
 
-        /*
-         * innerS = new Square(x+8,y+8.5, size *.70, new Color(39,29,6));
-         */
-        /*
-         * 
-         */
+       
 
          y = tentativeY;
 
@@ -116,16 +132,14 @@ public class MenuBox implements DrawingObject {
         
     }
     public void adjustX(double distance){
-
+            x+= distance;
     }
     public double getX(){
         return x;
     }
     public void highlightBox() {
         innerBox = Color.WHITE;
-        
         System.out.println("Highlighted");
-        //figure out how to enlarge square when selected
         
     }
     public void selectBox() {

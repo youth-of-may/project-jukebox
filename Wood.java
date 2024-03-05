@@ -1,3 +1,24 @@
+/**
+ * This is a template for a Java file.
+	
+	@author Princess May Giron (232869), Jienzel Christenzen H. Chua (231567)
+	@version 06 March 2024
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+ */
+/**
+ * This class is used to make the wood block and its details, it makes use of squares, rectangles, paths, and lines
+ **/
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
@@ -17,9 +38,12 @@ public class Wood implements DrawingObject{
     }
 	
 	public void draw(Graphics2D g2d){
+		
+		//Main body of the wood block
 		Square w = new Square(x-10,y,size+40,new Color(43,31,17));
 		w.draw(g2d);
 		
+		//Top angle of the wood block
 		Path2D.Double line4 = new Path2D.Double();
 		line4.moveTo(x-10,y);
 		line4.lineTo(475,300+25);
@@ -30,6 +54,7 @@ public class Wood implements DrawingObject{
 		g2d.fill(line4);
 		g2d.draw(line4);
 		
+		//Details of the wood block
 		Rectangle r1 = new Rectangle(x+25,y+125,15,30,new Color(35,28,12));
 		r1.draw(g2d);
 		
@@ -119,7 +144,7 @@ public class Wood implements DrawingObject{
 	}
 
 	public void adjustX(double distance){
-
+		x += distance;
 	}
 
 	public double getX(){

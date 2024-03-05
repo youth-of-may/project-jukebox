@@ -1,3 +1,24 @@
+/**
+ * This is a template for a Java file.
+	
+	@author Princess May Giron (232869), Jienzel Christenzen H. Chua (231567)
+	@version 06 March 2024
+	
+	I have not discussed the Java language code in my program 
+	with anyone other than my instructor or the teaching assistants 
+	assigned to this course.
+
+	I have not used Java language code obtained from another student, 
+	or any other unauthorized source, either modified or unmodified.
+
+	If any Java language code or documentation used in my program 
+	was obtained from another source, such as a textbook or website, 
+	that has been clearly noted with a proper citation in the comments 
+	of my program.
+ */
+/**
+	This class was used to create the fire that comes out of the candle, it makes use of squares and rectangles
+ **/
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
@@ -15,6 +36,8 @@ public class Fire implements DrawingObject{
         return className;
     }
 	public void draw(Graphics2D g2d){
+		
+		//Used to create fire to be placed on the candle
 		Square red1 = new Square(x+5,y,5,new Color(255,15,15));
 		red1.draw(g2d);
 		
@@ -62,7 +85,7 @@ public class Fire implements DrawingObject{
 	}
 	
 	public void adjustX(double distance){
-	
+		x += distance;
 	}
 	
 	public double getX(){
