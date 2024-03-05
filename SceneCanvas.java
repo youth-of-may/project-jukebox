@@ -142,7 +142,7 @@ public class SceneCanvas extends JComponent{
         AffineTransform reset = g2d.getTransform();
 		
 		//Created a new background before the other parts so that the snow appears infront of the background but behind the other parts
-	    Background bg = new Background();
+	    Background bg = new Background(0,0);
 		bg.draw(g2d);
         
 		Snowfall sf = new Snowfall(sx,sy);
