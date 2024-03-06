@@ -1,9 +1,0 @@
-{
-    "graalvm.installations": [
-        "c:\\Users\\user\\Documents\\Java\\graalvm-jdk-21.0.1+12.1"
-    ],
-    "graalvm.home": "c:\\Users\\user\\Documents\\Java\\graalvm-jdk-21.0.1+12.1",
-    "terminal.integrated.env.windows": {
-        "GRAALVM_HOME": "c:\\Users\\user\\Documents\\Java\\graalvm-jdk-21.0.1+12.1"
-    }
-}
