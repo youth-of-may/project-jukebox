@@ -23,14 +23,14 @@ import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
 /**
-	sign implements the drawingobject interface and instantiates the variables
+*	sign implements the drawingobject interface and instantiates the variables
 **/
 	public class Sign implements DrawingObject {
     	private double x, y, x2, y2;
 	private String className;
 	
 	/**
-		gives the value to the variables
+	*	gives the value to the variables
     	**/
 		public Sign(double x, double y, double x2, double y2) {
 		this.x = x;
@@ -40,13 +40,13 @@ import javax.swing.*;
 		className = "Sign";
     }
 	/**
-		gives the name of the class
+	*	gives the name of the class
 	**/
 		public String returnClassName () {
         	return className;
     }
 	/**
-		draws out the sign
+	*	draws out the sign
     	**/
 		public void draw(Graphics2D g2d){
 		
@@ -79,13 +79,13 @@ import javax.swing.*;
 		r4.draw(g2d);
     }
 	/**
-		changes the x value
+	*	changes the x value
     	**/
 		public void adjustX(double distance){
         	x += distance;
     }
 	/**
-		gives the x value
+	*	gives the x value
     	**/
 		public double getX() {
         return x;
