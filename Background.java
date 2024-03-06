@@ -36,11 +36,16 @@ public class Background implements DrawingObject{
         impurities = new Square[100];
     }
     public String returnClassName() {
+        /**
+         * This method returns the name of the class. This method was used in the SceneCanvas class.
+         **/
         return className;
 
     }
     public void draw(Graphics2D g2d) {
-
+        /**
+         * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
+         **/
         Stroke resetStroke = g2d.getStroke();
         g2d.setStroke(new BasicStroke(6));
 
@@ -445,9 +450,16 @@ public class Background implements DrawingObject{
 
     }
     public void adjustX(double distance) {
+
+        /**
+         * This method can be used to adjust x. It has an argument distance that will be added to x whenever this method is called.
+         **/
             x += distance;
     }
     public double getX() {
+        /**
+         * This method returns a double. It returns the instance x of the class.
+         **/
         return x;
     }
 }
