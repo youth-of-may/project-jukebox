@@ -17,24 +17,34 @@
 	of my program.
  */
 /**
- * Insert comments here
+ * This class creates the boxdetails class which is used to add details to the jukebox and makes use of squares and rectangles
  **/
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
-
+/**
+* boxdetails implements the drawingobject interface and instantiates the variables
+**/
 public class BoxDetails implements DrawingObject{
 	private double x, y;
 	private String className;
-	
+	/**
+*gives the values to the variables
+**/
 	public BoxDetails(double x, double y){
 		this.x = x;
 		this.y = y;
 		className = "BoxDetails";
 	}
+	/**
+	* gives the name of the class
+	**/
 	public String returnClassName () {
         return className;
     }
+	/**
+	* draws out the object
+	**/
 	public void draw(Graphics2D g2d){
 		
 		//Details for the front part of the jukebox
@@ -86,11 +96,15 @@ public class BoxDetails implements DrawingObject{
 		Square s11 = new Square(x+135,y+15,15,new Color(67,44,30));
 		s11.draw(g2d);
 	}
-	
+	/**
+	* changes the x value
+	**/
 	public void adjustX(double distance){
         x += distance;
     }
-	
+	/**
+	* gives the x value
+	**/
     public double getX() {
         return x;
     }
