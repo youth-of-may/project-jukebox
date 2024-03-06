@@ -30,7 +30,7 @@ public class Disc implements DrawingObject {
 	
 	public Disc(double x, double y, double percentage, Color color){
 		/**
-		 * The constructor of this class has several arguments: x, y, percentage, and color. It also asked for the percentage to enhance it's scalability. 
+		 * The constructor of this class has several parameters: x, y, percentage, and color. It also asked for the percentage to enhance it's scalability. 
 		 **/
 		this.x = x;
 		this.y = y;
@@ -80,7 +80,7 @@ public class Disc implements DrawingObject {
 	
 	public void adjustX(double distance){
 		/**
-         * This method can be used to adjust x. It has an argument distance that will be added to x whenever this method is called.
+         * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
          **/
 		x+= distance;
 	}

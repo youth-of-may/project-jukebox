@@ -54,7 +54,7 @@ public class Circle implements DrawingObject {
     }
     public void adjustX(double distance) {
        /**
-         * This method can be used to adjust x. It has an argument distance that will be added to x whenever this method is called.
+         * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
          **/ 
         x += distance;
     }

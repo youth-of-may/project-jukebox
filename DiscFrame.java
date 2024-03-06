@@ -17,7 +17,7 @@
 	of my program.
  */
 /**
- * The class implements DrawingObject and draws a frame that contains a disc found at the center of the JFrame.
+ * The class implements DrawingObject. It draws a frame that contains a disc found at the center of the JFrame.
  **/
 import java.awt.*;
 import java.awt.geom.*;
@@ -29,6 +29,10 @@ public class DiscFrame implements DrawingObject {
     private Square outerFrame, midFrame;
     private String className;
     public DiscFrame(double x, double y, double size) {
+        /**
+		 * The constructor of this class has several parameters: x, y, and its size. It also instantiated the variables outerFrame, midFrame, and className in the constructor. 
+		 **/
+
         this.x = x;
         this.y = y;
         this.size = size;
@@ -39,9 +43,16 @@ public class DiscFrame implements DrawingObject {
         midFrame = new Square(x+12, y+13, size*0.80, new Color(115,64,40));
     }
     public String returnClassName () {
+        /**
+         * This method returns the name of the class. This method was used in the SceneCanvas class.
+         **/
+
         return className;
     }
     public void draw(Graphics2D g2d) {
+        /**
+         * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
+         **/
         outerFrame.draw(g2d);
         midFrame.draw(g2d);
 
@@ -106,9 +117,15 @@ public class DiscFrame implements DrawingObject {
         
     }
     public void adjustX(double distance) {
+        /**
+         * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
+         **/
         x+=distance;
     }
     public double getX() {
+        /**
+         * This method returns a double. It returns the instance x of the class.
+         **/
         return x;
     }
 }
