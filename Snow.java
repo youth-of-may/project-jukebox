@@ -22,19 +22,21 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.*;
-
+//snow implements the drawingobject interface and instantiates the variables
 public class Snow implements DrawingObject{
 	private double x,y;
 	private String className;
-	
+	//gives the value to the variables
 	public Snow(double x, double y){
 		this.x = x;
 		this.y = y;
 		className = "Snow";
 	}
+	//gives the name of the class
 	public String returnClassName () {
         return className;
     }
+	//draws out the snow
 	public void draw(Graphics2D g2d){
 		
 		//Used to create a single snow particle
@@ -50,11 +52,11 @@ public class Snow implements DrawingObject{
 		Square s4 = new Square(x+5,y+10,5,Color.WHITE);
 		s4.draw(g2d);
 	}
-	
+	//changes the x value
 	public void adjustX(double distance){
 		x += distance;
 	}
-	
+	//gives the x value
 	public double getX(){
 		return x;
 	}

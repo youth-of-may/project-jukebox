@@ -22,20 +22,21 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.*;
-
+//snowfall implements the drawingobject interface and instantiates the variables
 public class Snowfall implements DrawingObject{
 	private double x,y;
 	private String className;
-	
+	//gives the values to the variables
 	public Snowfall(double x, double y){
 		this.x = x;
 		this.y = y;
 		className = "Snowfall";
 	}
+	//gives the name of the class
 	public String returnClassName () {
         return className;
     }
-	
+	//draws out the object
 	public void draw(Graphics2D g2d){
 		
 		//Collection of 4 snows to create an effect of multiple snowflakes
@@ -51,11 +52,11 @@ public class Snowfall implements DrawingObject{
 		Snow sw4 = new Snow(x-10, y+30);
 		sw4.draw(g2d);
 	}
-	
+	//changes the x value
 	public void adjustX(double distance){
 		x += distance;
 	}
-	
+	//gives the x value
 	public double getX(){
 		return x;
 	}
