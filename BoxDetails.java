@@ -29,8 +29,8 @@ public class BoxDetails implements DrawingObject{
 	private double x, y;
 	private String className;
 	/**
-*gives the values to the variables
-**/
+	*gives the values to the variables
+	**/
 	public BoxDetails(double x, double y){
 		this.x = x;
 		this.y = y;
