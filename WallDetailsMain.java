@@ -23,13 +23,13 @@ import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
 /**
-	walldetailsmain implements the drawingobject interface and instantiates the variables
+*	walldetailsmain implements the drawingobject interface and instantiates the variables
 **/
 	public class WallDetailsMain implements DrawingObject{
 	private double x,y;
 	private String className;
 	/**
-		gives the values of the variables
+	*	gives the values of the variables
 	**/
 		public WallDetailsMain(double x, double y){
 		this.x = x;
@@ -37,13 +37,13 @@ import javax.swing.*;
 		className = "WallDetailsMain";
 	}
 	/**
-		gives the name of the class
+	*	gives the name of the class
 	**/
 		public String returnClassName () {
         	return className;
     }
 	/**
-		draws out the object
+	*	draws out the object
 	**/
 		public void draw(Graphics2D g2d){
 		
@@ -115,13 +115,13 @@ import javax.swing.*;
 		det5.draw(g2d);
 	}
 	/**
-		changes the x value
+	*	changes the x value
 	**/
 		public void adjustX(double distance){
 		x += distance;
 	}
 	/**
-		gives the x value
+	*	gives the x value
 	**/
 		public double getX(){
 		return x;
