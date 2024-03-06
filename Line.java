@@ -27,11 +27,11 @@ public class Line implements DrawingObject{
     private float thickness;
     private Color color;
     private String className;
-
-    public Line(double x1, double y1, double x2, double y2, float thickness, Color color) {
-         /**
+/**
 		 * The constructor of this class has several parameters: x1, y1, x2, y2, color, and its thickness. It also instantiated the className variable. 
 		 **/
+    public Line(double x1, double y1, double x2, double y2, float thickness, Color color) {
+         
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
@@ -39,33 +39,33 @@ public class Line implements DrawingObject{
         this.thickness  = thickness;
         this.color = color;
         className = "Line";
-    }
-    public String returnClassName () {
-        /**
+    }/**
          * This method returns the name of the class. This method was used in the SceneCanvas class.
          **/
+    public String returnClassName () {
+        
         return className;
-    }
-    public void draw(Graphics2D g2d){
-        /**
+    }/**
          * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
          **/
+    public void draw(Graphics2D g2d){
+        
         g2d.setStroke(new BasicStroke(thickness));
         Line2D.Double l1 = new Line2D.Double(x1,y1,x2,y2);
         g2d.setColor(color);
         g2d.draw(l1);
         
-    }
-    public void adjustX(double distance) {
-        /**
+    }/**
          * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
          **/
+    public void adjustX(double distance) {
+        
         x1 += distance;
-    }
-    public double getX(){
-        /**
+    }/**
          * This method returns a double. It returns the instance x of the class.
          **/
+    public double getX(){
+        
         return x2;
     }
     
