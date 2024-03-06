@@ -25,41 +25,42 @@ public class Ellipse implements DrawingObject{
     private double x, y, width, height;
     private Color color;
     private String className;
-    public Ellipse(double x, double y, double width, double height, Color color) {
-         /**
+    /**
 		 * The constructor of this class has several parameters: x, y, width, height, and its color. It also instantiated the variable className here. 
 		 **/
+    public Ellipse(double x, double y, double width, double height, Color color) {
+         
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
         this.color = color;
         className = "Ellipse";
-    }
-    public String returnClassName () {
-        /**
+    }/**
          * This method returns the name of the class. This method was used in the SceneCanvas class.
          **/
+    public String returnClassName () {
+        
         return className;
-    }
-    public void draw(Graphics2D g2d) {
-        /**
+    }/**
          * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
          **/
+    public void draw(Graphics2D g2d) {
+        
         Ellipse2D.Double ellipse = new Ellipse2D.Double(x, y, width, height);
         g2d.setColor(color);
         g2d.fill(ellipse);
-    }
-    public void adjustX(double distance) {
-        /**
+    }/**
          * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
          **/
+    public void adjustX(double distance) {
+        
         x += distance;
-    }
-    public double getX() {
-        /**
+    }/**
          * This method returns a double. It returns the instance x of the class.
          **/
+    public double getX() {
+        
         return x;
     }
 }
