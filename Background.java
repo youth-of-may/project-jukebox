@@ -26,26 +26,29 @@ public class Background implements DrawingObject{
     private double x, y;
     private String className;
     private Square[] impurities;
-    public Background(double x, double y){
-        /**
+    /**
          * This constructor instantiates the variables x, y, and clsasName. It also creates an array called impurities that contains instances of the Square class.
          **/
+    public Background(double x, double y){
+        
         this.x = x;
         this.y = y;
         className = "Background";
         impurities = new Square[100];
     }
-    public String returnClassName() {
-        /**
+    /**
          * This method returns the name of the class. This method was used in the SceneCanvas class.
          **/
+    public String returnClassName() {
+        
         return className;
 
     }
-    public void draw(Graphics2D g2d) {
-        /**
+    /**
          * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
          **/
+    public void draw(Graphics2D g2d) {
+        
         Stroke resetStroke = g2d.getStroke();
         g2d.setStroke(new BasicStroke(6));
 
@@ -449,17 +452,19 @@ public class Background implements DrawingObject{
 	wdm2.draw(g2d);
 
     }
-    public void adjustX(double distance) {
-
-        /**
+    /**
          * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
          **/
+    public void adjustX(double distance) {
+
+        
             x += distance;
     }
-    public double getX() {
-        /**
+    /**
          * This method returns a double. It returns the instance x of the class.
          **/
+    public double getX() {
+        
         return x;
     }
 }
