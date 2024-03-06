@@ -40,7 +40,7 @@ public class SceneCanvas extends JComponent{
 	private String songname = " ";
     private ThreeDDisc threeDDisc;
     private long clipTime;
-    private boolean paused;
+    private boolean paused, stopped;
 	/**
      * Instantiate the variables created. Add elements to the DrawingObject ArrayList.
      **/
@@ -112,6 +112,7 @@ public class SceneCanvas extends JComponent{
         elements = new ArrayList<DrawingObject>();
         clipTime =0;
         paused = false;
+        stopped = false;
 
         
 
@@ -259,6 +260,11 @@ public class SceneCanvas extends JComponent{
 		g2d.setPaint(Color.magenta);
 		g2d.setFont(new Font("minecraft",Font.BOLD,20));
 	    	g2d.drawString(songname,xsong,480);
+
+        if (stopped) {
+            g2d.setFont(new Font("minecraft",Font.BOLD,20));
+	    	g2d.drawString("Press a number",300,480);
+        }
 		revalidate();
 		repaint();
     }
@@ -279,6 +285,7 @@ public class SceneCanvas extends JComponent{
 
 
             try {
+            stopped = false;
             threeDDisc.resetY();
             threeDDisc.moveUp(175);
             threeDDisc.changeColor(colorList.get(0));
@@ -307,6 +314,7 @@ public class SceneCanvas extends JComponent{
         @Override 
         public void actionPerformed(ActionEvent ae) {
             try {
+                stopped = false;
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(1));
@@ -335,6 +343,7 @@ public class SceneCanvas extends JComponent{
         public void actionPerformed(ActionEvent ae) {
 
             try {
+                stopped = false;
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(2));
@@ -366,6 +375,7 @@ public class SceneCanvas extends JComponent{
         public void actionPerformed(ActionEvent ae) {
 
             try {
+                stopped = false;
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(3));
@@ -398,6 +408,7 @@ public class SceneCanvas extends JComponent{
 
             
             try {
+                stopped = false;
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(4));
@@ -427,6 +438,7 @@ public class SceneCanvas extends JComponent{
         public void actionPerformed(ActionEvent ae) {
 
             try {
+                stopped = false;
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(5));
@@ -457,6 +469,7 @@ public class SceneCanvas extends JComponent{
         public void actionPerformed(ActionEvent ae) {
 
             try {
+                stopped = false;
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(6));
@@ -486,6 +499,7 @@ public class SceneCanvas extends JComponent{
         public void actionPerformed(ActionEvent ae) {
 
             try {
+                stopped = false;
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(7));
@@ -515,6 +529,7 @@ public class SceneCanvas extends JComponent{
         public void actionPerformed(ActionEvent ae) {
 
             try {
+                stopped = false;
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(8));
@@ -544,6 +559,7 @@ public class SceneCanvas extends JComponent{
         public void actionPerformed(ActionEvent ae) {
 
             try {
+                stopped = false;
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
                 threeDDisc.changeColor(colorList.get(9));
@@ -622,8 +638,10 @@ public class SceneCanvas extends JComponent{
                     clip.setMicrosecondPosition(clipTime);
                     clip.start();
                 }
+                if (stopped==false) {
                 clip.start();
 				x = 390;
+            }
             }
         });
     }
@@ -648,11 +666,14 @@ public class SceneCanvas extends JComponent{
         stopButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
+                stopped = true;
                 clipTime = 0;
                 clip.stop();
                 clip.close();
 		    songname = " ";
 				x = 800;
+                threeDDisc.resetY();
+                resetSelected();
             }
         });
     }
