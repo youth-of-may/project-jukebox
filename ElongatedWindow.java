@@ -25,6 +25,9 @@ public class ElongatedWindow implements DrawingObject{
     private double x, y, width, height;
     private String className;
     public ElongatedWindow(double x, double y, double width, double height) {
+         /**
+		 * The constructor of this class has several parameters: x, y, width, and its height. It also instantiated the variable className here. 
+		 **/
         this.x = x;
         this.y = y;
         this.width = width;
@@ -32,10 +35,15 @@ public class ElongatedWindow implements DrawingObject{
         className = "ElongatedWindow";
     }
     public String returnClassName () {
+        /**
+         * This method returns the name of the class. This method was used in the SceneCanvas class.
+         **/
         return className;
     }
     public void draw(Graphics2D g2d) {
-        Stroke oldStroke = g2d.getStroke();
+        /**
+         * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
+         **/
         g2d.setStroke(new BasicStroke(16));
 
         Rectangle2D.Double outsideRec = new Rectangle2D.Double(x+8, y+13, width-20, height-20);
@@ -60,9 +68,16 @@ public class ElongatedWindow implements DrawingObject{
         
     }
     public void adjustX(double distance) {
+        /**
+         * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
+         **/
+
         x += distance;
     }
     public double getX() {
+        /**
+         * This method returns a double. It returns the instance x of the class.
+         **/
         return x;
     }
 }
