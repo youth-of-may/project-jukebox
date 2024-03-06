@@ -31,8 +31,11 @@ public class MenuBox implements DrawingObject {
     private boolean selected;
     private Color shadow,innerBox;
     private String className;
-    
+    /**
+		 * The constructor of this class has several parameters: x, y, and its size. It also instantiated the variables selected, className, colorList, innerBox,outerS, middleS, and disc here. It called the method addCount at the end of it. 
+		 **/
     public MenuBox(double x, double y, double size) {
+         
         this.x = x;
         this.y = y;
         this.size = size;
@@ -61,14 +64,25 @@ public class MenuBox implements DrawingObject {
         disc = new Disc(x+10, y+15, 0.40, colorList.get(count));
         addCount();
     }
+    /**
+         * This method returns the name of the class. This method was used in the SceneCanvas class.
+         **/
     public String returnClassName () {
+        
         return className;
-    }
+    } 
+    /**
+         * This method was used to keep track of the number of discs made.
+          **/
     private static void addCount() {
-        //to keep track of number of discs made
+       
         count++;
     }
+    /**
+         * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
+         **/
     public void draw(Graphics2D g2d){
+        
         double tentativeY = y;
         float thickness = 4;
 
@@ -131,18 +145,37 @@ public class MenuBox implements DrawingObject {
 
         
     }
+    /**
+         * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
+         **/
     public void adjustX(double distance){
+        
             x+= distance;
     }
+    /**
+         * This method returns a double. It returns the instance x of the class.
+         **/
     public double getX(){
+        
         return x;
     }
+    /**
+         * This method was used to change the selected variable to true. 
+         **/
     public void selectBox() {
+        
         selected = true;
     }
+    /**
+         * This method was used to change selected to false.
+         **/
     public void resetSelect () {
+        
         selected = false;
     }
+    /** 
+     * This method returns selected. 
+    **/
     public boolean returnSelected() {
         return selected;
     }
