@@ -17,7 +17,7 @@
 	of my program.
  */
 /**
- * This class was used to create a Circle (basic shape) using the data entered or passed to its constructor.
+ * This class was used to create a Circle (basic shape). It used the data entered or passed to its constructor.
  **/
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
@@ -27,6 +27,9 @@ public class Circle implements DrawingObject {
     private String className;
 
     public Circle(double x, double y, double size, Color color) {
+        /**
+         * This class needs an x, y, size, and color to be successfully called. The variables stated will get instantiated here along with the className variable.
+         **/
         this.x = x;
         this.y = y;
         this.size = size;
@@ -34,17 +37,31 @@ public class Circle implements DrawingObject {
         className = "Circle";
     }
     public String returnClassName () {
+        /**
+         * This method returns the name of the class. This method was used in the SceneCanvas class.
+         **/
+
+
         return className;
     }
     public void draw(Graphics2D g2d){
+        /**
+         * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
+         **/
         Ellipse2D.Double e1 = new Ellipse2D.Double(x,y,size,size);
         g2d.setColor(color);
         g2d.fill(e1);
     }
     public void adjustX(double distance) {
+       /**
+         * This method can be used to adjust x. It has an argument distance that will be added to x whenever this method is called.
+         **/ 
         x += distance;
     }
     public double getX(){
+        /**
+         * This method returns a double. It returns the instance x of the class.
+         **/
         return x;
     }
 }
