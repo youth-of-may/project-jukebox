@@ -17,16 +17,20 @@
 	of my program.
  */
 /**
- * This class can be usecd to create a rectangle using x, y, width, height, and color.
+ * This class can be used to create a rectangle using x, y, width, height, and color.
  **/
 import java.awt.*;
 import java.awt.geom.*;
-//rectangle implements the drawingobject interface and instantiates the variables
+/**
+ * rectangle implements the drawingobject interface and instantiates the variables
+ **/
 public class Rectangle implements DrawingObject{
     private double x, y, width, height;
     private Color color;
     private String className;
-//gives the value to the variables
+/**
+ * gives the value to the variables
+ **/
     public Rectangle(double x, double y, double width, double height, Color color) {
         this.x = x;
         this.y = y;
@@ -35,21 +39,29 @@ public class Rectangle implements DrawingObject{
         this.color = color;
         className = "Rectangle";
     }
-	//gives the name of the class
+	/**
+         * This method returns the name of the class. This method was used in the SceneCanvas class.
+         **/
     public String returnClassName () {
         return className;
     }
-//draws out the rectangle
+/**
+         * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
+         **/
     public void draw(Graphics2D g2d){
         Rectangle2D.Double r1 = new Rectangle2D.Double(x,y,width,height);
         g2d.setColor(color);
         g2d.fill(r1);
     }
-	//changes the x value
+/**
+         * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
+         **/
     public void adjustX(double distance) {
             x += distance;
     }
-	//gives the x value
+/**
+         * This method returns a double. It returns the instance x of the class.
+         **/
     public double getX(){
         return x;
     }
