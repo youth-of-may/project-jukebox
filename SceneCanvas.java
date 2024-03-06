@@ -31,8 +31,8 @@ public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
     private ArrayList<Color> colorList;
 	private Action zero, one, two,three, four,five, six,seven,eight,nine;
-    private File sfx, aria, blocks, cat, chirp, door, hauntMuskie,kyoto, mall, mutation, strad;
-    private AudioInputStream sfxStream, zeroStream, oneStream, twoStream, threeStream, fourStream, fiveStream, sixStream, sevenStream, eightStream, nineStream;
+    private File snowSfx, sfx, aria, blocks, cat, chirp, door, hauntMuskie,kyoto, mall, mutation, strad;
+    private AudioInputStream bgStream, sfxStream, zeroStream, oneStream, twoStream, threeStream, fourStream, fiveStream, sixStream, sevenStream, eightStream, nineStream;
     private Clip clip;
     private ToolBox toolbox;
 	private double y = 200, max_y = 100, max_y2 = 290, y2 = 170, y3 = 180, y4 = 320, x = 800, sx = 230, sx2 = 400, sx3 = 620, sy = 100, sy2 = 200, sy3 = 100;
@@ -60,6 +60,7 @@ public class SceneCanvas extends JComponent{
         
 
         //instantiate the music files
+            snowSfx = new File("snowSfx.wav");
             sfx = new File("sfxMenu.wav");
             aria = new File("Aria Math.wav");
             blocks = new File("Blocks.wav");
@@ -74,6 +75,13 @@ public class SceneCanvas extends JComponent{
         
         //instantiating audiostream
         try {
+            //playing stream
+            bgStream = AudioSystem.getAudioInputStream(snowSfx);
+            clip = AudioSystem.getClip();
+            clip.open(bgStream);
+            clip.start();
+
+
             sfxStream = AudioSystem.getAudioInputStream(sfx);
             zeroStream = AudioSystem.getAudioInputStream(aria);
             oneStream = AudioSystem.getAudioInputStream(blocks);
