@@ -23,13 +23,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.*;
 /**
-	snow implements the drawingobject interface and instantiates the variables
+*	snow implements the drawingobject interface and instantiates the variables
 **/
 	public class Snow implements DrawingObject{
 	private double x,y;
 	private String className;
 	/**
-		gives the value to the variables
+	*	gives the value to the variables
 	**/
 		public Snow(double x, double y){
 		this.x = x;
@@ -37,13 +37,13 @@ import java.awt.geom.*;
 		className = "Snow";
 	}
 	/**
-		gives the name of the class
+	*	gives the name of the class
 	**/
 		public String returnClassName () {
         	return className;
     }
 	/**
-		draws out the snow
+	*	draws out the snow
 	**/
 		public void draw(Graphics2D g2d){
 		
@@ -61,13 +61,13 @@ import java.awt.geom.*;
 		s4.draw(g2d);
 	}
 	/**
-		changes the x value
+	*	changes the x value
 	**/
 		public void adjustX(double distance){
 		x += distance;
 	}
 	/**
-		gives the x value
+	*	gives the x value
 	**/
 		public double getX(){
 		return x;
