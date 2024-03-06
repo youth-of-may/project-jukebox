@@ -22,19 +22,21 @@
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
-
+//smoke implements the drawingobject interface and instantiates the variables
 public class Smoke implements DrawingObject{
 	private double x,y;
 	private String className;
-	
+	//gives the value to the variables
 	public Smoke(double x, double y){
 		this.x = x;
 		this.y = y;
 		className = "Smoke";
 	}
+	//gives the name of the class
 	public String returnClassName () {
         return className;
     }
+	//draws out the smoke
 	public void draw(Graphics2D g2d){
 		
 		//Used to create a smoke effect
@@ -62,11 +64,11 @@ public class Smoke implements DrawingObject{
 		Square s5 = new Square(x+15,y+10,5,new Color(159,134,111));
 		s5.draw(g2d);
 	}
-	
+	//changes the x value
 	public void adjustX(double distance){
 		x += distance;
 	}
-	
+	//gives the x value
 	public double getX(){
 		return x;
 	}
