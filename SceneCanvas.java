@@ -637,6 +637,7 @@ public class SceneCanvas extends JComponent{
                 paused = true;
                 clipTime = clip.getMicrosecondPosition();
                 clip.stop();
+		    x = 800;
             }
         });
     }
