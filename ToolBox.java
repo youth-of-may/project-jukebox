@@ -17,7 +17,7 @@
 	of my program.
  */
 /**
- * This class was used to create the toolbox similar to the toolbox found in Minecraft.
+ * This class was used to create the toolbox similar to the toolbox found in Minecraft. It made use of the MenuBox class to create the boxes.
  **/
 import java.util.*;
 import java.awt.*;
@@ -26,7 +26,9 @@ public class ToolBox implements DrawingObject{
     private double x, y, width, height;
     private ArrayList<MenuBox> boxes;
     private String className;
-
+     /**
+		 * The constructor of this class has several parameters: x, y, and its size. It also instantiated the variables className and boxes in the constructor.
+		 **/
     public ToolBox(double x, double y, double size) {
         this.x = x;
         this.y = y;
@@ -47,24 +49,38 @@ public class ToolBox implements DrawingObject{
         
 
     }
+    /**
+         * This method returns the name of the class. This method was used in the SceneCanvas class.
+         **/
+
     public String returnClassName () {
         return className;
     }
+    /** 
+     * This method can be used to "get" the menuBox located at the specific index passed to it.
+    **/
     public MenuBox returnMenuBox (int index) {
         return boxes.get(index);
     }
+    /**
+         * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
+         **/
     public void draw(Graphics2D g2d) {
-        
-        
         for (MenuBox m : boxes) {
             m.draw(g2d);
         }
 
         
     }
+    /**
+         * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
+         **/
     public void adjustX(double distance) {
         x += distance;
     }
+    /**
+         * This method returns a double. It returns the instance x of the class.
+         **/
     public double getX() {
         return x;
     }
