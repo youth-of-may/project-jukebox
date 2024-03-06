@@ -30,6 +30,9 @@ public class SceneFrame {
     private JButton playButton, test, stopButton;
     private JLabel invisibleLabel;
     private Font minecraft;
+    /**
+     * The constructor creates a frame and an instance of the SceneCanvas class. In making the components of the frame we also added/created a new font to go with the theme of our project.
+     **/
     public SceneFrame() {
         
         //add a new font 
@@ -71,6 +74,9 @@ public class SceneFrame {
         stopButton.setBorder(BorderFactory.createRaisedBevelBorder());
 
     }
+    /**
+     * This method sets up the GUI, calling the necessary methods of the JFrame class. 
+     **/
     public void setUpGUI() {
         JPanel bottomPanel = new JPanel();
         bottomPanel.setLayout(new GridLayout(1,4));

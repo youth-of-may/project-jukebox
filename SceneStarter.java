@@ -17,9 +17,12 @@
 	of my program.
  */
 /**
- * This class contains a main method that was used to instantiate the SceneFrame class.
+ * This class contains a main method that was used to instantiate the SceneFrame class. It also calls the setUpGUI method of it.
  **/
 public class SceneStarter {
+	/**
+	 * The main method was used to instantiate the SceneFrame class. This was the start of it all. the program won't function without this.
+	 *  **/
     public static void main(String args[]) {
         SceneFrame s = new SceneFrame();
         s.setUpGUI();
