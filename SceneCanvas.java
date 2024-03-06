@@ -31,8 +31,8 @@ public class SceneCanvas extends JComponent{
     private ArrayList<DrawingObject> elements;
     private ArrayList<Color> colorList;
 	private Action zero, one, two,three, four,five, six,seven,eight,nine;
-    private File aria, blocks, cat, chirp, door, hauntMuskie,kyoto, mall, mutation, strad;
-    private AudioInputStream zeroStream, oneStream, twoStream, threeStream, fourStream, fiveStream, sixStream, sevenStream, eightStream, nineStream;
+    private File sfx, aria, blocks, cat, chirp, door, hauntMuskie,kyoto, mall, mutation, strad;
+    private AudioInputStream sfxStream, zeroStream, oneStream, twoStream, threeStream, fourStream, fiveStream, sixStream, sevenStream, eightStream, nineStream;
     private Clip clip;
     private ToolBox toolbox;
 	private double y = 200, max_y = 100, max_y2 = 290, y2 = 170, y3 = 180, y4 = 320, x = 800, sx = 230, sx2 = 400, sx3 = 620, sy = 100, sy2 = 200, sy3 = 100;
@@ -60,7 +60,7 @@ public class SceneCanvas extends JComponent{
         
 
         //instantiate the music files
-       
+            sfx = new File("sfxMenu.wav");
             aria = new File("Aria Math.wav");
             blocks = new File("Blocks.wav");
             cat = new File("Cat.wav");
@@ -74,6 +74,7 @@ public class SceneCanvas extends JComponent{
         
         //instantiating audiostream
         try {
+            sfxStream = AudioSystem.getAudioInputStream(sfx);
             zeroStream = AudioSystem.getAudioInputStream(aria);
             oneStream = AudioSystem.getAudioInputStream(blocks);
             twoStream = AudioSystem.getAudioInputStream(cat);
@@ -293,6 +294,12 @@ public class SceneCanvas extends JComponent{
             MenuBox m = toolbox.returnMenuBox(0);
             m.selectBox();
 
+            sfxStream= AudioSystem.getAudioInputStream(sfx);
+            clip = AudioSystem.getClip();
+            clip.open(sfxStream);
+            clip.start();
+
+
             zeroStream = AudioSystem.getAudioInputStream(aria);
             clip = AudioSystem.getClip();
             clip.open(zeroStream);
@@ -314,6 +321,7 @@ public class SceneCanvas extends JComponent{
         @Override 
         public void actionPerformed(ActionEvent ae) {
             try {
+                
                 stopped = false;
                 threeDDisc.resetY();
                 threeDDisc.moveUp(175);
@@ -321,6 +329,12 @@ public class SceneCanvas extends JComponent{
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(1);
                 m.selectBox();
+
+                //for sfx
+                sfxStream= AudioSystem.getAudioInputStream(sfx);
+                clip = AudioSystem.getClip();
+                clip.open(sfxStream);
+                clip.start();
 
                 oneStream = AudioSystem.getAudioInputStream(blocks);
                 clip = AudioSystem.getClip();
@@ -350,6 +364,12 @@ public class SceneCanvas extends JComponent{
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(2);
                 m.selectBox();
+
+                //for sfx
+                sfxStream= AudioSystem.getAudioInputStream(sfx);
+                clip = AudioSystem.getClip();
+                clip.open(sfxStream);
+                clip.start();
 
                 twoStream = AudioSystem.getAudioInputStream(cat);
                 clip = AudioSystem.getClip();
@@ -383,6 +403,11 @@ public class SceneCanvas extends JComponent{
                 MenuBox m = toolbox.returnMenuBox(3);
                 m.selectBox();
 
+                //for sfx
+                sfxStream= AudioSystem.getAudioInputStream(sfx);
+                clip = AudioSystem.getClip();
+                clip.open(sfxStream);
+                clip.start();
 
                 threeStream = AudioSystem.getAudioInputStream(chirp);
                 clip = AudioSystem.getClip();
@@ -416,6 +441,12 @@ public class SceneCanvas extends JComponent{
                 MenuBox m = toolbox.returnMenuBox(4);
                 m.selectBox();
 
+                //for sfx
+                sfxStream= AudioSystem.getAudioInputStream(sfx);
+                clip = AudioSystem.getClip();
+                clip.open(sfxStream);
+                clip.start();
+
                 fourStream = AudioSystem.getAudioInputStream(door);
                 clip = AudioSystem.getClip();
                 clip.open(fourStream);
@@ -445,6 +476,12 @@ public class SceneCanvas extends JComponent{
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(5);
                 m.selectBox();
+
+                //for sfx
+                sfxStream= AudioSystem.getAudioInputStream(sfx);
+                clip = AudioSystem.getClip();
+                clip.open(sfxStream);
+                clip.start();
 
 
                 fiveStream = AudioSystem.getAudioInputStream(hauntMuskie);
@@ -477,6 +514,12 @@ public class SceneCanvas extends JComponent{
                 MenuBox m = toolbox.returnMenuBox(6);
                 m.selectBox();
 
+                //for sfx
+                sfxStream= AudioSystem.getAudioInputStream(sfx);
+                clip = AudioSystem.getClip();
+                clip.open(sfxStream);
+                clip.start();
+
                 sixStream = AudioSystem.getAudioInputStream(kyoto);
                 clip = AudioSystem.getClip();
                 clip.open(sixStream);
@@ -506,6 +549,12 @@ public class SceneCanvas extends JComponent{
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(7);
                 m.selectBox();
+
+                //for sfx
+                sfxStream= AudioSystem.getAudioInputStream(sfx);
+                clip = AudioSystem.getClip();
+                clip.open(sfxStream);
+                clip.start();
 
                 sevenStream = AudioSystem.getAudioInputStream(mall);
                 clip = AudioSystem.getClip();
@@ -537,6 +586,12 @@ public class SceneCanvas extends JComponent{
                 MenuBox m = toolbox.returnMenuBox(8);
                 m.selectBox();
 
+                //for sfx
+                sfxStream= AudioSystem.getAudioInputStream(sfx);
+                clip = AudioSystem.getClip();
+                clip.open(sfxStream);
+                clip.start();
+
                 eightStream = AudioSystem.getAudioInputStream(mutation);
                 clip = AudioSystem.getClip();
                 clip.open(eightStream);
@@ -566,6 +621,12 @@ public class SceneCanvas extends JComponent{
                 resetSelected();
                 MenuBox m = toolbox.returnMenuBox(9);
                 m.selectBox();
+
+                //for sfx
+                sfxStream= AudioSystem.getAudioInputStream(sfx);
+                clip = AudioSystem.getClip();
+                clip.open(sfxStream);
+                clip.start();
 
                 nineStream = AudioSystem.getAudioInputStream(strad);
                 clip = AudioSystem.getClip();
