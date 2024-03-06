@@ -21,23 +21,31 @@
  **/
 import java.awt.*;
 import java.awt.geom.*;
-//glasspane implements the drawingobject interface and instantiates the variables
-public class GlassPane implements DrawingObject {
+/**
+	glasspane implements the drawingobject interface and instantiates the variables
+**/
+	public class GlassPane implements DrawingObject {
     private double x, y, size;
 	private String className;
-	//gives the values to the variables
-    public GlassPane(double x, double y, double size) {
+	/**
+		gives the values to the variables
+    	**/
+		public GlassPane(double x, double y, double size) {
 		this.x = x;
 		this.y = y;
 		this.size = size;
 		className = "GlassPane";
     }
-	//gives the name of the class
-	public String returnClassName () {
+	/**
+		gives the name of the class
+	**/
+		public String returnClassName () {
         return className;
     }
-	//draws out the glass pane
-    public void draw(Graphics2D g2d){
+	/**
+		draws out the glass pane
+    	**/
+		public void draw(Graphics2D g2d){
 		
 		//Main body of the glass pane and its details
         Rectangle r1 = new Rectangle(x,y,size,15,new Color(171,187,184));
@@ -67,12 +75,16 @@ public class GlassPane implements DrawingObject {
 		Square s5 = new Square(x+size-30,y+size-45,15,new Color(168,187,185));
 		s5.draw(g2d);
     }
-	//changes the x value
-    public void adjustX(double distance){
+	/**
+		changes the x value
+    	**/
+		public void adjustX(double distance){
 		x += distance;
     }
-	//gives the x values
-    public double getX() {
+	/**
+		gives the x values
+	**/    
+		public double getX() {
         return x;
     }
 }

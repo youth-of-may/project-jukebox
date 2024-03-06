@@ -22,23 +22,31 @@
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
-//jukebox implements the drawingobject interface and instantiates the variables
-public class Jukebox implements DrawingObject{
+/**
+	jukebox implements the drawingobject interface and instantiates the variables
+**/
+	public class Jukebox implements DrawingObject{
 	private double x, y, size;
 	private String className;
-	//gives the values to the variables
-	public Jukebox(double x, double y, double size){
+	/**
+		gives the values to the variables
+	**/
+		public Jukebox(double x, double y, double size){
 		this.x = x;
-        this.y = y;
+       		 this.y = y;
 		this.size = size;
 		className = "Jukebox";
 	}
-	//gives the name of the class
-	public String returnClassName () {
-        return className;
+	/**
+		gives the name of the class
+	**/
+		public String returnClassName () {
+       		return className;
     }
-	//draws out the jukebox
-	public void draw(Graphics2D g2d){
+	/**
+		draws out the jukebox
+	**/
+		public void draw(Graphics2D g2d){
 		
 		//Main Body of the jukebox
 		Square s = new Square(x, y+25, size, new Color(24,23,18));
@@ -139,12 +147,16 @@ public class Jukebox implements DrawingObject{
 		row4.draw(g2d);
 		
 	}
-//changes the x value
-	public void adjustX(double distance){
+		/**
+				changes the x value
+		**/
+		public void adjustX(double distance){
 		x += distance;
 	}
-//gives the x value
-	public double getX(){
+		/**
+				gives the x value
+		**/
+		public double getX(){
 		return x;
 	}
 }

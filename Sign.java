@@ -22,28 +22,36 @@
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
-//sign implements the drawingobject interface and instantiates the variables
-public class Sign implements DrawingObject {
-    private double x, y, x2, y2;
+/**
+	sign implements the drawingobject interface and instantiates the variables
+**/
+	public class Sign implements DrawingObject {
+    	private double x, y, x2, y2;
 	private String className;
 	
-	//gives the value to the variables
-    public Sign(double x, double y, double x2, double y2) {
+	/**
+		gives the value to the variables
+    	**/
+		public Sign(double x, double y, double x2, double y2) {
 		this.x = x;
 		this.y = y;
 		this.x2 = x2;
 		this.y2 = y2;
 		className = "Sign";
     }
-	//gives the name of the class
-	public String returnClassName () {
-        return className;
+	/**
+		gives the name of the class
+	**/
+		public String returnClassName () {
+        	return className;
     }
-	//draws out the sign
-    public void draw(Graphics2D g2d){
+	/**
+		draws out the sign
+    	**/
+		public void draw(Graphics2D g2d){
 		
 		//Used to add text and add immersion to imitate minecraft
-        Rectangle r1 = new Rectangle(x,y,x2,y2,new Color(109,95,60));
+       		Rectangle r1 = new Rectangle(x,y,x2,y2,new Color(109,95,60));
 		r1.draw(g2d);
 		
 		Line l1 = new Line(x+5,y+30,310,y+30,10,new Color(87,77,50));
@@ -70,12 +78,16 @@ public class Sign implements DrawingObject {
 		Rectangle r4 = new Rectangle(x+5+130,y+65,10,20,new Color(97,83,54));
 		r4.draw(g2d);
     }
-	//changes the x value
-    public void adjustX(double distance){
-        x += distance;
+	/**
+		changes the x value
+    	**/
+		public void adjustX(double distance){
+        	x += distance;
     }
-	//gives the x value
-    public double getX() {
+	/**
+		gives the x value
+    	**/
+		public double getX() {
         return x;
     }
 }
