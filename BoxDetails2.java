@@ -23,18 +23,29 @@
 import javax.swing.*;
 import java.awt.geom.*;
 import java.awt.*;
-
+	/**
+	* boxdetails2 implements the drawingobject interface and instantiates the variables
+	**/
 public class BoxDetails2 implements DrawingObject{
 	private double x, y;
 	private String className;
+	/**
+	* gives the values to the variables
+	**/
 	public BoxDetails2(double x, double y){
 		this.x = x;
 		this.y = y;
 		className = "BoxDetails2";
 	}
+	/**
+	* gives the name of the class
+	**/
 	public String returnClassName () {
         return className;
     }
+	/**
+	* draws out the object
+	**/
 	public void draw(Graphics2D g2d){
 		
 		//Similar to box details 1 except positioned differently
@@ -83,11 +94,15 @@ public class BoxDetails2 implements DrawingObject{
 		Rectangle r0 = new Rectangle(x+150,y,10,45,new Color(37,23,14));
 		r0.draw(g2d);
 	}
-	
+	/**
+	* changes the x value
+	**/
 	public void adjustX(double distance){
         x += distance;
     }
-	
+	/**
+	* gives the x value
+	**/
     public double getX() {
         return x;
     }
