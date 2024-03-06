@@ -21,11 +21,12 @@
  **/
 import java.awt.*;
 import java.awt.geom.*;
+//square implements the drawingobject interface and instantiates the variables
 public class Square implements DrawingObject{
     private double x, y, size;
     private Color color;
     private String className;
-
+   //gives the values to the variables
     public Square(double x, double y, double size, Color color) {
         this.x = x;
         this.y = y;
@@ -33,18 +34,21 @@ public class Square implements DrawingObject{
         this.color = color;
         className = "Square";
     }
+//gives the name of the class
     public String returnClassName () {
         return className;
     }
-
+//draws out the squaree
     public void draw(Graphics2D g2d){
         Rectangle2D.Double r1 = new Rectangle2D.Double(x,y,size, size);
         g2d.setColor(color);
         g2d.fill(r1);
     }
+	//changes the x value
     public void adjustX(double distance) {
         x += distance;
     }
+	//gives the x value
     public double getX(){
         return x;
     }
