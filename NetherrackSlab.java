@@ -22,12 +22,12 @@
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
-
+//netherrackslab implements the drawingobject interface and instantiates the variables
 public class NetherrackSlab implements DrawingObject {
 	
 	private double x, y, x2, y2;
 	private String className;
-	
+	//gives the value to the variables
 	public NetherrackSlab(double x, double y, double x2, double y2){
 		this.x = x;
         this.y = y;
@@ -35,9 +35,11 @@ public class NetherrackSlab implements DrawingObject {
 		this.y2 = y2;
 		className = "NetherrackSlab";
 	}
+	//gives the name of the class
 	public String returnClassName () {
         return className;
     }
+	//draws out the netherrack slab
 	public void draw(Graphics2D g2d){
 		
 		//Main body of the netherrack slab
@@ -103,11 +105,11 @@ public class NetherrackSlab implements DrawingObject {
 		Line verti4 = new Line(x+200,y+50,x+200,y+100,5,new Color(9,5,6));
 		verti4.draw(g2d);
 	}
-
+//changes the x value
 	public void adjustX(double distance){
 			x += distance;
 	}
-
+//gives the x value
 	public double getX(){
 		return x;
 	}
