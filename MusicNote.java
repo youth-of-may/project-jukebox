@@ -22,19 +22,21 @@
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
-
+//musicnote implements the drawingobject interface and instantiates the variables
 public class MusicNote implements DrawingObject{
 	private double x,y;
 	private String className;
-	
+	//gives the value to the variables
 	public MusicNote(double x, double y){
 		this.x = x;
 		this.y = y;
 		className = "MusicNote";
 	}
+	//gives the name of the class
 	public String returnClassName () {
         return className;
     }
+	//draws out the music note
 	public void draw(Graphics2D g2d){
 		
 		//Used to create the music note that pops out of the jukebox
@@ -71,11 +73,11 @@ public class MusicNote implements DrawingObject{
 		Rectangle r3 = new Rectangle(x+10,y+15,5,15,new Color(80,146,134));
 		r3.draw(g2d);
 	}
-	
+	//changes the x value
 	public void adjustX(double distance){
 		x += distance;
 	}
-	
+	//gives the x value
 	public double getX(){
 		return x;
 	}
