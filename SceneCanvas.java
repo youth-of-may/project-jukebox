@@ -39,7 +39,9 @@ public class SceneCanvas extends JComponent{
 	private int xsong = 340;
 	private String songname = " ";
     private ThreeDDisc threeDDisc;
-	
+	/**
+     * Instantiate the variables created. Add elements to the DrawingObject ArrayList.
+     **/
     public SceneCanvas() {
         //instantiate the colorList
         colorList = new ArrayList<>();
@@ -132,7 +134,9 @@ public class SceneCanvas extends JComponent{
     
     }
 
-
+/**
+ * Override the paintComponent and add animation to elements. 
+ **/
 @Override
     protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
@@ -254,13 +258,17 @@ public class SceneCanvas extends JComponent{
 		revalidate();
 		repaint();
     }
-    
+    /**
+     * Used to reset the selected variable of the menuboxes in a toolbox. 
+     **/
     private void resetSelected() {
         for (int i = 0; i<10; i++) {
             toolbox.returnMenuBox(i).resetSelect();
         }
     }
-	
+	/**
+     * This class is called when the user press 0 in their keyboard. It calls several methods such as resetY, moveUp, changeColor, etc.
+     **/
     private class ZeroAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
@@ -288,7 +296,9 @@ public class SceneCanvas extends JComponent{
             
         }
     }
-
+    /**
+     * This class is called when the user press 1 in their keyboard. It calls several methods such as resetY, moveUp, changeColor, etc.
+     **/
     private class OneAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
@@ -313,7 +323,9 @@ public class SceneCanvas extends JComponent{
                 }
         }
     }
-
+    /**
+     * This class is called when the user press 2 in their keyboard. It calls several methods such as resetY, moveUp, changeColor, etc.
+     **/
     private class TwoAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
@@ -342,7 +354,9 @@ public class SceneCanvas extends JComponent{
         }
     }
 
-
+    /**
+     * This class is called when the user press 3 in their keyboard. It calls several methods such as resetY, moveUp, changeColor, etc.
+     **/
     private class ThreeAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
@@ -371,7 +385,9 @@ public class SceneCanvas extends JComponent{
             
         }
     }
-
+    /**
+     * This class is called when the user press 4 in their keyboard. It calls several methods such as resetY, moveUp, changeColor, etc.
+     **/
     private class FourAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
@@ -399,7 +415,9 @@ public class SceneCanvas extends JComponent{
             
         }
     }
-
+    /**
+     * This class is called when the user press 5 in their keyboard. It calls several methods such as resetY, moveUp, changeColor, etc.
+     **/
     private class FiveAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
@@ -427,7 +445,9 @@ public class SceneCanvas extends JComponent{
             
         }
     }
-
+    /**
+     * This class is called when the user press 6 in their keyboard. It calls several methods such as resetY, moveUp, changeColor, etc.
+     **/
     private class SixAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
@@ -454,7 +474,9 @@ public class SceneCanvas extends JComponent{
             
         }
     }
-
+    /**
+     * This class is called when the user press 7 in their keyboard. It calls several methods such as resetY, moveUp, changeColor, etc.
+     **/
     private class SevenAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
@@ -481,7 +503,9 @@ public class SceneCanvas extends JComponent{
             
         }
     }
-
+    /**
+     * This class is called when the user press 8 in their keyboard. It calls several methods such as resetY, moveUp, changeColor, etc.
+     **/
     private class EightAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
@@ -508,7 +532,9 @@ public class SceneCanvas extends JComponent{
             
         }
     }
-	
+	/**
+     * This class is called when the user press 9 in their keyboard. It calls several methods such as resetY, moveUp, changeColor, etc.
+     **/
     private class NineAction extends AbstractAction {
         @Override 
         public void actionPerformed(ActionEvent ae) {
@@ -534,6 +560,9 @@ public class SceneCanvas extends JComponent{
                 }
         }
     }
+    /**
+     * This method was used to set up the keybindings. It has two parameters: button and canvas.
+     **/
     public void setUpKeyBindings(JButton button, SceneCanvas canvas) {
         button.getInputMap().put(KeyStroke.getKeyStroke("0"),"zeroAction");
         //first is the map name then second is the instance name
@@ -578,6 +607,9 @@ public class SceneCanvas extends JComponent{
         //repaint the canvas after 
         canvas.repaint();
     }
+    /** 
+     * This method sets up the listener for the playButton. It plays the clip when clicked.
+     * **/
     public void setUpPlayListener(JButton playButton) {
         playButton.addActionListener(new ActionListener() {
             @Override
@@ -587,6 +619,9 @@ public class SceneCanvas extends JComponent{
             }
         });
     }
+    /** 
+     * This method sets up the listener for the stopButton. It stops and closes the clip when clicked.
+     * **/
     public void setUpStopListener (JButton stopButton) {
         stopButton.addActionListener(new ActionListener() {
             @Override
