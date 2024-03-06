@@ -28,10 +28,11 @@ public class DiscFrame implements DrawingObject {
     private Color color;
     private Square outerFrame, midFrame;
     private String className;
-    public DiscFrame(double x, double y, double size) {
-        /**
+    /**
 		 * The constructor of this class has several parameters: x, y, and its size. It also instantiated the variables outerFrame, midFrame, and className in the constructor. 
 		 **/
+    public DiscFrame(double x, double y, double size) {
+        
 
         this.x = x;
         this.y = y;
@@ -41,18 +42,20 @@ public class DiscFrame implements DrawingObject {
         
         outerFrame = new Square(x, y, size, new Color(190,171,113));
         midFrame = new Square(x+12, y+13, size*0.80, new Color(115,64,40));
-    }
-    public String returnClassName () {
-        /**
+    } 
+    /**
          * This method returns the name of the class. This method was used in the SceneCanvas class.
          **/
+    public String returnClassName () {
+       
 
         return className;
     }
-    public void draw(Graphics2D g2d) {
-        /**
+    /**
          * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
          **/
+    public void draw(Graphics2D g2d) {
+        
         outerFrame.draw(g2d);
         midFrame.draw(g2d);
 
@@ -116,16 +119,18 @@ public class DiscFrame implements DrawingObject {
 
         
     }
-    public void adjustX(double distance) {
-        /**
+    /**
          * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
          **/
+    public void adjustX(double distance) {
+        
         x+=distance;
-    }
-    public double getX() {
-        /**
+    } 
+    /**
          * This method returns a double. It returns the instance x of the class.
          **/
+    public double getX() {
+       
         return x;
     }
 }
