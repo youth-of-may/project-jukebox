@@ -17,19 +17,19 @@
 	of my program.
  */
 /**
-	This class was used to create the fire that comes out of the candle, it makes use of squares and rectangles
+	*This class was used to create the fire that comes out of the candle, it makes use of squares and rectangles
  **/
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
 /**
-	fire implements the drawingobject interface and instantiates the variables
+	*fire implements the drawingobject interface and instantiates the variables
 **/
 	public class Fire implements DrawingObject{
 	private double x,y;
 	private String className;
 	/**
-		gives the values to the variables
+	*	gives the values to the variables
 	**/
 		public Fire(double x, double y){
 		this.x = x;
@@ -37,13 +37,13 @@ import javax.swing.*;
 		className = "Fire";
 	}
 	/**
-		gives the name of the class
+		*gives the name of the class
 	**/
 		public String returnClassName () {
         return className;
     }
 	/**
-	draws the fire
+	*draws the fire
 	**/
 		public void draw(Graphics2D g2d){
 		
@@ -94,13 +94,13 @@ import javax.swing.*;
 		lightYellow2.draw(g2d);
 	}
 	/**
-		changes the x value
+		*changes the x value
 	**/
 		public void adjustX(double distance){
 		x += distance;
 	}
 	/**
-		gives the x value
+	*	gives the x value
 	**/
 		public double getX(){
 		return x;
