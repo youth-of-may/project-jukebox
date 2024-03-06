@@ -25,43 +25,47 @@ public class Circle implements DrawingObject {
     private double x, y, size;
     private Color color;
     private String className;
-
-    public Circle(double x, double y, double size, Color color) {
-        /**
+/**
          * This class needs an x, y, size, and color to be successfully called. The variables stated will get instantiated here along with the className variable.
          **/
+    public Circle(double x, double y, double size, Color color) {
+        
         this.x = x;
         this.y = y;
         this.size = size;
         this.color = color;
         className = "Circle";
     }
-    public String returnClassName () {
-        /**
+    /**
          * This method returns the name of the class. This method was used in the SceneCanvas class.
          **/
 
+    public String returnClassName () {
+        
 
         return className;
     }
-    public void draw(Graphics2D g2d){
-        /**
+    /**
          * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
          **/
+    public void draw(Graphics2D g2d){
+        
         Ellipse2D.Double e1 = new Ellipse2D.Double(x,y,size,size);
         g2d.setColor(color);
         g2d.fill(e1);
     }
-    public void adjustX(double distance) {
-       /**
+    /**
          * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
          **/ 
+    public void adjustX(double distance) {
+       
         x += distance;
     }
-    public double getX(){
-        /**
+    /**
          * This method returns a double. It returns the instance x of the class.
          **/
+    public double getX(){
+        
         return x;
     }
 }
