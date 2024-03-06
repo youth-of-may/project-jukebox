@@ -23,13 +23,13 @@ import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
 /**
-	wood implements the drawing interface and instantiates variables
+*	wood implements the drawing interface and instantiates variables
 **/
 	public class Wood implements DrawingObject{ 
 	private double x, y, size;
 	private String className;
 	/**
-		gives values to the variables
+	*	gives values to the variables
 	**/
 		public Wood(double x, double y, double size){
 		this.x = x;
@@ -38,13 +38,13 @@ import javax.swing.*;
 		className = "Wood";
 	}
 	/**
-		returns the name of the class
+	*	returns the name of the class
 	**/
 		public String returnClassName () {
        		return className;
     }
 	/**
-		draws out the wood block
+	*	draws out the wood block
 	**/
 		public void draw(Graphics2D g2d){
 		
@@ -152,13 +152,13 @@ import javax.swing.*;
 		l10.draw(g2d);
 	}
 	/**
-		adjusts the x value
+	*	adjusts the x value
 	**/	
 		public void adjustX(double distance){
 		x += distance;
 	}
 	/**
-		gets the x value
+	*	gets the x value
 	**/
 		public double getX(){
 		return x;
