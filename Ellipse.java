@@ -17,7 +17,7 @@
 	of my program.
  */
 /**
- * This class was used to create the basic shape Ellipse.
+ * This class was used to create the basic shape Ellipse. This is similar to a circle but its width and height are not equal.
  **/
 import java.awt.*;
 import java.awt.geom.*;
@@ -26,6 +26,9 @@ public class Ellipse implements DrawingObject{
     private Color color;
     private String className;
     public Ellipse(double x, double y, double width, double height, Color color) {
+         /**
+		 * The constructor of this class has several parameters: x, y, width, height, and its color. It also instantiated the variable className here. 
+		 **/
         this.x = x;
         this.y = y;
         this.width = width;
@@ -34,17 +37,29 @@ public class Ellipse implements DrawingObject{
         className = "Ellipse";
     }
     public String returnClassName () {
+        /**
+         * This method returns the name of the class. This method was used in the SceneCanvas class.
+         **/
         return className;
     }
     public void draw(Graphics2D g2d) {
+        /**
+         * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
+         **/
         Ellipse2D.Double ellipse = new Ellipse2D.Double(x, y, width, height);
         g2d.setColor(color);
         g2d.fill(ellipse);
     }
     public void adjustX(double distance) {
+        /**
+         * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
+         **/
         x += distance;
     }
     public double getX() {
+        /**
+         * This method returns a double. It returns the instance x of the class.
+         **/
         return x;
     }
 }
