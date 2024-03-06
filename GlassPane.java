@@ -22,13 +22,13 @@
 import java.awt.*;
 import java.awt.geom.*;
 /**
-	glasspane implements the drawingobject interface and instantiates the variables
+*	glasspane implements the drawingobject interface and instantiates the variables
 **/
 	public class GlassPane implements DrawingObject {
     private double x, y, size;
 	private String className;
 	/**
-		gives the values to the variables
+	*	gives the values to the variables
     	**/
 		public GlassPane(double x, double y, double size) {
 		this.x = x;
@@ -37,13 +37,13 @@ import java.awt.geom.*;
 		className = "GlassPane";
     }
 	/**
-		gives the name of the class
+	*	gives the name of the class
 	**/
 		public String returnClassName () {
         return className;
     }
 	/**
-		draws out the glass pane
+	*	draws out the glass pane
     	**/
 		public void draw(Graphics2D g2d){
 		
@@ -76,13 +76,13 @@ import java.awt.geom.*;
 		s5.draw(g2d);
     }
 	/**
-		changes the x value
+	*	changes the x value
     	**/
 		public void adjustX(double distance){
 		x += distance;
     }
 	/**
-		gives the x values
+	*	gives the x values
 	**/    
 		public double getX() {
         return x;

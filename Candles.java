@@ -37,13 +37,13 @@ public class Candles implements DrawingObject{
 		className = "Candles";
 	}
 	/**
-	gives the name of the class
+	*gives the name of the class
 	**/
 	public String returnClassName () {
         return className;
     }
 	/**
-	draws out the candles
+	*draws out the candles
 	**/
 	public void draw(Graphics2D g2d){	
 
@@ -167,13 +167,13 @@ public class Candles implements DrawingObject{
 		l3.draw(g2d);
 	}
 	/**
-	changes the x value
+	*changes the x value
 	**/
 	public void adjustX(double distance){
 		x+=distance;
 	}
 	/**
-	gives the x value
+	*gives the x value
 	**/
 	public double getX(){
 		return x;
