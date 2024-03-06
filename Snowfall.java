@@ -23,13 +23,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.*;
 /**
-	snowfall implements the drawingobject interface and instantiates the variables
+*	snowfall implements the drawingobject interface and instantiates the variables
 **/
 	public class Snowfall implements DrawingObject{
 	private double x,y;
 	private String className;
 	/**
-		gives the values to the variables
+	*	gives the values to the variables
 	**/
 		public Snowfall(double x, double y){
 		this.x = x;
@@ -37,13 +37,13 @@ import java.awt.geom.*;
 		className = "Snowfall";
 	}
 	/**
- 		gives the name of the class
+ 	*	gives the name of the class
 	**/
   		public String returnClassName () {
         	return className;
     }
 	/**
-		draws out the object
+	*	draws out the object
 	**/
 		public void draw(Graphics2D g2d){
 		
@@ -61,13 +61,13 @@ import java.awt.geom.*;
 		sw4.draw(g2d);
 	}
 	/**
-		changes the x value
+	*	changes the x value
 	**/
 		public void adjustX(double distance){
 		x += distance;
 	}
 	/**
-		gives the x value
+	*	gives the x value
 	**/
 		public double getX(){
 		return x;
