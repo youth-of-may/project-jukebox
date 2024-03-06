@@ -17,7 +17,7 @@
 	of my program.
  */
 /**
- * This class was used to create the disc that can be found at the bottom left side of the window.
+ * This class was used to create the disc that can be found at the bottom left side of the window. Its constructor asks for five parameters.
  **/
 import java.util.*;
 import java.awt.*;
@@ -27,7 +27,9 @@ public class ThreeDDisc implements DrawingObject{
     private String className;
     private Color color;
     
-
+     /**
+		 * The constructor of this class has several parameters: x, y, width, height, and its color. It also instantiated the variables tempY and className in the constructor. 
+		 **/
     public ThreeDDisc(double x, double y, double width, double height, Color color) {
        this.x =x;
        this.y = y;
@@ -39,10 +41,15 @@ public class ThreeDDisc implements DrawingObject{
         
 
     }
+    /**
+         * This method returns the name of the class. This method was used in the SceneCanvas class.
+         **/
     public String returnClassName () {
         return className;
     }
-   
+   /**
+         * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
+         **/
     public void draw(Graphics2D g2d) {
         
         
@@ -92,21 +99,40 @@ public class ThreeDDisc implements DrawingObject{
         
 
     }
+    /** 
+     * This method can be used to change the color of the middle part of the disc. 
+    **/
     public void changeColor(Color c) {
         color = c;
     }
+    /**
+         * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
+         **/
+
     public void adjustX(double distance) {
         x+=distance;
     }
+    /**
+         * This method returns a double. It returns the instance x of the class.
+         **/
     public double getX() {
         return x;
     }
+    /**
+     * This method can be used to move up the disc. 
+     **/
     public void moveUp(double y) {
         this.y -=y;
     }
+    /**
+     * This method can be used to move down the disc.
+     *  **/
     public void moveDown(double y) {
         this.y +=y;
     }
+    /**
+     * This method can be used to reset the y variable of the disc. 
+     **/
     public void resetY() {
         y = tempY;
     }
