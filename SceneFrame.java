@@ -27,7 +27,7 @@ import java.io.*;
 public class SceneFrame {
     private JFrame frame;
     private SceneCanvas canvas;
-    private JButton playButton, test, stopButton;
+    private JButton playButton, pauseButton, test, stopButton;
     private JLabel invisibleLabel;
     private Font minecraft;
     /**
@@ -61,6 +61,14 @@ public class SceneFrame {
         invisibleLabel.setOpaque(true);
         invisibleLabel.setBackground(new Color(47,33,19));
 
+        //pauseButton
+        pauseButton = new JButton("Pause");
+        pauseButton.setBackground(new Color(198,198,198));
+        pauseButton.setForeground(new Color(76,76,76));
+        pauseButton.setFocusPainted(false);
+        pauseButton.setFont(minecraft);
+        pauseButton.setBorder(BorderFactory.createRaisedBevelBorder());
+
         test = new JButton();
         test.setOpaque(true);
         //test.setContentAreaFilled(false);
@@ -79,9 +87,10 @@ public class SceneFrame {
      **/
     public void setUpGUI() {
         JPanel bottomPanel = new JPanel();
-        bottomPanel.setLayout(new GridLayout(1,4));
+        bottomPanel.setLayout(new GridLayout(1,5));
         bottomPanel.add(test);
         bottomPanel.add(playButton);
+        bottomPanel.add(pauseButton);
         bottomPanel.add(stopButton);
         bottomPanel.add(invisibleLabel);
 
@@ -89,6 +98,7 @@ public class SceneFrame {
         canvas.setUpKeyBindings(test,canvas);
         canvas.setUpKeyBindings(stopButton,canvas);
         canvas.setUpPlayListener(playButton);
+        canvas.setUpPauseListener(pauseButton);
         canvas.setUpStopListener(stopButton);
         frame.setTitle("Midterm Project - Chua - Giron");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

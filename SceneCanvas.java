@@ -39,6 +39,8 @@ public class SceneCanvas extends JComponent{
 	private int xsong = 340;
 	private String songname = " ";
     private ThreeDDisc threeDDisc;
+    private long clipTime;
+    private boolean paused;
 	/**
      * Instantiate the variables created. Add elements to the DrawingObject ArrayList.
      **/
@@ -108,6 +110,8 @@ public class SceneCanvas extends JComponent{
         threeDDisc = new ThreeDDisc(600, 650, 175, 100, colorList.get(0));
 
         elements = new ArrayList<DrawingObject>();
+        clipTime =0;
+        paused = false;
 
         
 
@@ -614,8 +618,25 @@ public class SceneCanvas extends JComponent{
         playButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
+                if(paused) {
+                    clip.setMicrosecondPosition(clipTime);
+                    clip.start();
+                }
                 clip.start();
 				x = 390;
+            }
+        });
+    }
+    /** 
+     * This method sets up the pause listener for the pause button. 
+    **/
+    public void setUpPauseListener(JButton pauseButton) {
+        pauseButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                paused = true;
+                clipTime = clip.getMicrosecondPosition();
+                clip.stop();
             }
         });
     }
@@ -626,6 +647,7 @@ public class SceneCanvas extends JComponent{
         stopButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
+                clipTime = 0;
                 clip.stop();
                 clip.close();
 		    songname = " ";
