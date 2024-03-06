@@ -17,7 +17,7 @@
 	of my program.
  */
 /**
- * This class was used to create the disc found in the toolbox and the frame found at the center of the JFrame.
+ * This class was used to create the disc found in the toolbox and the frame found at the center of the JFrame. It implements the DrawingObject interface.
  **/
 import java.awt.*;
 import java.awt.geom.*;
@@ -29,6 +29,9 @@ public class Disc implements DrawingObject {
 	private String className;
 	
 	public Disc(double x, double y, double percentage, Color color){
+		/**
+		 * The constructor of this class has several arguments: x, y, percentage, and color. It also asked for the percentage to enhance it's scalability. 
+		 **/
 		this.x = x;
 		this.y = y;
 		this.percentage = percentage;
