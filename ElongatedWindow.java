@@ -24,26 +24,27 @@ import java.awt.*;
 public class ElongatedWindow implements DrawingObject{
     private double x, y, width, height;
     private String className;
-    public ElongatedWindow(double x, double y, double width, double height) {
-         /**
+    /**
 		 * The constructor of this class has several parameters: x, y, width, and its height. It also instantiated the variable className here. 
 		 **/
+    public ElongatedWindow(double x, double y, double width, double height) {
+         
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
         className = "ElongatedWindow";
-    }
-    public String returnClassName () {
-        /**
+    }/**
          * This method returns the name of the class. This method was used in the SceneCanvas class.
          **/
+    public String returnClassName () {
+        
         return className;
-    }
-    public void draw(Graphics2D g2d) {
-        /**
+    }/**
          * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
          **/
+    public void draw(Graphics2D g2d) {
+        
         g2d.setStroke(new BasicStroke(16));
 
         Rectangle2D.Double outsideRec = new Rectangle2D.Double(x+8, y+13, width-20, height-20);
@@ -66,18 +67,18 @@ public class ElongatedWindow implements DrawingObject{
         Square details5 = new Square(x + 110, y*1.85,10, new Color(134,166,168));        
         details5.draw(g2d);
         
-    }
-    public void adjustX(double distance) {
-        /**
+    }/**
          * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
          **/
+    public void adjustX(double distance) {
+        
 
         x += distance;
-    }
-    public double getX() {
-        /**
+    }/**
          * This method returns a double. It returns the instance x of the class.
          **/
+    public double getX() {
+        
         return x;
     }
 }
