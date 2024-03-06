@@ -22,19 +22,21 @@
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
-
+//fire implements the drawingobject interface and instantiates the variables
 public class Fire implements DrawingObject{
 	private double x,y;
 	private String className;
-	
+	//gives the values to the variables
 	public Fire(double x, double y){
 		this.x = x;
 		this.y = y;
 		className = "Fire";
 	}
+	//gives the name of the class
 	public String returnClassName () {
         return className;
     }
+	//draws the fire
 	public void draw(Graphics2D g2d){
 		
 		//Used to create fire to be placed on the candle
@@ -83,11 +85,11 @@ public class Fire implements DrawingObject{
 		Square lightYellow2 = new Square(x+10,y+30,5,new Color(255,245,199));
 		lightYellow2.draw(g2d);
 	}
-	
+	//changes the x value
 	public void adjustX(double distance){
 		x += distance;
 	}
-	
+	//gives the x value
 	public double getX(){
 		return x;
 	}
