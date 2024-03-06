@@ -17,26 +17,32 @@
 	of my program.
  */
 /**
- * This class was used to create the 3D wood found at the bottom part of the elongated window.
+ * This class was used to create the 3D wood found at the bottom part of the elongated window. It made use of the Rectangle class.
  **/
 import java.awt.*;
 import java.awt.geom.*;
 public class ThreeDWood implements DrawingObject{
-    private String shadow;
     private double x, y, height, width;
     private String className;
-    public ThreeDWood(String shadow, double x, double y, double width, double height) {
+     /**
+		 * The constructor of this class has several parameters: x, y, width, and its height. It also instantiated the variable className. 
+		 **/
+    public ThreeDWood( double x, double y, double width, double height) {
         this.x = x;
         this.y = y;
         this.height = height;
         this.width = width;
-        this.shadow = shadow;
         className = "ThreeDWood";
     }
+    /**
+         * This method returns the name of the class. This method was used in the SceneCanvas class.
+         **/
     public String returnClassName () {
         return className;
     }
-
+    /**
+         * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
+         **/
     public void draw(Graphics2D g2d) {
 
        
@@ -96,9 +102,15 @@ public class ThreeDWood implements DrawingObject{
 
 
     }
+    /**
+         * This method can be used to adjust x. It has an parameter distance that will be added to x whenever this method is called.
+         **/
     public void adjustX(double distance) {
             x += distance;
     }
+    /**
+         * This method returns a double. It returns the instance x of the class.
+         **/
     public double getX() {
         return x;
     }

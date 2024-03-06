@@ -114,7 +114,7 @@ public class SceneCanvas extends JComponent{
 
         //testing out toolbox
         
-        elements.add(new ThreeDWood("shadow", 100, 100, 100, 100));
+        elements.add(new ThreeDWood( 100, 100, 100, 100));
         elements.add(new NetherrackSlab(50,500,250,100));
 		elements.add(new Sign(160,200,155,90));
         elements.add(new GlassPane(339,190,107));
