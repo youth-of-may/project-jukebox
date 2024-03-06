@@ -22,21 +22,29 @@
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.*;
-//candles implements the drawingobject interface and instantiates the variables
+/**
+	*candles implements the drawingobject interface and instantiates the variables
+**/
 public class Candles implements DrawingObject{
 	private double x, y;
 	private String className;
-	//gives the value to the variables
+	/**
+	*gives the value to the variables
+	**/
 	public Candles(double x, double y){
 		this.x = x;
 		this.y = y;
 		className = "Candles";
 	}
-	//gives the name of the class
+	/**
+	gives the name of the class
+	**/
 	public String returnClassName () {
         return className;
     }
-	//draws out the candles
+	/**
+	draws out the candles
+	**/
 	public void draw(Graphics2D g2d){	
 
 		//Main body of the second candle
@@ -158,11 +166,15 @@ public class Candles implements DrawingObject{
 		Line l3 = new Line(x+15-8,y+30,x+15-8,y+25,7,new Color(191,180,162));
 		l3.draw(g2d);
 	}
-	//changes the x value
+	/**
+	changes the x value
+	**/
 	public void adjustX(double distance){
 		x+=distance;
 	}
-	//gives the x value
+	/**
+	gives the x value
+	**/
 	public double getX(){
 		return x;
 	}
