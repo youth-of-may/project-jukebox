@@ -37,9 +37,19 @@ public class Disc implements DrawingObject {
 
 	}
 	public String returnClassName () {
+		/**
+         * This method returns the name of the class. This method was used in the SceneCanvas class.
+         **/
+
+
         return className;
     }
 	public void draw(Graphics2D g2d){
+		/**
+         * This method is part of the DrawingObject interface. It was used to create and draw the graphics of this class.
+         **/
+
+
 		//for bottom part
 		Rectangle d1 = new Rectangle(x,y+(15*percentage),75*percentage,20*percentage,new Color(43,43,43));
 		d1.draw(g2d);
@@ -66,10 +76,16 @@ public class Disc implements DrawingObject {
 	}
 	
 	public void adjustX(double distance){
+		/**
+         * This method can be used to adjust x. It has an argument distance that will be added to x whenever this method is called.
+         **/
 		x+= distance;
 	}
 	
 	public double getX(){
+		/**
+         * This method returns a double. It returns the instance x of the class.
+         **/
 		return x;
 	}
 }
